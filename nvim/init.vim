@@ -4,6 +4,10 @@ call plug#begin('~/.vim/plugged')
 " Themes
 Plug 'itchyny/lightline.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+"Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+
+" Treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Files
 " Nerdtre
@@ -26,8 +30,6 @@ Plug 'peitalin/vim-jsx-typescript'
 " https://prettier.io/docs/en/vim.html
 " Plug 'sbdchd/cneoformat'
 
-"Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-
 " Ident lines
 " https://github.com/Yggdroot/indentLine
 Plug 'Yggdroot/indentLine'
@@ -37,15 +39,13 @@ Plug 'smithbm2316/centerpad.nvim' " Does work, but resets with NERDtree
 " Plug 'junegunn/goyo.vim' not good enough
 Plug 'folke/zen-mode.nvim'
 
-" Excellent git wrapper
-" https://github.com/tpope/vim-fugitive
-"Plug 'tpope/vim-fugitive'
 " Toggle comments
 " https://github.com/tpope/vim-commentary
 Plug 'tpope/vim-commentary'
 " Surround stuff like "", '', (), {} and so on
 " https://github.com/tpope/vim-surround
 "Plug 'tpope/vim-surround'
+"
 " git diff integration
 " https://github.com/airblade/vim-gitgutter
 Plug 'airblade/vim-gitgutter'
@@ -103,13 +103,19 @@ hi tsxTypes guifg=#666666
 " General stuff ------------------------------
 syntax enable
 set shiftwidth=4
+set tabstop=4
 set relativenumber
+set ignorecase
+set smartindent
+set cursorline
+
+" Autosave on focus loss
 :au FocusLost * :wa
 colorscheme tokyonight-night
 " colorscheme tokyonight-storm
 " colorscheme tokyonight-day
 " Yank and paste with the system clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 " ----------------------------- General stuff
 
 "  Binds ----------------------------------

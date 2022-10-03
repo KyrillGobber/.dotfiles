@@ -1,6 +1,23 @@
 #!/bin/bash
 
 # TODO Add pacman install command for everything needed
+# - git
+# - kitty
+# - hyprland
+#   - waybar
+#     - waybar-mpris-git
+#     - blueman-applet
+#   - swaylock
+#   - swaybg -> switch to hyprpaper?
+#   - wofi
+# - nextcloud
+# - polkit-gnome / xfce-polkit
+# - grim + slurp + swappy
+# 
+# vim-plug:
+# sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+#       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 # TODO Add git clone and checkout
 
 # Create all symlinks
