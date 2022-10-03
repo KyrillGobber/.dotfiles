@@ -49,9 +49,17 @@ Plug 'tpope/vim-commentary'
 " git diff integration
 " https://github.com/airblade/vim-gitgutter
 Plug 'airblade/vim-gitgutter'
-" fuzzy finder
+
+"git diff
+" https://github.com/sindrets/diffview.nvim
+Plug 'sindrets/diffview.nvim'
+
+" Telescope
 " https://github.com/nvim-telescope/telescope.nvim#getting-started
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 " Vim Glow -> markdown preview
 " https://github.com/ellisonleao/glow.nvim
@@ -101,6 +109,11 @@ hi tsxTypes guifg=#666666
 
 
 " General stuff ------------------------------
+
+let mapleader = " "
+nnoremap <leader>ne :Telescope file_browser<CR>
+nnoremap <leader>p :Glow<CR>
+
 syntax enable
 set shiftwidth=4
 set tabstop=4
