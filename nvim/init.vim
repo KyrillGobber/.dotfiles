@@ -60,9 +60,15 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'kyazdani42/nvim-web-devicons'
+
 " Vim Glow -> markdown preview
 " https://github.com/ellisonleao/glow.nvim
 Plug 'ellisonleao/glow.nvim'
+
+" cheat.sh
+" https://github.com/dbeniamine/cheat.sh-vim
+" Use with <Leader>KK, <Leader>KP, <Leader>KR, <Leader>KC
+Plug 'dbeniamine/cheat.sh-vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -111,13 +117,6 @@ hi tsxTypes guifg=#666666
 
 let mapleader = " "
 
-" Telescope: Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
-nnoremap <leader>p :Glow<CR>
 
 syntax enable
 set shiftwidth=4
@@ -126,6 +125,8 @@ set relativenumber
 set ignorecase
 set smartindent
 set cursorline
+set updatetime=300
+set signcolumn=yes
 
 " Autosave on focus loss
 :au FocusLost * :wa
@@ -142,6 +143,62 @@ nnoremap <f8> :Centerpad 50 10<CR>
 nnoremap <C-Tab> gt
 nnoremap <S-C-Tab> gT
 nnoremap <F4> :q<CR>
+nnoremap <leader>t <cmd>tabnew<cr>
+
+" Telescope: Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Coc:::::::::::::::::::::::
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+" use <c-space>for trigger completion
+inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <Tab> coc#pum#confirm()
+
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Run the Code Lens action on the current line.
+nmap <leader>cl  <Plug>(coc-codelens-action)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
+
+
+" Add (Neo)Vim's native statusline support.
+" NOTE: Please see `:h coc-status` for integrations with external plugins that
+" provide custom statusline: lightline.vim, vim-airline.
+" TODO set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')
+
+" Show commands.
+nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+
+" :::::::::::::::Coc
+
+nnoremap <leader>p :Glow<CR>
 "  ---------------------------------- Binds
 
 " NERDTree stuff ----------------------------
@@ -155,10 +212,3 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 " ---------------------------- NERDTree stuff
-
-" Coc stuff --------------------------------
-"
-" use <c-space>for trigger completion
-inoremap <silent><expr> <c-space> coc#refresh()
-inoremap <silent><expr> <Tab> coc#pum#confirm()
-" -------------------------------- coc stuff

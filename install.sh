@@ -10,6 +10,7 @@
 #   - swaylock
 #   - swaybg -> switch to hyprpaper?
 #   - wofi
+#   - pavocontrol
 # - nextcloud
 # - polkit-gnome / xfce-polkit
 # - grim + slurp + swappy
