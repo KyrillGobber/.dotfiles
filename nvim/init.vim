@@ -61,6 +61,9 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'kyazdani42/nvim-web-devicons'
 
+Plug 'rmagatti/auto-session'
+Plug 'rmagatti/session-lens'
+
 " Vim Glow -> markdown preview
 " https://github.com/ellisonleao/glow.nvim
 Plug 'ellisonleao/glow.nvim'
@@ -119,9 +122,9 @@ let mapleader = " "
 
 
 syntax enable
+set number
 set shiftwidth=4
 set tabstop=4
-set relativenumber
 set ignorecase
 set smartindent
 set cursorline
@@ -150,6 +153,7 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fs <cmd>Telescope session-lens search_session<cr>
 
 " Coc:::::::::::::::::::::::
 " GoTo code navigation.
@@ -194,7 +198,7 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 " TODO set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')
 
 " Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+"nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 
 " :::::::::::::::Coc
 
