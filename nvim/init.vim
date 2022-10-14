@@ -117,6 +117,7 @@ nnoremap <leader>fg <cmd>Telescope live_grep hidden=true<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fs <cmd>Telescope session-lens search_session<cr>
+nnoremap <leader>fq <cmd>Telescope quickfix<cr>
 
 " Coc:::::::::::::::::::::::
 " GoTo code navigation.
