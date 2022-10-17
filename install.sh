@@ -14,6 +14,7 @@
 # - nextcloud
 # - polkit-gnome / xfce-polkit
 # - grim + slurp + swappy
+# - wl-clipboard
 # 
 # vim-plug:
 # sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \

@@ -25,6 +25,8 @@ Plug 'rmagatti/auto-session'		" Save sessions
 Plug 'rmagatti/session-lens'		" Telescope session picker
 Plug 'preservim/nerdtree'
 Plug 'ellisonleao/glow.nvim' 		" Vim Glow -> markdown preview
+" Plug 'kyazdani42/nvim-web-devicons'
+" Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 
 " cheat.sh
 " Use with <Leader>KK, <Leader>KP, <Leader>KR, <Leader>KC
@@ -46,6 +48,8 @@ endif
 
 " Coc prettier bind
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+" format code
+nmap <leader>cf  <Plug>(coc-format-selected)
 
 " Typescript start ------------------------------
 " set filetypes as typescriptreact
@@ -90,6 +94,7 @@ set ruler
 set updatetime=300
 set signcolumn=yes
 set noshowmode
+set noswapfile
 
 " Autosave on focus loss
 :au FocusLost * :wa
@@ -110,6 +115,10 @@ nnoremap <S-C-Tab> gT
 nnoremap <F4> :q<CR>
 nnoremap <leader>t <cmd>tabnew<cr>
 nnoremap <leader>p :Glow<CR>
+
+" Easy CAPS
+inoremap <c-u> <ESC>viwUi
+nnoremap <c-u> viwU<Esc>
 
 " Telescope: Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files hidden=true<cr>
@@ -180,6 +189,12 @@ let g:lightline = {
 \ }
 " Use autocmd to force lightline update.
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
+
+" set termguicolors
+" lua << EOF
+" require("bufferline").setup{}
+" EOF
+
 " :::::::::::::::Coc
 "  ---------------------------------- Binds
 
