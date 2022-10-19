@@ -25,8 +25,7 @@ Plug 'rmagatti/auto-session'		" Save sessions
 Plug 'rmagatti/session-lens'		" Telescope session picker
 Plug 'preservim/nerdtree'
 Plug 'ellisonleao/glow.nvim' 		" Vim Glow -> markdown preview
-" Plug 'kyazdani42/nvim-web-devicons'
-" Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
+" Plug 'mengelbrecht/lightline-bufferline'
 
 " cheat.sh
 " Use with <Leader>KK, <Leader>KP, <Leader>KR, <Leader>KC
@@ -95,6 +94,7 @@ set updatetime=300
 set signcolumn=yes
 set noshowmode
 set noswapfile
+set showtabline=2
 
 " Autosave on focus loss
 :au FocusLost * :wa
@@ -164,6 +164,29 @@ nmap <leader>cl  <Plug>(coc-codelens-action)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
+
+" Coc jump command tab if not open
+function! TabeIfNotOpen(...)
+    let fname = a:1
+    let call = ''
+    if a:0 == 2
+	let fname = a:2
+	let call = a:1
+    endif
+    let bufnum=bufnr(expand(fname))
+    let winnum=bufwinnr(bufnum)
+    if winnum != -1
+	" Jump to existing split
+	exe winnum . "wincmd w"
+    else
+	" Make new split as usual
+	exe "tabe " . fname
+    endif
+    " Execute the cursor movement command
+    exe call
+endfunction
+
+command! -nargs=+ CocTabeIfNotOpen :call TabeIfNotOpen(<f-args>)
 
 " Diff view
 nnoremap <leader>do <cmd>DiffviewOpen<cr>
