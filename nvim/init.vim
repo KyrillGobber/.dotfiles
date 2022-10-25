@@ -1,3 +1,6 @@
+"TODO:
+"Telescope new tab
+
 call plug#begin('~/.vim/plugged')
 
 " Themes
@@ -11,6 +14,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+" Plug 'sheerun/vim-polyglot'  		" Still testing this
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'
 Plug 'Raimondi/delimitMate'			" automatic closing of quotes, parenthesis, brackets, etc.
@@ -95,6 +99,7 @@ set signcolumn=yes
 set noshowmode
 set noswapfile
 set showtabline=2
+set nocompatible
 
 " Autosave on focus loss
 :au FocusLost * :wa
