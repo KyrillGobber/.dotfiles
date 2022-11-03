@@ -1,5 +1,27 @@
 "TODO:
-"Telescope new tab
+" Telescope method list in file
+" onedark lightline Theme
+" telescope git stuff!
+
+let mapleader = " "
+
+syntax enable
+set number
+set shiftwidth=4
+set tabstop=4
+set ignorecase
+set smartindent
+set cursorline
+set ruler
+set updatetime=300
+set signcolumn=yes
+set noshowmode
+set noswapfile
+set showtabline=2
+set guioptions-=e
+set nocompatible
+set termguicolors
+set relativenumber
 
 call plug#begin('~/.vim/plugged')
 
@@ -7,14 +29,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-"Plug 'joshdick/onedark.vim'
+Plug 'joshdick/onedark.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-" Plug 'sheerun/vim-polyglot'  		" Still testing this
+" Plug 'maxmellon/vim-jsx-pretty' -> polyglot
+" Plug 'pangloss/vim-javascript' -> polyglot
+" Plug 'leafgarland/typescript-vim' -> polyglot, but yats instead of this
+" Plug 'peitalin/vim-jsx-typescript'
+Plug 'sheerun/vim-polyglot'  		" Still testing this
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'
 Plug 'Raimondi/delimitMate'			" automatic closing of quotes, parenthesis, brackets, etc.
@@ -29,7 +51,7 @@ Plug 'rmagatti/auto-session'		" Save sessions
 Plug 'rmagatti/session-lens'		" Telescope session picker
 Plug 'preservim/nerdtree'
 Plug 'ellisonleao/glow.nvim' 		" Vim Glow -> markdown preview
-" Plug 'mengelbrecht/lightline-bufferline'
+Plug 'mengelbrecht/lightline-bufferline'
 
 " cheat.sh
 " Use with <Leader>KK, <Leader>KP, <Leader>KR, <Leader>KC
@@ -55,55 +77,39 @@ command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 nmap <leader>cf  <Plug>(coc-format-selected)
 
 " Typescript start ------------------------------
+
+let g:yats_host_keyword = 1
 " set filetypes as typescriptreact
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+" autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
-" dark red
-hi tsxTagName guifg=#E06C75
-hi tsxComponentName guifg=#E06C75
-hi tsxCloseComponentName guifg=#E06C75
+" " dark red
+" hi tsxTagName guifg=#E06C75
+" hi tsxComponentName guifg=#E06C75
+" hi tsxCloseComponentName guifg=#E06C75
 
-" orange
-hi tsxCloseString guifg=#F99575
-hi tsxCloseTag guifg=#F99575
-hi tsxCloseTagName guifg=#F99575
-hi tsxAttributeBraces guifg=#F99575
-hi tsxEqual guifg=#F99575
+" " orange
+" hi tsxCloseString guifg=#F99575
+" hi tsxCloseTag guifg=#F99575
+" hi tsxCloseTagName guifg=#F99575
+" hi tsxAttributeBraces guifg=#F99575
+" hi tsxEqual guifg=#F99575
 
-" yellow
-hi tsxAttrib guifg=#F8BD7F cterm=italic
+" " yellow
+" hi tsxAttrib guifg=#F8BD7F cterm=italic
 
-" light-grey
-hi tsxTypeBraces guifg=#999999
-" dark-grey
-hi tsxTypes guifg=#666666
+" " light-grey
+" hi tsxTypeBraces guifg=#999999
+" " dark-grey
+" hi tsxTypes guifg=#666666
 
 "------------------------------ Typescript 
 
 
 " General stuff ------------------------------
-
-let mapleader = " "
-
-
-syntax enable
-set number
-set shiftwidth=4
-set tabstop=4
-set ignorecase
-set smartindent
-set cursorline
-set ruler
-set updatetime=300
-set signcolumn=yes
-set noshowmode
-set noswapfile
-set showtabline=2
-set nocompatible
-
 " Autosave on focus loss
 :au FocusLost * :wa
-colorscheme tokyonight-night
+colorscheme onedark
+"colorscheme tokyonight-night
 " colorscheme tokyonight-storm
 " colorscheme tokyonight-day
 " Yank and paste with the system clipboard
@@ -115,9 +121,9 @@ vmap > >gv
 " ----------------------------- General stuff
 
 "  Binds ----------------------------------
-nnoremap <C-Tab> gt
-nnoremap <S-C-Tab> gT
-nnoremap <F4> :q<CR>
+nnoremap <C-Tab> :bnext<cr>
+nnoremap <S-C-Tab> :bNext<cr>
+nnoremap <F4> :bd<CR>
 nnoremap <leader>t <cmd>tabnew<cr>
 nnoremap <leader>p :Glow<CR>
 
@@ -170,7 +176,7 @@ nmap <leader>cl  <Plug>(coc-codelens-action)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
 
-" Coc jump command tab if not open
+" Coc jump command tab if not open -> not needed with buffers
 function! TabeIfNotOpen(...)
     let fname = a:1
     let call = ''
@@ -206,10 +212,20 @@ nnoremap <leader>k :call
 
 " Lightline config with coc stuff
 let g:lightline = {
-\ 'colorscheme': 'wombat',
+\ 'colorscheme': 'one',
 \ 'active': {
 \   'left': [ [ 'mode', 'paste' ],
 \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+\ },
+\ 'tabline': {
+\   'left': [ ['buffers'] ],
+\   'right': [ ['close'] ]
+\ },
+\ 'component_expand': {
+\   'buffers': 'lightline#bufferline#buffers'
+\ },
+\ 'component_type': {
+\   'buffers': 'tabsel'
 \ },
 \ 'component_function': {
 \   'cocstatus': 'coc#status'
@@ -218,14 +234,7 @@ let g:lightline = {
 " Use autocmd to force lightline update.
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
-" set termguicolors
-" lua << EOF
-" require("bufferline").setup{}
-" EOF
-
-" :::::::::::::::Coc
 "  ---------------------------------- Binds
-
 " NERDTree stuff ----------------------------
 nnoremap <f1> :NERDTreeToggle<CR>
 nnoremap <F2> :NERDTreeFind<CR>
