@@ -32,9 +32,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'peitalin/vim-jsx-typescript'
 Plug 'sheerun/vim-polyglot'  		" Still testing this
 Plug 'Yggdroot/indentLine'
+"Plug 'nvim-lualine/lualine.nvim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'Raimondi/delimitMate'			" automatic closing of quotes, parenthesis, brackets, etc.
@@ -145,7 +145,7 @@ nnoremap <leader>ds :CocList -I symbols<cr>
 nmap <silent> ca <cmd>Telescope coc line_code_actions<cr>
 nmap <silent> cs <cmd>Telescope coc document_symbols<cr>
 nmap <silent> cd <cmd>Telescope coc diagnostics<cr>
-nmap <silent> cc <cmd>Telescope coc commands<cr>
+nmap <silent> cm <cmd>Telescope coc commands<cr>
 " Coc:::::::::::::::::::::::
 " GoTo code navigation.
 nmap <silent> td <cmd>Telescope coc definitions<cr>
