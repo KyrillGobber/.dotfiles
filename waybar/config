@@ -2,7 +2,7 @@
     "layer": "top", // Waybar at top layer
     "output": "DP-1",
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 24, // Waybar height (to be removed for auto height)
+    "height": 32, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     "margin-top": 3,
@@ -11,7 +11,7 @@
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces", "custom/waybar-mpris"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "pulseaudio", "custom/power"],
+    "modules-right": ["tray", "pulseaudio"],
     // Modules configuration
      "wlr/workspaces": {
          "disable-scroll": true,

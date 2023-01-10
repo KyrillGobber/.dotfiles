@@ -126,7 +126,7 @@ vmap > >gv
 nnoremap <C-Tab> :bnext<cr>
 nnoremap <S-C-Tab> :bNext<cr>
 nnoremap <F4> :bd<CR>
-nnoremap <leader>p :Glow<CR>
+nnoremap <leader>p :Prettier<CR>
 nnoremap <leader>ss :source ~/.config/nvim/init.vim<cr>
 
 " Easy CAPS
