@@ -1,10 +1,11 @@
 term=kitty
 location=top
 yoffset=170
-width=500
+width=30%
+height=30%
 lines=5
 
-prompt=
+prompt=Search
 show=drun
 insensitive=true
 allow_images=true

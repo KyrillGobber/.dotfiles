@@ -1,53 +1,48 @@
-* {
-  font-family: cantarell;
-  font-size: 20px;
+window {
+  background: unset;
 }
 
+flowboxchild {
+  outline-width: 0;
+}
 
-#window {
-  margin: 0px;
-  border: 2px solid;
-  border-color: #121212;
-  border-radius: 15px;
-  background-color: #202020;
-  color: #dedede;
+#outer-box {
+  background: #1e1e2e;
+  border-radius: 24px;
+  box-shadow: 0 2px 3px black;
+  margin: 5px 5px 10px;
+  padding: 5px 5px 10px;
 }
 
 #input {
-  margin: 3px;
-  background-color: transparent;
-  color: #dedede;
-  border-radius: 25px;
+  background-color: #161320;
+  border: none;
+  border-radius: 16px;
+  color: #f8f8f2;
+  margin: 5px;
+}
+
+#inner-box {
+  background-color: #1E1D2F;
+  border: none;
+  border-radius: 16px;
+  margin: 5px;
 }
 
 #scroll {
-  margin-bottom: 15px;
+  border: none;
+  margin: 0px;
 }
 
+#text {
+  color: #f8f8f2;
+  margin: 5px;
+} 
+
 #entry {
-  margin: 0px 15px;
+  border-radius: 16px;
 }
 
 #entry:selected {
-  background-color: #404040;
-  border-radius: 15px;
-  border: none;
-  outline: none;
+  background-color: #302D41;
 }
-
-#entry > box {
-  margin-left: 16px;
-}
-
-#entry image {
-  padding-right: 10px;
-}
-/*
-#colors {
-color: rgb(37, 38, 51);
-color: rgb(52, 64, 76);
-color: rgb(76, 90, 107);
-color: rgb(112, 122, 137);
-color: rgb(235, 77, 129);
-color: rgb(245, 98, 36);
-}*/
