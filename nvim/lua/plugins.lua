@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
     use {'Raimondi/delimitMate'}
     use {'mhinz/vim-signify'}
     use {'sindrets/diffview.nvim'}
+    use 'nvim-treesitter/nvim-treesitter'
     use {'nvim-lua/popup.nvim'}
     use {'nvim-lua/plenary.nvim'}
     use {
