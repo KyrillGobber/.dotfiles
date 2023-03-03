@@ -30,3 +30,11 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 
 vim.cmd("au FocusLost * :wa")
+
+if vim.g.neovide then
+    -- Put anything you want to happen only in Neovide here
+    vim.o.guifont = "Operator Mono:h14" 
+    vim.g.neovide_transparency = 0.9
+    vim.g.neovide_refresh_rate = 120
+end
+
