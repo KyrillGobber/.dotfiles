@@ -48,6 +48,7 @@ return require('packer').startup(function(use)
             require('session-lens').setup({path_display={'shorten'},})
         end
     }
+    use('kmonad/kmonad-vim')
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
   if packer_bootstrap then

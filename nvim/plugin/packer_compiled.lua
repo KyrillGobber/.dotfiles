@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/indentLine",
     url = "https://github.com/Yggdroot/indentLine"
   },
+  ["kmonad-vim"] = {
+    loaded = true,
+    path = "/home/ky/.local/share/nvim/site/pack/packer/start/kmonad-vim",
+    url = "https://github.com/kmonad/kmonad-vim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/lualine.nvim",

@@ -11,10 +11,16 @@
 #   - swaybg -> switch to hyprpaper?
 #   - wofi
 #   - pavocontrol
+#   - xdg portal stuff
 # - nextcloud
 # - polkit-gnome / xfce-polkit
 # - grim + slurp + swappy
 # - wl-clipboard
+# - ripgrep
+# - kmonad
+# - acpi stuff
+# - light (for display brightness)
+# - Lid close action and stuff: /etc/systemd/logind.conf
 # 
 # vim-plug:
 # sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
