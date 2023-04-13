@@ -14,3 +14,7 @@ vim.keymap.set("n", "<leader>do", ":DiffviewOpen<CR>")
 vim.keymap.set("n", "<leader>dc", ":DiffviewClose<CR>")
 --nnoremap <leader>p :Prettier<CR>
 --nnoremap <leader>ss :source ~/.config/nvim/init.vim<cr>
+
+vim.keymap.set("n", "<leader>hh", "<Plug>RestNvim")
+vim.keymap.set("n", "<leader>hp", "<Plug>RestNvimPreview")
+vim.keymap.set("n", "<leader>hl", "<Plug>RestNvimLast")
