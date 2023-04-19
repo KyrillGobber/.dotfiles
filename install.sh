@@ -18,10 +18,16 @@
 # - wl-clipboard
 # - ripgrep
 # - kmonad
-# - acpi stuff
+#   - create Udev rules
+#   - create systemd service
+# - tlp for laptops
 # - light (for display brightness)
-# - Lid close action and stuff: /etc/systemd/logind.conf
-# 
+# - Lid close action and stuff: /etc/systemd/logind.conf or acpid
+# - tmux
+#   - tmux package manager git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
+#   - tmuxifier https://github.com/jimeh/tmuxifier
+
+
 # vim-plug:
 # sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
 #       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -34,4 +40,5 @@ ln -sv ~/.dotfiles/kitty/ .config/
 ln -sv ~/.dotfiles/nvim/ .config/
 ln -sv ~/.dotfiles/waybar/ .config/
 ln -sv ~/.dotfiles/wofi/ .config/
+ln -sv ~/.dotfiles/tmux/ .config/
 
