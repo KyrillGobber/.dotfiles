@@ -4,22 +4,23 @@
           "KMonad"
           "sleep 0.2s; xset r rate 230 70; sleep 0.2s; setxkbmap -option compose:menu")
 )
-#| -------------- Keeb Pattern ------------------------------ https://github.com/kmonad/kmonad-contrib/blob/master/keymaps/MaxGyver83/neo-de.kbd
+#| -------------- Keeb Pattern ------------------------------ 
 
 (deflayer name
-  _   _    _    _    _    _    _    _    _    _    _    _    _    _
-  _   _    _    _    _    _    _    _    _    _    _    _    _    _
-  _   _    _    _    _    _    _    _    _    _    _    _    _    _
-  _   _    _    _    _    _    _    _    _    _    _    _    _
-  _   _    _    _    _    _    _    _    _    _    _    _    _
-  _   _    _              _                   _    _    _    _ _    _
+  esc   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ins prnt del
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _              _                   _    _    _    _    _    _
 )
 
 ------------------------------------------------------------- |#
 
 (defalias
-  yah (layer-toggle A)
-  yas (tap-next esc lctl)
+  nav (layer-toggle A)
+  ces (tap-next esc lctl)
 )
 
 (defsrc
@@ -35,16 +36,16 @@
   esc   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ins prnt del
   grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab   q    w    e    r    t    y    u    i    o    p    [    ]    ret
-  @yas  a    s    d    f    g    h    j    k    l    o    ;    '
+  @ces  a    s    d    f    g    h    j    k    l    ;    '    \
   lsft 102d  z    x    c    v    b    n    m    ,    .    /    rsft
-  @yah lmet lalt            spc                ralt rctl left up down right
+  @nav lmet lalt            spc                ralt rctl left up down right
 )
 
 (deflayer A
   esc   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ins prnt del
   grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab   q    w    e    r    t    pgup    home up   end  p    u    ¨    ret
-  lctl  a    s    d    f    g    pgdn left down rght o    a    $
+  tab   q    w    e    r    t    pgup home up   end  p    u    ¨    ret
+  lctl  a    s    d    f    g    pgdn left down rght ;    '    \
   lsft 102d  z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt            spc                 ralt rctl left up down right
 )
