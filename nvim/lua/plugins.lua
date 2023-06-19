@@ -42,13 +42,26 @@ return require('packer').startup(function(use)
     }
     use {'fannheyward/telescope-coc.nvim'}
     use {
-        'rmagatti/session-lens',
-        requires = {'rmagatti/auto-session'},
+        'rmagatti/auto-session',
         config = function()
-            require('session-lens').setup({path_display={'shorten'},})
+            require("auto-session").setup {
+                log_level = vim.log.levels.ERROR,
+                auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+                auto_session_use_git_branch = false,
+
+                auto_session_enable_last_session = false,
+
+                -- ⚠️ This will only work if Telescope.nvim is installed
+                -- The following are already the default values, no need to provide them if these are already the settings you want.
+                session_lens = {
+                    -- If load_on_setup is set to false, one needs to eventually call `require("auto-session").setup_session_lens()` if they want to use session-lens.
+                    load_on_setup = true,
+                    theme_conf = { border = true },
+                    previewer = false,
+                },
+            }
         end
-    }
-    use('kmonad/kmonad-vim')
+        }
     use {
         "rest-nvim/rest.nvim",
         requires = { "nvim-lua/plenary.nvim" },
@@ -90,6 +103,13 @@ return require('packer').startup(function(use)
         end
     }
     use {'github/copilot.vim'}
+    use({
+        "ggandor/leap.nvim",
+        requires = "tpope/vim-repeat",
+        config = function()
+            require("leap").add_default_mappings()
+        end,
+    })
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
   if packer_bootstrap then

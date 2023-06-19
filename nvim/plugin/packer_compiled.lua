@@ -75,6 +75,7 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["auto-session"] = {
+    config = { "\27LJ\2\nÆ\2\0\0\5\0\15\0\0186\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\a\0006\3\3\0009\3\4\0039\3\5\0039\3\6\3=\3\b\0025\3\t\0=\3\n\0025\3\v\0005\4\f\0=\4\r\3=\3\14\2B\0\2\1K\0\1\0\17session_lens\15theme_conf\1\0\1\vborder\2\1\0\2\18load_on_setup\2\14previewer\1\31auto_session_suppress_dirs\1\5\0\0\a~/\15~/Projects\16~/Downloads\6/\14log_level\1\0\2%auto_session_enable_last_session\1 auto_session_use_git_branch\1\nERROR\vlevels\blog\bvim\nsetup\17auto-session\frequire\0" },
     loaded = true,
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/auto-session",
     url = "https://github.com/rmagatti/auto-session"
@@ -83,6 +84,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
+  },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/home/ky/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
   },
   delimitMate = {
     loaded = true,
@@ -99,10 +105,11 @@ _G.packer_plugins = {
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/indentLine",
     url = "https://github.com/Yggdroot/indentLine"
   },
-  ["kmonad-vim"] = {
+  ["leap.nvim"] = {
+    config = { "\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\25add_default_mappings\tleap\frequire\0" },
     loaded = true,
-    path = "/home/ky/.local/share/nvim/site/pack/packer/start/kmonad-vim",
-    url = "https://github.com/kmonad/kmonad-vim"
+    path = "/home/ky/.local/share/nvim/site/pack/packer/start/leap.nvim",
+    url = "https://github.com/ggandor/leap.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -144,11 +151,11 @@ _G.packer_plugins = {
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
-  ["session-lens"] = {
-    config = { "\27LJ\2\nb\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\17path_display\1\0\0\1\2\0\0\fshorten\nsetup\17session-lens\frequire\0" },
+  ["rest.nvim"] = {
+    config = { "\27LJ\2\n>\0\1\5\0\4\0\0066\1\0\0009\1\1\0019\1\2\0015\3\3\0\18\4\0\0D\1\3\0\1\5\0\0\ttidy\a-i\a-q\6-\vsystem\afn\bvimî\2\1\0\6\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0003\5\b\0=\5\t\4=\4\n\3=\3\v\0024\3\0\0=\3\f\2B\0\2\1K\0\1\0\29custom_dynamic_variables\vresult\15formatters\thtml\0\1\0\1\tjson\ajq\1\0\3\rshow_url\2\17show_headers\2\19show_http_info\2\14highlight\1\0\2\fenabled\2\ftimeout\3–\1\1\0\a\26skip_ssl_verification\1\26result_split_in_place\1\28result_split_horizontal\1\17yank_dry_run\2\renv_file\t.env\20jump_to_request\1\15encode_url\2\nsetup\14rest-nvim\frequire\0" },
     loaded = true,
-    path = "/home/ky/.local/share/nvim/site/pack/packer/start/session-lens",
-    url = "https://github.com/rmagatti/session-lens"
+    path = "/home/ky/.local/share/nvim/site/pack/packer/start/rest.nvim",
+    url = "https://github.com/rest-nvim/rest.nvim"
   },
   ["telescope-coc.nvim"] = {
     loaded = true,
@@ -170,6 +177,11 @@ _G.packer_plugins = {
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-repeat"] = {
+    loaded = true,
+    path = "/home/ky/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    url = "https://github.com/tpope/vim-repeat"
+  },
   ["vim-signify"] = {
     loaded = true,
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/vim-signify",
@@ -178,10 +190,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: session-lens
-time([[Config for session-lens]], true)
-try_loadstring("\27LJ\2\nb\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\17path_display\1\0\0\1\2\0\0\fshorten\nsetup\17session-lens\frequire\0", "config", "session-lens")
-time([[Config for session-lens]], false)
+-- Config for: auto-session
+time([[Config for auto-session]], true)
+try_loadstring("\27LJ\2\nÆ\2\0\0\5\0\15\0\0186\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\a\0006\3\3\0009\3\4\0039\3\5\0039\3\6\3=\3\b\0025\3\t\0=\3\n\0025\3\v\0005\4\f\0=\4\r\3=\3\14\2B\0\2\1K\0\1\0\17session_lens\15theme_conf\1\0\1\vborder\2\1\0\2\18load_on_setup\2\14previewer\1\31auto_session_suppress_dirs\1\5\0\0\a~/\15~/Projects\16~/Downloads\6/\14log_level\1\0\2%auto_session_enable_last_session\1 auto_session_use_git_branch\1\nERROR\vlevels\blog\bvim\nsetup\17auto-session\frequire\0", "config", "auto-session")
+time([[Config for auto-session]], false)
+-- Config for: leap.nvim
+time([[Config for leap.nvim]], true)
+try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\25add_default_mappings\tleap\frequire\0", "config", "leap.nvim")
+time([[Config for leap.nvim]], false)
+-- Config for: rest.nvim
+time([[Config for rest.nvim]], true)
+try_loadstring("\27LJ\2\n>\0\1\5\0\4\0\0066\1\0\0009\1\1\0019\1\2\0015\3\3\0\18\4\0\0D\1\3\0\1\5\0\0\ttidy\a-i\a-q\6-\vsystem\afn\bvimî\2\1\0\6\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0003\5\b\0=\5\t\4=\4\n\3=\3\v\0024\3\0\0=\3\f\2B\0\2\1K\0\1\0\29custom_dynamic_variables\vresult\15formatters\thtml\0\1\0\1\tjson\ajq\1\0\3\rshow_url\2\17show_headers\2\19show_http_info\2\14highlight\1\0\2\fenabled\2\ftimeout\3–\1\1\0\a\26skip_ssl_verification\1\26result_split_in_place\1\28result_split_horizontal\1\17yank_dry_run\2\renv_file\t.env\20jump_to_request\1\15encode_url\2\nsetup\14rest-nvim\frequire\0", "config", "rest.nvim")
+time([[Config for rest.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
