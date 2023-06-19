@@ -6,7 +6,9 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fc', ':Telescope git_status <cr>', {})
 --vim.keymap.set('n', '<leader>fq', builtin.quickfix, {})
-vim.keymap.set('n', '<leader>fs', ':Telescope session-lens search_session <cr>', {})
+vim.keymap.set("n", "<leader>fs", require("auto-session.session-lens").search_session, {
+  noremap = true,
+})
 vim.keymap.set('n', '<leader>ca', ':Telescope coc line_code_actions <cr>', {})
 vim.keymap.set('n', '<leader>cs', ':Telescope coc document_symbols <cr>', {})
 vim.keymap.set('n', '<leader>cd', ':Telescope coc diagnostics <cr>', {})
