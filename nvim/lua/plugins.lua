@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
   -- My plugins here
     use 'navarasu/onedark.nvim'
+    use { 'kartikp10/noctis.nvim', requires = { 'rktjmp/lush.nvim' } }
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {

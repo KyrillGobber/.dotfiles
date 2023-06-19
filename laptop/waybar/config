@@ -26,7 +26,7 @@
 		"interval": 2,
         "device": "intel_backlight",
         "format": "{icon}",
-        "format-icons": ["", "", "", "", "", "", ""],
+        "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
 		// Commands to execute on events
         "on-scroll-up": "light -A 5%",
         "on-scroll-down": "light -U 5%",
@@ -50,7 +50,7 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% 󰂄",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -63,10 +63,10 @@
     "network": {
 		"interval": 5,
         //"interface": "wlan*", // (Optional) To force the use of this interface, set it for netspeed to work
-        "format-wifi": "直 {essid}",
-        "format-ethernet": "",
-        "format-linked": "",
-        "format-disconnected": "睊",
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀",
+        "format-linked": "󰈀",
+        "format-disconnected": "󰟦",
         "format-disabled": "睊",
         "tooltip-format": " {ifname} via {gwaddr}",
         "on-click": "[[ ! `pidof nm-connection-editor` ]] && nm-connection-editor || pkill nm-connection-e",
@@ -76,13 +76,13 @@
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-muted": "󰝟 {format_source}",
+        "format-source": " {volume}% ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
             "phone": "",
             "portable": "",
             "car": "",

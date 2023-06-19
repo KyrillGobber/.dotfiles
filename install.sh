@@ -7,6 +7,7 @@
 #   - waybar
 #     - waybar-mpris-git
 #     - blueman-applet
+#     - otf-firamono-nerd
 #   - swaylock
 #   - swaybg -> switch to hyprpaper?
 #   - wofi
