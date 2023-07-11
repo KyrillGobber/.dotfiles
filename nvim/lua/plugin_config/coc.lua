@@ -77,6 +77,8 @@ keyset("n", "<leader>rn", "<Plug>(coc-rename)", {silent = true})
 -- Formatting selected code
 keyset("x", "<leader>f", "<Plug>(coc-format-selected)", {silent = true})
 keyset("n", "<leader>f", "<Plug>(coc-format-selected)", {silent = true})
+-- Prettier
+vim.keymap.set("n", "<leader>p", ":CocCommand prettier.forceFormatDocument<cr>")
 
 
 -- Setup formatexpr specified filetype(s)
