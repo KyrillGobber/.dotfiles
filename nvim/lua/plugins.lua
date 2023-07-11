@@ -13,9 +13,32 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    -- My plugins here
+    --Themes
     use 'navarasu/onedark.nvim'
+    -- Core
     use {"kelly-lin/ranger.nvim"}
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use 'nvim-treesitter/nvim-treesitter'
+    use({
+        "ggandor/leap.nvim",
+        requires = "tpope/vim-repeat"
+    })
+    -- LSP
+    use {
+        -- LSP
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+        -- Autocompletion
+        'hrsh7th/nvim-cmp',
+        'hrsh7th/cmp-buffer',
+        'hrsh7th/cmp-path',
+        'hrsh7th/cmp-nvim-lsp',
+    }
+    -- stuff to make life easier
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -26,18 +49,9 @@ return require('packer').startup(function(use)
     use {'mbbill/undotree'}
     --use {'Raimondi/delimitMate'} -- Auto close brackets and stuff
     use {'mhinz/vim-signify'}
-    use 'nvim-treesitter/nvim-treesitter'
     use {'nvim-lua/popup.nvim'}
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        requires = { {'nvim-lua/plenary.nvim'} }
-    }
     use {'rmagatti/auto-session'}
     use {'github/copilot.vim'}
-    use({
-        "ggandor/leap.nvim",
-        requires = "tpope/vim-repeat"
-    })
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
