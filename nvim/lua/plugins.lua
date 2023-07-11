@@ -15,25 +15,29 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
   -- My plugins here
     use 'navarasu/onedark.nvim'
-    use { 'kartikp10/noctis.nvim', requires = { 'rktjmp/lush.nvim' } }
     use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
-        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+        "kelly-lin/ranger.nvim",
+        config = function()
+            require("ranger-nvim").setup({ replace_netrw = true })
+            vim.api.nvim_set_keymap("n", "<leader>ef", "", {
+            noremap = true,
+            callback = function()
+                require("ranger-nvim").open(true)
+            end,
+            })
+        end,
     }
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     use {'neoclide/coc.nvim', branch = 'release'}
+    use {'coc-extensions/coc-svelte'}
     use {'Yggdroot/indentLine'}
     use {'tpope/vim-commentary'}
     use {'tpope/vim-fugitive'}
-    use {'Raimondi/delimitMate'}
+    --use {'Raimondi/delimitMate'} -- Auto close brackets and stuff
     use {'mhinz/vim-signify'}
-    use {'sindrets/diffview.nvim'}
     use 'nvim-treesitter/nvim-treesitter'
     use {'nvim-lua/popup.nvim'}
     use {'nvim-lua/plenary.nvim'}
@@ -63,46 +67,6 @@ return require('packer').startup(function(use)
             }
         end
         }
-    use {
-        "rest-nvim/rest.nvim",
-        requires = { "nvim-lua/plenary.nvim" },
-        config = function()
-            require("rest-nvim").setup({
-            -- Open request results in a horizontal split
-            result_split_horizontal = false,
-            -- Keep the http file buffer above|left when split horizontal|vertical
-            result_split_in_place = false,
-            -- Skip SSL verification, useful for unknown certificates
-            skip_ssl_verification = false,
-            -- Encode URL before making request
-            encode_url = true,
-            -- Highlight request on run
-            highlight = {
-                enabled = true,
-                timeout = 150,
-            },
-            result = {
-                -- toggle showing URL, HTTP info, headers at top the of result window
-                show_url = true,
-                show_http_info = true,
-                show_headers = true,
-                -- executables or functions for formatting response body [optional]
-                -- set them to false if you want to disable them
-                formatters = {
-                json = "jq",
-                html = function(body)
-                    return vim.fn.system({"tidy", "-i", "-q", "-"}, body)
-                end
-                },
-            },
-            -- Jump to request line on run
-            jump_to_request = false,
-            env_file = '.env',
-            custom_dynamic_variables = {},
-            yank_dry_run = true,
-            })
-        end
-    }
     use {'github/copilot.vim'}
     use({
         "ggandor/leap.nvim",

@@ -18,3 +18,5 @@ vim.keymap.set("n", "<leader>dc", ":DiffviewClose<CR>")
 vim.keymap.set("n", "<leader>hh", "<Plug>RestNvim")
 vim.keymap.set("n", "<leader>hp", "<Plug>RestNvimPreview")
 vim.keymap.set("n", "<leader>hl", "<Plug>RestNvimLast")
+vim.keymap.set("n", "<leader>rp", ":call CocAction('format')<cr>")
+
