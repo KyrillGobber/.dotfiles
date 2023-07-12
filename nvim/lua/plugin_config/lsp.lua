@@ -1,14 +1,19 @@
+vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+
 vim.api.nvim_create_autocmd('LspAttach', {
-  desc = 'LSP actions',
-  callback = function(event)
-    -- Create your keybindings here...
-    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
-    vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
-    vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, {})
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-  end
+    desc = 'LSP actions',
+    callback = function(event)
+        -- Create your keybindings here...
+        vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
+        vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
+        vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
+        vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, {})
+        vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+        vim.keymap.set('n', '<space>p', function()
+            vim.lsp.buf.format { async = true }
+        end)
+    end
 })
 
 require("mason").setup()
@@ -25,11 +30,11 @@ local lspconfig = require('lspconfig')
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require('mason-lspconfig').setup_handlers({
-  function(server_name)
-    lspconfig[server_name].setup({
-      capabilities = lsp_capabilities,
-    })
-  end,
+    function(server_name)
+        lspconfig[server_name].setup({
+            capabilities = lsp_capabilities,
+        })
+    end,
 })
 
 require('cmp').setup({
