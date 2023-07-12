@@ -1,12 +1,12 @@
 local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+    local fn = vim.fn
+    local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+    if fn.empty(fn.glob(install_path)) > 0 then
+        fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
+        vim.cmd [[packadd packer.nvim]]
+        return true
+    end
+    return false
 end
 
 local packer_bootstrap = ensure_packer()
@@ -16,10 +16,10 @@ return require('packer').startup(function(use)
     --Themes
     use 'navarasu/onedark.nvim'
     -- Core
-    use {"kelly-lin/ranger.nvim"}
+    use { "kelly-lin/ranger.nvim" }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use 'nvim-treesitter/nvim-treesitter'
     use({
@@ -38,20 +38,24 @@ return require('packer').startup(function(use)
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-nvim-lsp',
     }
+    use {
+        'prettier/vim-prettier',
+        run = 'npm install',
+    }
     -- stuff to make life easier
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    use {'Yggdroot/indentLine'}
-    use {'tpope/vim-commentary'}
-    use {'tpope/vim-fugitive'}
-    use {'mbbill/undotree'}
+    use { 'Yggdroot/indentLine' }
+    use { 'tpope/vim-commentary' }
+    use { 'tpope/vim-fugitive' }
+    use { 'mbbill/undotree' }
     --use {'Raimondi/delimitMate'} -- Auto close brackets and stuff
-    use {'mhinz/vim-signify'}
-    use {'nvim-lua/popup.nvim'}
-    use {'rmagatti/auto-session'}
-    use {'github/copilot.vim'}
+    use { 'mhinz/vim-signify' }
+    use { 'nvim-lua/popup.nvim' }
+    use { 'rmagatti/auto-session' }
+    use { 'github/copilot.vim' }
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then

@@ -31,6 +31,7 @@ vim.keymap.set('n', '<F4>', ':bd<cr>')
 --vim.keymap.set('n', '<F1>', ':NvimTreeToggle<cr>')
 --vim.keymap.set('n', '<F2>', ':NvimTreeFindFile<cr>')
 
+vim.keymap.set('n', '<leader>P', ':Prettier<cr>')
 --nnoremap <leader>p :Prettier<CR>
 
 --vim.keymap.set("n", "<leader>rp", ":call CocAction('format')<cr>")
