@@ -28,6 +28,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set('n', '<C-Tab>', ':bnext<cr>')
 vim.keymap.set('n', '<S-C-Tab>', ':bNext<cr>')
 vim.keymap.set('n', '<F4>', ':bd<cr>')
+vim.keymap.set('n', '<leader>cl', ':set conceallevel=0<cr>')
 --vim.keymap.set('n', '<F1>', ':NvimTreeToggle<cr>')
 --vim.keymap.set('n', '<F2>', ':NvimTreeFindFile<cr>')
 
