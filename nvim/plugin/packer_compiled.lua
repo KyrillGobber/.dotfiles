@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["cmp-vsnip"] = {
+    loaded = true,
+    path = "/home/ky/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
+    url = "https://github.com/hrsh7th/cmp-vsnip"
+  },
   ["copilot.vim"] = {
     loaded = true,
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/copilot.vim",
@@ -170,6 +175,11 @@ _G.packer_plugins = {
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/ranger.nvim",
     url = "https://github.com/kelly-lin/ranger.nvim"
   },
+  ["refactoring.nvim"] = {
+    loaded = true,
+    path = "/home/ky/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
+    url = "https://github.com/ThePrimeagen/refactoring.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -204,6 +214,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/vim-signify",
     url = "https://github.com/mhinz/vim-signify"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/home/ky/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    url = "https://github.com/hrsh7th/vim-vsnip"
   }
 }
 

@@ -37,6 +37,8 @@ return require('packer').startup(function(use)
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-nvim-lsp',
+        'hrsh7th/cmp-vsnip',
+        'hrsh7th/vim-vsnip',
     }
     use {
         'prettier/vim-prettier',
@@ -56,6 +58,7 @@ return require('packer').startup(function(use)
     use { 'nvim-lua/popup.nvim' }
     use { 'rmagatti/auto-session' }
     use { 'github/copilot.vim' }
+    use { "ThePrimeagen/refactoring.nvim" }
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
