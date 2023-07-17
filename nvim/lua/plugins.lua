@@ -53,12 +53,12 @@ return require('packer').startup(function(use)
     use { 'tpope/vim-commentary' }
     use { 'tpope/vim-fugitive' }
     use { 'mbbill/undotree' }
-    --use {'Raimondi/delimitMate'} -- Auto close brackets and stuff
     use { 'mhinz/vim-signify' }
     use { 'nvim-lua/popup.nvim' }
     use { 'rmagatti/auto-session' }
     use { 'github/copilot.vim' }
     use { "ThePrimeagen/refactoring.nvim" }
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
