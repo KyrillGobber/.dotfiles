@@ -8,11 +8,11 @@
     "margin-right": 3,
     "margin-left": 3,
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces", "custom/waybar-mpris"],
+    "modules-left": ["hyprland/workspaces", "custom/waybar-mpris"],
     "modules-center": ["clock"],
     "modules-right": ["tray", "backlight", "pulseaudio","network", "battery", "custom/power"],
     // Modules configuration
-     "wlr/workspaces": {
+     "hyprland/workspaces": {
          "disable-scroll": true,
          "all-outputs": true,
          "format": "{name}",
