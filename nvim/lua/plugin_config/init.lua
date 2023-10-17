@@ -1,5 +1,4 @@
 require("plugin_config.theme")
---require("plugin_config.nvim-tree")
 require("plugin_config.lualine")
 require("plugin_config.lsp")
 --require("plugin_config.coc")
