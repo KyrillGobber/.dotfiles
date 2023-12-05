@@ -10,4 +10,5 @@ require("plugin_config.fugitive")
 require("plugin_config.ranger-nvim")
 require("plugin_config.leap")
 require("plugin_config.refactoring")
+require("plugin_config.copilot")
 
