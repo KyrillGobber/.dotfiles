@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
     -- Core
     use { "kelly-lin/ranger.nvim" }
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use 'nvim-treesitter/nvim-treesitter'
@@ -49,10 +49,8 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    use { 'Yggdroot/indentLine' }
     use { 'tpope/vim-commentary' }
     use { 'tpope/vim-fugitive' }
-    use { 'mbbill/undotree' }
     use { 'mhinz/vim-signify' }
     use { 'nvim-lua/popup.nvim' }
     use { 'rmagatti/auto-session' }
