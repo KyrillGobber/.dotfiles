@@ -51,7 +51,6 @@ return require('packer').startup(function(use)
     }
     use { 'tpope/vim-commentary' }
     use { 'tpope/vim-fugitive' }
-    --use { 'mbbill/undotree' }
     use { 'mhinz/vim-signify' }
     use { 'nvim-lua/popup.nvim' }
     use { 'rmagatti/auto-session' }
