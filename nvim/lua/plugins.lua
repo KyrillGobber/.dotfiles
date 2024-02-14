@@ -55,7 +55,8 @@ return require('packer').startup(function(use)
     use { 'mhinz/vim-signify' }
     use { 'nvim-lua/popup.nvim' }
     use { 'rmagatti/auto-session' }
-    use { 'github/copilot.vim' }
+    --use { 'github/copilot.vim' }
+    use {'Exafunction/codeium.vim'}
     use { "ThePrimeagen/refactoring.nvim" }
     use { 'nvim-telescope/telescope-ui-select.nvim' }
 
