@@ -35,6 +35,10 @@ output DP-1 {
     mode 2560x1440@240Hz
 }
 
+bindgesture swipe:right workspace prev bindgesture swipe:left workspace next 
+
+gaps inner 2
+gaps outer 2
 ### Idle configuration
 #
 # Example configuration:
@@ -72,6 +76,7 @@ input type:keyboard {
 #
     # Start a terminal
     bindsym $mod+t exec $term
+    bindsym $mod+space exec wofi
 
     bindsym $mod+g exec telegram-desktop
 
@@ -167,7 +172,7 @@ input type:keyboard {
     bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    #bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
@@ -216,18 +221,22 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
+# bar {
+#     position top
+
+#     # When the status_command prints a new line to stdout, swaybar updates.
+#     # The default just shows the current date and time.
+#     status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+
+#     colors {
+#         statusline #ffffff
+#         background #323232
+#         inactive_workspace #32323200 #32323200 #5c5c5c
+#     }
+# }
+
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+	swaybar_command waybar
 }
 
 include /etc/sway/config.d/*
