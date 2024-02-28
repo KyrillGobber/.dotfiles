@@ -2,17 +2,17 @@
 
 # TODO Add pacman install command for everything needed
 # - git
-# - kitty
+# - kitty / foot with fish & starship
 # - hyprland
 #   - waybar
 #     - waybar-mpris-git
 #     - blueman-applet
 #     - otf-firamono-nerd
-#   - swaylock
-#   - swaybg -> switch to hyprpaper?
+#   - swaylock / hyprlock
+#   - hyprpaper
 #   - wofi
 #   - pavocontrol
-#   - xdg portal stuff
+#   - xdg-hyprland-portal
 # - nextcloud
 # - polkit-gnome / xfce-polkit
 # - grim + slurp + swappy
