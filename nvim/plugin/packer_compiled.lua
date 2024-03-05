@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/codeium.vim",
     url = "https://github.com/Exafunction/codeium.vim"
   },
+  ["conform.nvim"] = {
+    loaded = true,
+    path = "/home/ky/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
+  },
   ["leap.nvim"] = {
     loaded = true,
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/leap.nvim",
@@ -194,11 +199,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-prettier"] = {
-    loaded = true,
-    path = "/home/ky/.local/share/nvim/site/pack/packer/start/vim-prettier",
-    url = "https://github.com/prettier/vim-prettier"
   },
   ["vim-repeat"] = {
     loaded = true,

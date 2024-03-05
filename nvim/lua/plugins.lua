@@ -40,10 +40,7 @@ return require('packer').startup(function(use)
         'hrsh7th/cmp-vsnip',
         'hrsh7th/vim-vsnip',
     }
-    use {
-        'prettier/vim-prettier',
-        run = 'npm install',
-    }
+    use {'stevearc/conform.nvim'}
     -- stuff to make life easier
     use {
         'nvim-lualine/lualine.nvim',
@@ -55,9 +52,11 @@ return require('packer').startup(function(use)
     use { 'nvim-lua/popup.nvim' }
     use { 'rmagatti/auto-session' }
     --use { 'github/copilot.vim' }
-    use {'Exafunction/codeium.vim'}
+    use { 'Exafunction/codeium.vim' }
     use { "ThePrimeagen/refactoring.nvim" }
     use { 'nvim-telescope/telescope-ui-select.nvim' }
+    --use { 'folke/zen-mode.nvim' }
+    --use { 'nvimdev/lspsaga.nvim' }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
