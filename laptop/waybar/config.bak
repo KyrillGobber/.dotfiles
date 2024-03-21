@@ -1,0 +1,108 @@
+{
+    "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 26, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 8, // Gaps between modules (4px)
+    "margin-top": 3,
+    "margin-right": 3,
+    "margin-left": 3,
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces", "custom/waybar-mpris"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "backlight", "pulseaudio","network", "battery", "custom/power"],
+    // Modules configuration
+     "hyprland/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "format": "{name}",
+         "on-click": "activate",
+     },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "backlight": {
+		"interval": 2,
+        "device": "intel_backlight",
+        "format": "{icon}",
+        "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
+		// Commands to execute on events
+        "on-scroll-up": "light -A 5%",
+        "on-scroll-down": "light -U 5%",
+        "smooth-scrolling-threshold": 1,
+    },
+    "clock": {
+        "timezone": "Europe/Zurich",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%a, %d %b, %H:%M}",
+        "today-format": "<span color='#ff6699'><b><u>{}</u></b></span>",
+        "calendar-weeks-pos": "right",
+        "format-calendar": "<span color='#ecc6d9'><b>{}</b></span>",
+        "format-calendar-weeks": "<span color='#99ffdd'><b>W{:%V}</b></span>",
+        "format-calendar-weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "on-click": "swaync-client -t",
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰂄",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+		"interval": 5,
+        //"interface": "wlan*", // (Optional) To force the use of this interface, set it for netspeed to work
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀",
+        "format-linked": "󰈀",
+        "format-disconnected": "󰟦",
+        "format-disabled": "睊",
+        "tooltip-format": " {ifname} via {gwaddr}",
+        "on-click": "[[ ! `pidof nm-connection-editor` ]] && nm-connection-editor || pkill nm-connection-e",
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "󰝟 {format_source}",
+        "format-source": " {volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/waybar-mpris": {
+		"return-type": "json",
+		"exec": "waybar-mpris --position --autofocus",
+		"on-click": "waybar-mpris --send toggle",
+		// This option will switch between players on right click.
+			"on-click-right": "waybar-mpris --send player-next",
+		// The options below will switch the selected player on scroll
+			// "on-scroll-up": "waybar-mpris --send player-next",
+			// "on-scroll-down": "waybar-mpris --send player-prev",
+		// The options below will go to next/previous track on scroll
+			"on-scroll-up": "waybar-mpris --send prev",
+			"on-scroll-down": "waybar-mpris --send next",
+		"escape": true,
+}
+}
+
