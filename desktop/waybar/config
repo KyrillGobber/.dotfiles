@@ -11,7 +11,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "custom/waybar-mpris"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "pulseaudio"],
+    "modules-right": ["tray", "bluetooth", "wireplumber", "custom/notification", "group/group-power"],
     // Modules configuration
      "hyprland/workspaces": {
          "disable-scroll": true,
@@ -32,7 +32,12 @@
         "format-calendar": "<span color='#ecc6d9'><b>{}</b></span>",
         "format-calendar-weeks": "<span color='#99ffdd'><b>W{:%V}</b></span>",
         "format-calendar-weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-         "on-click": "swaync-client -t"
+    },
+    "wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "on-click": "pavucontrol",
+        "format-icons": ["", "", ""]
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -53,24 +58,91 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/power": {
-         "format": "襤",
-         "tooltip": false,
-         "on-click": "$HOME/.config/hypr/scripts/wlogout",
+    "bluetooth": {
+        // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+        "format": " {status}",
+        "format-disabled": "", // an empty format will hide the module
+        "format-connected": " {num_connections}",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+    "user": {
+        "format": " {user}",
+        "interval": 60,
+        "height": 20,
+        "width": 20,
+        "icon": true,
+        "avatar": "/home/ky/Cloud/Photos/Avatars/galaxtea.jpg"
     },
     "custom/waybar-mpris": {
-    "return-type": "json",
-    "exec": "waybar-mpris --position --autofocus",
-    "on-click": "waybar-mpris --send toggle",
-    // This option will switch between players on right click.
-        "on-click-right": "waybar-mpris --send player-next",
-    // The options below will switch the selected player on scroll
-        // "on-scroll-up": "waybar-mpris --send player-next",
-        // "on-scroll-down": "waybar-mpris --send player-prev",
-    // The options below will go to next/previous track on scroll
-         "on-scroll-down": "waybar-mpris --send next",
-         "on-scroll-up": "waybar-mpris --send prev",
-    "escape": true,
+        "return-type": "json",
+        "exec": "waybar-mpris --position --autofocus",
+        "on-click": "waybar-mpris --send toggle",
+        // This option will switch between players on right click.
+            "on-click-right": "waybar-mpris --send player-next",
+        // The options below will switch the selected player on scroll
+            // "on-scroll-up": "waybar-mpris --send player-next",
+            // "on-scroll-down": "waybar-mpris --send player-prev",
+        // The options below will go to next/previous track on scroll
+            "on-scroll-down": "waybar-mpris --send next",
+            "on-scroll-up": "waybar-mpris --send prev",
+        "escape": true,
     },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{} {icon}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-none": "",
+            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    "group/group-power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "drawer",
+            "transition-left-to-right": false,
+        },
+        "modules": [
+            "user",
+            "custom/quit",
+            "custom/lock",
+            "custom/reboot",
+            "custom/power",
+        ],
+    },
+    "custom/quit": {
+        "format": "󰗼",
+        "tooltip": false,
+        "on-click": "hyprctl dispatch exit"
+    },
+    "custom/lock": {
+        "format": "󰍁",
+        "tooltip": false,
+        "on-click": "hyprlock"
+    },
+    "custom/reboot": {
+        "format": "󰜉",
+        "tooltip": false,
+        "on-click": "reboot"
+    },
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "shutdown now"
+    }
 }
 

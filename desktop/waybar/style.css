@@ -12,6 +12,7 @@
 #network,
 #pulseaudio,
 #custom-media,
+#custom-notification,
 #tray,
 #mode,
 #idle_inhibitor,
@@ -19,6 +20,16 @@
 #custom-cycle_wall,
 #custom-ss,
 #custom-dynamic_pill,
+#bluetooth,
+#wireplumber,
+#user,
+#custom-waybar-mpris,
+#drawer,
+#custom-quit,
+#custom-lock,
+#custom-reboot,
+#custom-power,
+#drawer,
 #mpd {
     padding: 0 10px;
     border-radius: 15px;
