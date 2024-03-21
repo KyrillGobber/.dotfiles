@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/conform.nvim",
     url = "https://github.com/stevearc/conform.nvim"
   },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/home/ky/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
+  },
   ["leap.nvim"] = {
     loaded = true,
     path = "/home/ky/.local/share/nvim/site/pack/packer/start/leap.nvim",

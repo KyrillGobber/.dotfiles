@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     --Themes
     use 'navarasu/onedark.nvim'
+    use "rebelot/kanagawa.nvim"
     -- Core
     use { "kelly-lin/ranger.nvim" }
     use {
@@ -40,7 +41,7 @@ return require('packer').startup(function(use)
         'hrsh7th/cmp-vsnip',
         'hrsh7th/vim-vsnip',
     }
-    use {'stevearc/conform.nvim'}
+    use { 'stevearc/conform.nvim' }
     -- stuff to make life easier
     use {
         'nvim-lualine/lualine.nvim',
