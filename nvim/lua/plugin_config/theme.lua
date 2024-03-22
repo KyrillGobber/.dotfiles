@@ -28,8 +28,11 @@ require('onedark').setup {
     },
 
     -- Custom Highlights --
-    colors = {},     -- Override default colors
-    highlights = {}, -- Override highlight groups
+    colors = {
+    }, -- Override default colors
+    highlights = {
+        ['@tag.tsx'] = { fg = "$yellow" },
+    },
 
     -- Plugins Config --
     diagnostics = {
