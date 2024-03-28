@@ -27,11 +27,12 @@ require('onedark').setup {
         transparent = true, -- lualine center bar transparency
     },
 
-    -- Custom Highlights --
+    -- Override default colors
     colors = {
-    }, -- Override default colors
+    },
+    -- Custom Highlights --
     highlights = {
-        ['@tag.tsx'] = { fg = "$yellow" },
+        ['@tag.tsx'] = { fg = "#ffe662" },
     },
 
     -- Plugins Config --

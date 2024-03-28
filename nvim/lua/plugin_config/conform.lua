@@ -21,6 +21,5 @@ vim.keymap.set({ "n", "v" }, "<leader>P", function()
 	conform.format({
 		lsp_fallback = true,
 		async = false,
-		timeout_ms = 300,
 	})
 end, { desc = "Format file or range (in visual mode)" })
