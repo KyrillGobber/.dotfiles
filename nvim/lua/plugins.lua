@@ -17,16 +17,11 @@ return require('packer').startup(function(use)
     use 'navarasu/onedark.nvim'
     use "rebelot/kanagawa.nvim"
     -- Core
-    use { "kelly-lin/ranger.nvim" }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use 'nvim-treesitter/nvim-treesitter'
-    use({
-        "ggandor/leap.nvim",
-        requires = "tpope/vim-repeat"
-    })
     -- LSP
     use {
         -- LSP
@@ -43,6 +38,11 @@ return require('packer').startup(function(use)
     }
     use { 'stevearc/conform.nvim' }
     -- stuff to make life easier
+    use { "kelly-lin/ranger.nvim" }
+    use({
+        "ggandor/leap.nvim",
+        requires = "tpope/vim-repeat"
+    })
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -52,12 +52,9 @@ return require('packer').startup(function(use)
     use { 'mhinz/vim-signify' }
     use { 'nvim-lua/popup.nvim' }
     use { 'rmagatti/auto-session' }
-    --use { 'github/copilot.vim' }
     use { 'Exafunction/codeium.vim' }
     use { "ThePrimeagen/refactoring.nvim" }
     use { 'nvim-telescope/telescope-ui-select.nvim' }
-    --use { 'folke/zen-mode.nvim' }
-    --use { 'nvimdev/lspsaga.nvim' }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
