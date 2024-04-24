@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# All we should do is "git clone git@github.com:KyrillGobber/.dotfiles.git && cd dotfiles && ./install"
+
+sudo pacman -S --noconfirm ansible
+ansible-playbook install.yml
+
 # TODO Add pacman install command for everything needed
 # - git
 # - kitty / foot with fish & starship
@@ -36,10 +41,10 @@
 # TODO Add git clone and checkout
 
 # Create all symlinks
-ln -sv ~/.dotfiles/hypr/ .config/
-ln -sv ~/.dotfiles/kitty/ .config/
-ln -sv ~/.dotfiles/nvim/ .config/
-ln -sv ~/.dotfiles/waybar/ .config/
-ln -sv ~/.dotfiles/wofi/ .config/
-ln -sv ~/.dotfiles/tmux/ .config/
+# ln -sv ~/.dotfiles/hypr/ .config/
+# ln -sv ~/.dotfiles/kitty/ .config/
+# ln -sv ~/.dotfiles/nvim/ .config/
+# ln -sv ~/.dotfiles/waybar/ .config/
+# ln -sv ~/.dotfiles/wofi/ .config/
+# ln -sv ~/.dotfiles/tmux/ .config/
 
