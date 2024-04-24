@@ -1,0 +1,14 @@
+- hosts: localhost
+  become: true
+  pre_tasks:
+    - name: Update pacman cache
+      pacman:
+        update_cache: yes
+      tags:
+      - packages
+      - fish
+  tasks: 
+    # - name: stow everything
+    #   shell: stow -t ~ .config
+    - include_tasks: ansible-tasks/packages.yml
+    - include_tasks: ansible-tasks/fish.yml

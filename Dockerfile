@@ -9,7 +9,7 @@ LABEL description="Clean Arch Linux Docker Image"
 RUN pacman -Syu --noconfirm
 
 # Install base-devel group (commonly needed tools)
-RUN pacman -S --noconfirm base-devel
+RUN pacman -S --noconfirm base-devel ansible git
 
 # Clean up cache
 RUN pacman -Scc --noconfirm

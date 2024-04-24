@@ -1,0 +1,7 @@
+- name: Install needed packages
+  pacman:
+    name:
+      - curl
+      - stow
+  tags:
+  - packages
