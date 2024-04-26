@@ -124,37 +124,37 @@ require("lualine").setup({
     },
     tabline = {
         lualine_a = {
-            -- {
-            --     'buffers',
-            --     mode = 2, -- 0: Shows buffer name
-            --     -- 1: Shows buffer index
-            --     -- 2: Shows buffer name + buffer index
-            --     -- 3: Shows buffer number
-            --     -- 4: Shows buffer name + buffer number
+            {
+                'buffers',
+                mode = 2, -- 0: Shows buffer name
+                -- 1: Shows buffer index
+                -- 2: Shows buffer name + buffer index
+                -- 3: Shows buffer number
+                -- 4: Shows buffer name + buffer number
 
-            --     max_length = vim.o.columns * 2 / 3, -- Maximum width of buffers component,
-            --     -- it can also be a function that returns
-            --     -- the value of `max_length` dynamically.
-            --     filetype_names = {
-            --         TelescopePrompt = 'Telescope',
-            --         dashboard = 'Dashboard',
-            --         packer = 'Packer',
-            --         fzf = 'FZF',
-            --         alpha = 'Alpha'
-            --     },        -- Shows specific buffer name for that filetype ( { `filetype` = `buffer_name`, ... } )
-            --     buffers_color = { -- This doesn't work
-            --         active = { fg = colors.white, bg = colors.light_green},
-            --         inactive = { fg = colors.white, bg = colors.grey},
-            --     },
-            --     -- Automatically updates active buffer color to match color of other components (will be overidden if buffers_color is set)
-            --     use_mode_colors = false,
+                max_length = vim.o.columns * 2 / 3, -- Maximum width of buffers component,
+                -- it can also be a function that returns
+                -- the value of `max_length` dynamically.
+                filetype_names = {
+                    TelescopePrompt = 'Telescope',
+                    dashboard = 'Dashboard',
+                    packer = 'Packer',
+                    fzf = 'FZF',
+                    alpha = 'Alpha'
+                },        -- Shows specific buffer name for that filetype ( { `filetype` = `buffer_name`, ... } )
+                buffers_color = { -- This doesn't work
+                    active = { fg = colors.white, bg = colors.light_green},
+                    inactive = { fg = colors.white, bg = colors.grey},
+                },
+                -- Automatically updates active buffer color to match color of other components (will be overidden if buffers_color is set)
+                use_mode_colors = false,
 
-            --     symbols = {
-            --         modified = ' ●', -- Text to show when the buffer is modified
-            --         alternate_file = '#', -- Text to show to identify the alternate file
-            --         directory = '', -- Text to show when the buffer is a directory
-            --     },
-            -- }
+                symbols = {
+                    modified = ' ●', -- Text to show when the buffer is modified
+                    alternate_file = '#', -- Text to show to identify the alternate file
+                    directory = '', -- Text to show when the buffer is a directory
+                },
+            }
         },
         lualine_b = {},
         lualine_c = {},

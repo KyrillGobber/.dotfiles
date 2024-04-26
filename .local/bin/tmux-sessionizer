@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set session $(find $HOME/projects $HOME/projects/freelance -mindepth 1 -maxdepth 1 -type d | fzf)
+
+set session_name $(basename "$session" | tr . _)
+
+if ! tmux has-session -t "$session_name" 2> /dev/null;
+    tmux new-session -s "$session_name" -c "$session" -d
+end
+
+tmux split-window -h -l 100% -c "$session"
+tmux attach-session -t "$session_name"
+

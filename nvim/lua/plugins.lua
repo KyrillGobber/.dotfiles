@@ -13,16 +13,16 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    --Themes
+    --Themes -----
     use 'navarasu/onedark.nvim'
     use "rebelot/kanagawa.nvim"
-    -- Core
+    -- Core -----
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use 'nvim-treesitter/nvim-treesitter'
-    -- LSP
+    -- LSP -----
     use {
         -- LSP
         "williamboman/mason.nvim",
@@ -37,7 +37,23 @@ return require('packer').startup(function(use)
         'hrsh7th/vim-vsnip',
     }
     use { 'stevearc/conform.nvim' }
-    -- stuff to make life easier
+    -- DB Explorer -----
+    use {
+        "kndndrj/nvim-dbee",
+        requires = {
+            "MunifTanjim/nui.nvim",
+        },
+        run = function()
+            -- Install tries to automatically detect the install method.
+            -- if it fails, try calling it with one of these parameters:
+            --    "curl", "wget", "bitsadmin", "go"
+            require("dbee").install()
+        end,
+        config = function()
+            require("dbee").setup( --[[optional config]])
+        end
+    }
+    -- stuff to make life easier -----
     use { "kelly-lin/ranger.nvim" }
     use({
         "ggandor/leap.nvim",
