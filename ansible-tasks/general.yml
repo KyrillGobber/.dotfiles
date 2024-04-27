@@ -1,0 +1,21 @@
+- name: Install general stuff
+  pacman:
+    name:
+      - curl
+      - stow
+      - ripgrep
+      - tmux
+      - neovim
+      - ranger
+      - pipewire
+      - wireplumber
+      - foot
+      - ttf-jetbrains-mono-nerd
+      - pavucontrol
+      - nextcloud
+  tags:
+  - general
+- name: stow all config files
+  shell: stow config
+  tags:
+  - general

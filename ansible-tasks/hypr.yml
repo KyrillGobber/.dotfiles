@@ -12,11 +12,12 @@
       - waybar
       - grim
       - slurp
+      - swappy
       - wofi
       - udiskie
   tags:
   - hypr
-- name: remove other portals
-  tags:
-  - hypr
+# - name: remove other portals
+#   tags:
+#   - hypr
 

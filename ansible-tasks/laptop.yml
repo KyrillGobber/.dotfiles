@@ -1,0 +1,12 @@
+- name: Install all hypr stuff
+  pacman:
+    name:
+      - kmonad
+      - tlp
+      - light
+  tags:
+    - laptop
+- name: stow laptop config files
+  shell: stow laptop
+  tags:
+    - laptop
