@@ -3,5 +3,7 @@
     name:
       - curl
       - stow
+      - pipewire
+      - wireplumber
   tags:
   - packages
