@@ -68,9 +68,19 @@ return require('packer').startup(function(use)
     use { 'mhinz/vim-signify' }
     use { 'nvim-lua/popup.nvim' }
     use { 'rmagatti/auto-session' }
-    use { 'Exafunction/codeium.vim' }
     use { "ThePrimeagen/refactoring.nvim" }
     use { 'nvim-telescope/telescope-ui-select.nvim' }
+    use {
+        'Exafunction/codeium.vim',
+        config = function()
+            -- Change '<C-g>' here to any keycode you like.
+            vim.keymap.set('i', '<c-j>', function() return vim.fn['codeium#CycleCompletions'](1) end,
+                { expr = true, silent = true })
+            vim.keymap.set('i', '<c-k>', function() return vim.fn['codeium#CycleCompletions'](-1) end,
+                { expr = true, silent = true })
+            vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+        end
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

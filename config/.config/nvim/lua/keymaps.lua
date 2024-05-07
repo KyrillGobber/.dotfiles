@@ -37,4 +37,3 @@ vim.keymap.set('n', '<leader>P', ':Prettier<cr>')
 --nnoremap <leader>p :Prettier<CR>
 
 --vim.keymap.set("n", "<leader>rp", ":call CocAction('format')<cr>")
-
