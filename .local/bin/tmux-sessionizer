@@ -6,8 +6,12 @@ set session_name $(basename "$session" | tr . _)
 
 if ! tmux has-session -t "$session_name" 2> /dev/null;
     tmux new-session -s "$session_name" -c "$session" -d
+    tmux send-keys -t 0 'git status' enter
 end
 
 tmux split-window -h -l 100% -c "$session"
+tmux send-keys -t 1 'nvim' enter
+#tmux new-window -c "$session"
+#tmux select-window -t 0
 tmux attach-session -t "$session_name"
 
