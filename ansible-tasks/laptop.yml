@@ -1,4 +1,4 @@
-- name: Install all hypr stuff
+- name: Install all laptop things
   pacman:
     name:
       - kmonad

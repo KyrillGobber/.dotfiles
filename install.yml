@@ -9,11 +9,12 @@
       - fish
       - hypr
       - laptop
+      - desktop
   tasks: 
     - include_tasks: ansible-tasks/general.yml
     - include_tasks: ansible-tasks/fish.yml
     - include_tasks: ansible-tasks/hypr.yml
-    #- include_tasks: ansible-tasks/laptop.yml
+    - include_tasks: ansible-tasks/laptop.yml
     - include_tasks: ansible-tasks/desktop.yml
-     # Task stow tmux-sessionizer to .local/bin/
+     # Task symlink tmux-sessionizer to .local/bin/
       # Move tmux.conf to $HOME/tmux.conf
