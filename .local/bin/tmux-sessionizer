@@ -4,6 +4,16 @@ set session $(find $HOME/projects $HOME/projects/freelance -mindepth 1 -maxdepth
 
 set session_name $(basename "$session" | tr . _)
 
+if [ -z "$session" ]; 
+  echo "Error: No session picked"
+  exit 1
+end
+
+if [ -z "$session_name" ]; 
+  echo "Error: no session name defined."
+  exit 1
+end
+
 if ! tmux has-session -t "$session_name" 2> /dev/null;
     tmux new-session -s "$session_name" -c "$session" -d
     tmux send-keys -t 0 'git status' enter

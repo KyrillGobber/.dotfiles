@@ -1,6 +1,9 @@
 #!/bin/bash
 
 # All we should do is "git clone git@github.com:KyrillGobber/.dotfiles.git && cd dotfiles && ./install"
+# Add git setup:
+#   git config --add --global set user.name / user.email
+# copy ssh keys with ansible vault!
 
 sudo pacman -S --noconfirm ansible
 ansible-playbook install.yml
