@@ -39,5 +39,3 @@
     - include_tasks: ansible-tasks/desktop.yml
       tags:
       - desktop
-     # Task symlink tmux-sessionizer to .local/bin/
-      # Move tmux.conf to $HOME/tmux.conf
