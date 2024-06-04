@@ -1,12 +1,11 @@
-- name: Install all laptop things
-  pacman:
-    name:
-      - kmonad
-      - tlp
-      - light
+- block:
+  - name: Install all laptop things
+    pacman:
+      name:
+        - kmonad
+        - tlp
+        - light
+  - name: stow laptop config files
+    shell: stow laptop
   tags:
-    - laptop
-- name: stow laptop config files
-  shell: stow laptop
-  tags:
-    - laptop
+  - laptop

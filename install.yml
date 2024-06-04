@@ -6,17 +6,38 @@
         update_cache: yes
       tags:
       - general
+      - ssh
       - fish
       - hypr
       - laptop
       - desktop
   tasks: 
     - include_tasks: ansible-tasks/general.yml
+      tags:
+      - general
+      - desktop
+      - laptop
     #- include_tasks: ansible-tasks/gitconfig.yml
-    #- include_tasks: ansible-tasks/ssh.yml
+    - include_tasks: ansible-tasks/ssh.yml
+      tags:
+      - ssh
+      - desktop
+      - laptop
     - include_tasks: ansible-tasks/fish.yml
+      tags:
+      - fish
+      - desktop
+      - laptop
     - include_tasks: ansible-tasks/hypr.yml
+      tags:
+      - hypr
+      - desktop
+      - laptop
     - include_tasks: ansible-tasks/laptop.yml
+      tags:
+      - laptop
     - include_tasks: ansible-tasks/desktop.yml
+      tags:
+      - desktop
      # Task symlink tmux-sessionizer to .local/bin/
       # Move tmux.conf to $HOME/tmux.conf

@@ -1,4 +1,5 @@
-- name: stow desktop config files
-  shell: stow desktop
+- block:
+  - name: stow desktop config files
+    shell: stow desktop
   tags:
   - desktop
