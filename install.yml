@@ -12,6 +12,8 @@
       - desktop
   tasks: 
     - include_tasks: ansible-tasks/general.yml
+    #- include_tasks: ansible-tasks/gitconfig.yml
+    #- include_tasks: ansible-tasks/ssh.yml
     - include_tasks: ansible-tasks/fish.yml
     - include_tasks: ansible-tasks/hypr.yml
     - include_tasks: ansible-tasks/laptop.yml

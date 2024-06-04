@@ -2,6 +2,8 @@
   pacman:
     name:
       - curl
+      - git
+      - ssh
       - stow
       - ripgrep
       - tmux

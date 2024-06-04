@@ -1,0 +1,12 @@
+- name: Clone dotfiles repository and change directory
+  hosts: localhost
+  tasks:
+    - name: Clone the dotfiles repository
+      git:
+        repo: 'git@github.com:KyrillGobber/.dotfiles.git'
+        dest: '~/dotfiles'
+        version: 'master'
+    - name: Change directory to the cloned repository
+      command: chdir=~/dotfiles
+      args:
+        chdir: '~/dotfiles'

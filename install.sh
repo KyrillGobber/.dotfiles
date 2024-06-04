@@ -1,12 +1,15 @@
 #!/bin/bash
 
+
 # All we should do is "git clone git@github.com:KyrillGobber/.dotfiles.git && cd dotfiles && ./install"
 # Add git setup:
 #   git config --add --global set user.name / user.email
-# copy ssh keys with ansible vault!
+#   git rerere
+# Even better:
+#ansible-playbook -t [tags] install.yml --ask-become-pass --ask-vault-pass
 
 sudo pacman -S --noconfirm ansible
-ansible-playbook install.yml
+ansible-playbook install.yml --ask-become-pass --ask-vault-pass
 
 # TODO Add pacman install command for everything needed
 # - git
