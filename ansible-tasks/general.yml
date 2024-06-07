@@ -15,6 +15,7 @@
         - ttf-jetbrains-mono-nerd
         - pavucontrol
         - nextcloud
+        - xfce-polkit
   - name: stow all config files
     shell: stow config
   - name: Ensure .local/bin directory exists
