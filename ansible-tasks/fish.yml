@@ -1,20 +1,13 @@
-- name: Install and setup fish shell
-  pacman:
-    name:
-      - fish
-      - starship
-    state: present
+- block:
+  - name: Install and setup fish shell
+    pacman:
+      name:
+        - fish
+        - starship
+      state: present
+  - name: Change shell
+    shell: chsh -s "{{ lookup('pipe', 'which fish') }}"
   tags:
-    - fish
-- name: Change shell
-  shell: chsh -s "{{ lookup('pipe', 'which fish') }}"
-  tags:
-    - fish
-- name: stow fish.conf to .config/fish/fish.conf
-  shell: stow -t ~/.config/fish fish
-  tags:
-    - fish
-- name: stow starship.toml to .config
-  shell: stow -v -t ~/.config starship.toml
-  tags:
-    - fish
+  - fish
+  - desktop
+  - laptop

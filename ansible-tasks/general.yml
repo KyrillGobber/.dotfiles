@@ -1,0 +1,32 @@
+- block:
+  - name: Install general stuff
+    pacman:
+      name:
+        - curl
+        - openssh
+        - stow
+        - ripgrep
+        - tmux
+        - neovim
+        - ranger
+        - pipewire
+        - wireplumber
+        - foot
+        - ttf-jetbrains-mono-nerd
+        - pavucontrol
+        - nextcloud
+        - xfce-polkit
+  - name: stow all config files
+    shell: stow config
+  - name: Ensure .local/bin directory exists
+    ansible.builtin.file:
+      path: "{{ ansible_env.HOME }}/.local/bin"
+      state: directory
+      mode: '0700'
+  - name: Symlink tmux sessionizer
+    shell: ln -sv ~/.dotfiles/.local/bin/tmux-sessionizer ~/.local/bin/tmux-sessionizer
+  tags:
+  - general
+  - desktop
+  - laptop
+

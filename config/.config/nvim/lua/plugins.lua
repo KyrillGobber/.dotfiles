@@ -38,21 +38,21 @@ return require('packer').startup(function(use)
     }
     use { 'stevearc/conform.nvim' }
     -- DB Explorer -----
-    use {
-        "kndndrj/nvim-dbee",
-        requires = {
-            "MunifTanjim/nui.nvim",
-        },
-        run = function()
-            -- Install tries to automatically detect the install method.
-            -- if it fails, try calling it with one of these parameters:
-            --    "curl", "wget", "bitsadmin", "go"
-            require("dbee").install()
-        end,
-        config = function()
-            require("dbee").setup( --[[optional config]])
-        end
-    }
+    -- use {
+    --     "kndndrj/nvim-dbee",
+    --     requires = {
+    --         "MunifTanjim/nui.nvim",
+    --     },
+    --     run = function()
+    --         -- Install tries to automatically detect the install method.
+    --         -- if it fails, try calling it with one of these parameters:
+    --         --    "curl", "wget", "bitsadmin", "go"
+    --         require("dbee").install()
+    --     end,
+    --     config = function()
+    --         require("dbee").setup( --[[optional config]])
+    --     end
+    -- }
     -- stuff to make life easier -----
     use { "kelly-lin/ranger.nvim" }
     use({
@@ -68,9 +68,19 @@ return require('packer').startup(function(use)
     use { 'mhinz/vim-signify' }
     use { 'nvim-lua/popup.nvim' }
     use { 'rmagatti/auto-session' }
-    use { 'Exafunction/codeium.vim' }
     use { "ThePrimeagen/refactoring.nvim" }
     use { 'nvim-telescope/telescope-ui-select.nvim' }
+    use {
+        'Exafunction/codeium.vim',
+        config = function()
+            -- Change '<C-g>' here to any keycode you like.
+            vim.keymap.set('i', '<c-j>', function() return vim.fn['codeium#CycleCompletions'](1) end,
+                { expr = true, silent = true })
+            vim.keymap.set('i', '<c-k>', function() return vim.fn['codeium#CycleCompletions'](-1) end,
+                { expr = true, silent = true })
+            vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+        end
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

@@ -1,22 +1,22 @@
-- name: Install all hypr stuff
-  pacman:
-    name:
-      - hyprlang
-      - hyprland
-      - hyprpaper
-      - hypridle
-      - swaync
-      - xdg-desktop-portal-hyprland
-      - qt5-wayland
-      - qt6-wayland
-      - waybar
-      - grim
-      - slurp
-      - wofi
-      - udiskie
+- block:
+  - name: Install all hypr stuff
+    pacman:
+      name:
+        - hyprlang
+        - hyprland
+        - hyprpaper
+        - hypridle
+        - swaync
+        - xdg-desktop-portal-hyprland
+        - qt5-wayland
+        - qt6-wayland
+        - waybar
+        - grim
+        - slurp
+        - swappy
+        - wofi
+        - udiskie
   tags:
   - hypr
-- name: remove other portals
-  tags:
-  - hypr
-
+  - desktop
+  - laptop

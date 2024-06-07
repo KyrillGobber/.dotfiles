@@ -1,0 +1,5 @@
+- block:
+  - name: stow desktop config files
+    shell: stow desktop
+  tags:
+  - desktop
