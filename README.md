@@ -1,5 +1,5 @@
 # dotfiles
-- instal git and "git clone git clone git@github.com:KyrillGobber/.dotfiles.git"
+- install git and "git clone git clone git@github.com:KyrillGobber/.dotfiles.git"
 - cd .dotfiles
-- install ansible and do "ansible-playbook install.yml --tags desktop / laptop"
+- install ansible and do "ansible-playbook install.yml --ask-become-pass --tags desktop / laptop"
 
