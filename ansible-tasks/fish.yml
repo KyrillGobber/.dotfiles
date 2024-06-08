@@ -1,12 +1,14 @@
 - block:
   - name: Install and setup fish shell
+    become: true
     pacman:
       name:
         - fish
         - starship
       state: present
   - name: Change shell
-    shell: chsh -s "{{ lookup('pipe', 'which fish') }}"
+    become: true
+    shell: usermod -s "{{ lookup('pipe', 'which fish') }}" ky
   tags:
   - fish
   - desktop

@@ -1,5 +1,6 @@
 - block:
   - name: Install all hypr stuff
+    become: true
     pacman:
       name:
         - hyprlang

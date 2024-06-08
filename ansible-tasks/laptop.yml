@@ -1,5 +1,6 @@
 - block:
   - name: Install all laptop things
+    become: true
     pacman:
       name:
         - kmonad

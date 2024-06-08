@@ -1,16 +1,12 @@
 - block:
   - name: Ensure .ssh directory exists
     ansible.builtin.file:
-      path: "{{ ansible_env.HOME }}/.ssh"
+      path: "~/.ssh"
       state: directory
       mode: '0700'
   - name: Decrypt the private SSH key file to the .ssh dir
     ansible.builtin.command:
       cmd: "ansible-vault decrypt ~/.dotfiles/.ssh/id_ed25519 --output ~/.ssh/id_ed25519"
-    vars:
-      ansible_become: yes
-      ansible_become_method: sudo
-      ansible_become_user: "root"
   tags:
   - ssh
   - desktop

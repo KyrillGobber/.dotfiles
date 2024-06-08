@@ -1,5 +1,6 @@
 - block:
   - name: Install general stuff
+    become: true
     pacman:
       name:
         - curl
@@ -15,12 +16,12 @@
         - ttf-jetbrains-mono-nerd
         - pavucontrol
         - nextcloud
-        - xfce-polkit
+        - nodejs
   - name: stow all config files
     shell: stow config
   - name: Ensure .local/bin directory exists
     ansible.builtin.file:
-      path: "{{ ansible_env.HOME }}/.local/bin"
+      path: "~/.local/bin"
       state: directory
       mode: '0700'
   - name: Symlink tmux sessionizer

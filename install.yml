@@ -1,7 +1,7 @@
 - hosts: localhost
-  become: true
   pre_tasks:
     - name: Update pacman cache
+      become: true
       pacman:
         update_cache: yes
       tags:
@@ -11,6 +11,8 @@
       - hypr
       - laptop
       - desktop
+      - laptop_only
+      - desktop_only
   tasks: 
     - include_tasks: ansible-tasks/general.yml
       tags:
@@ -36,6 +38,8 @@
     - include_tasks: ansible-tasks/laptop.yml
       tags:
       - laptop
+      - laptop_only
     - include_tasks: ansible-tasks/desktop.yml
       tags:
       - desktop
+      - desktop_only
