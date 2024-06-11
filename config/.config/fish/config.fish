@@ -8,3 +8,7 @@ if status is-interactive
     bind \cf 'source ~/.dotfiles/.local/bin/tmux-sessionizer'
 	starship init fish | source
 end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
