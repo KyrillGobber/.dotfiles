@@ -5,6 +5,7 @@
       repo: https://aur.archlinux.org/yay.git
       dest: /yay
   - name: Build an dinstall yay
+    become: true
     command: makepkg -si --noconfirm
     args:
       chdir: /yay
