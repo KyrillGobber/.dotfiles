@@ -17,6 +17,7 @@
         - pavucontrol
         - nextcloud
         - nodejs
+        - npm
         - firefox
         - thunar
         - neofetch

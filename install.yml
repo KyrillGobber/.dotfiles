@@ -43,6 +43,13 @@
       tags:
       - desktop
       - desktop_only
+    - include_tasks: ansible-tasks/aur_builder.yml
+      tags:
+      - aur_builder
+      - yay
+      - yayapps
+      - desktop
+      - laptop
     - include_tasks: ansible-tasks/yay.yml
       tags:
       - yay

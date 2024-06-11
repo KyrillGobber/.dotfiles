@@ -1,0 +1,21 @@
+- block:
+  - name: Create aur_builder user
+    become: true
+    user:
+      name: aur_builder
+      state: present
+
+  - name: Allow aur_builder to use sudo for pacman without password
+    become: true
+    lineinfile:
+      path: /etc/sudoers.d/aur_builder-allow-to-sudo-pacman
+      state: present
+      line: "aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
+      validate: /usr/sbin/visudo -cf %s
+      create: yes
+  tags:
+  - aur_builder
+  - yay
+  - yayapps
+  - desktop
+  - laptop
