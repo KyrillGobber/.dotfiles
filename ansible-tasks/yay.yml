@@ -1,0 +1,16 @@
+- block:
+  - name: Clone yay repo
+    become: true
+    git:
+      repo: https://aur.archlinux.org/yay.git
+      dest: /yay
+  - name: Build an dinstall yay
+    command: makepkg -si --noconfirm
+    args:
+      chdir: /yay
+  tags:
+  - yay
+  - desktop
+  - laptop
+    # Then install otf-operator-mono-nerd via yay..
+    # ... or copy .local/share/fonts to correct place

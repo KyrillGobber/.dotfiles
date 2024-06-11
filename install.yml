@@ -43,3 +43,13 @@
       tags:
       - desktop
       - desktop_only
+    - include_tasks: ansible-tasks/yay.yml
+      tags:
+      - yay
+      - desktop
+      - laptop
+    - include_tasks: ansible-tasks/yayapps.yml
+      tags:
+      - yayapps
+      - desktop
+      - laptop

@@ -17,6 +17,10 @@
         - pavucontrol
         - nextcloud
         - nodejs
+        - firefox
+        - thunar
+        - neofetch
+        - base-devel
   - name: stow all config files
     shell: stow config
   - name: Ensure .local/bin directory exists
@@ -30,4 +34,6 @@
   - general
   - desktop
   - laptop
-
+    # New step for installing yay
+    # Then install otf-operator-mono-nerd via yay..
+    # ... or copy .local/share/fonts to correct place

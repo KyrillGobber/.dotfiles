@@ -1,0 +1,17 @@
+- block:
+  - name: Install librewolf
+    become: true
+    ansible.builtin.command:
+      cmd: yay -S librewolf-bin --noconfirm
+    args:
+      creates: /usr/bin/librewolf
+  - name: Install operator mono font
+    become: true
+    ansible.builtin.command:
+      cmd: yay -S otf-operator-mono-nerd --noconfirm
+    args:
+      creates: /usr/bin/librewolf
+  tags:
+  - yayapps
+  - desktop
+  - laptop
