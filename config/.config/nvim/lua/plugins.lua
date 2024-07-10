@@ -54,6 +54,7 @@ return require('packer').startup(function(use)
     --     end
     -- }
     -- stuff to make life easier -----
+    use {'diepm/vim-rest-console'}
     use { "kelly-lin/ranger.nvim" }
     use({
         "ggandor/leap.nvim",
