@@ -10,10 +10,20 @@
     "margin-right": 3,
     "margin-left": 3,
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "custom/waybar-mpris"],
+    "modules-left": ["sway/workspaces","hyprland/workspaces", "custom/waybar-mpris"],
     "modules-center": ["clock"],
     "modules-right": ["tray", "bluetooth", "wireplumber", "custom/notification", "group/group-power"],
     // Modules configuration
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
      "hyprland/workspaces": {
          "disable-scroll": true,
          "all-outputs": true,
