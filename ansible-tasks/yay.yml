@@ -1,17 +1,32 @@
 - block:
-  - name: Clone yay repo
+  - name: Create aur_builder user
     become: true
+    user:
+      name: aur_builder
+      state: present
+
+  - name: Allow aur_builder to use sudo for pacman without password
+    become: true
+    lineinfile:
+      path: /etc/sudoers.d/aur_builder-allow-to-sudo-pacman
+      state: present
+      line: "aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
+      validate: /usr/sbin/visudo -cf %s
+      create: yes
+  - name: Clone yay repository
     git:
       repo: https://aur.archlinux.org/yay.git
-      dest: /yay
-  - name: Build an dinstall yay
+      dest: /home/aur_builder/yay
     become: true
+    become_user: aur_builder
+
+  - name: Build and install yay
     command: makepkg -si --noconfirm
     args:
-      chdir: /yay
+      chdir: /home/aur_builder/yay
+    become: true
+    become_user: aur_builder
   tags:
-  - yay
-  - desktop
-  - laptop
-    # Then install otf-operator-mono-nerd via yay..
-    # ... or copy .local/share/fonts to correct place
+    - yay
+    - desktop
+    - laptop
