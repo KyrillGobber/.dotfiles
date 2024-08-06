@@ -9,16 +9,26 @@
     "margin-right": 3,
     "margin-left": 3,
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["sway/workspaces","hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["tray", "wireplumber", "backlight", "bluetooth", "network", "battery", "custom/notification"],
     // Modules configuration
-     "hyprland/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "format": "{name}",
-         "on-click": "activate",
-     },
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}",
+        "on-click": "activate",
+    },
     "tray": {
         // "icon-size": 21,
         "spacing": 10

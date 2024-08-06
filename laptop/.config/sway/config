@@ -84,7 +84,7 @@ input type:keyboard {
     # Start a terminal
     bindsym $mod+t exec $term
     bindsym $mod+space exec wofi
-    bindsym $mod+x exec,bash ~/.config/wofi/scripts/powermenu.sh
+    bindsym $mod+x exec ~/.config/wofi/scripts/powermenu.sh
 
     bindsym $mod+g exec telegram-desktop
 

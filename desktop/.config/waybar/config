@@ -24,12 +24,12 @@
             "default": ""
         }
     },
-     "hyprland/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "format": "{name}",
-         "on-click": "activate",
-     },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}",
+        "on-click": "activate",
+    },
     "tray": {
         // "icon-size": 21,
         "spacing": 10

@@ -14,6 +14,7 @@ conform.setup({
 		markdown = { "prettier" },
 		graphql = { "prettier" },
 		lua = { "stylua" },
+		go = { "gofumpt" },
 	},
 })
 
