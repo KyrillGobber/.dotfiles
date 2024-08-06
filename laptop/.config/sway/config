@@ -83,8 +83,9 @@ input type:keyboard {
 #
     # Start a terminal
     bindsym $mod+t exec $term
+    bindsym $mod+e exec thunar
     bindsym $mod+space exec wofi
-    bindsym $mod+x exec ~/.config/wofi/scripts/powermenu.sh
+    bindsym $mod+x exec bash ~/.config/wofi/scripts/powermenu.sh
 
     bindsym $mod+g exec telegram-desktop
 
@@ -177,9 +178,9 @@ input type:keyboard {
     #bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    #bindsym $mod+s layout stacking
+    #bindsym $mod+w layout tabbed
+    #bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
