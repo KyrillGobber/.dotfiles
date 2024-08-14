@@ -5,7 +5,7 @@ if status is-interactive
     fish_add_path ~/.local/bin
 	set -U fish_greeting
     alias egg='exit'
-    bind \cf 'source ~/.dotfiles/.local/bin/tmux-sessionizer'
+    bind \cf 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer'
     fzf --fish | source
 	starship init fish | source
 end
