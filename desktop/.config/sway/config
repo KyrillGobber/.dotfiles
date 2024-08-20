@@ -70,6 +70,10 @@ input type:touchpad {
     pointer_accel 0.0
 }
 
+input type:pointer {
+    pointer_accel 0.0
+}
+
 bindgesture swipe:right workspace prev
 bindgesture swipe:left workspace next 
 
@@ -88,6 +92,8 @@ input type:keyboard {
     bindsym $mod+h exec grim -g "$(slurp)" - | swappy -f -
 
     bindsym $mod+g exec telegram-desktop
+    bindsym $mod+l exec hyprlock
+    bindsym $mod+n exec swaync-client -t
 
     # Kill focused window
     bindsym $mod+q kill
