@@ -6,6 +6,8 @@
         - curl
         - openssh
         - stow
+        - fzf
+        - yazi
         - ripgrep
         - tmux
         - neovim
