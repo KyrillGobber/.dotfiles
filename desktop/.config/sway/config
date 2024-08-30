@@ -33,6 +33,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 output DP-1 {
     background /home/ky/Cloud/Photos/wallpapers/ocean-wave-sunset-japanese-digital-art-4k-wallpaper-uhdpaper.com-876@1@m.jpg fill
     mode 2560x1440@359.980Hz
+    #mode 1920x1080@359.980Hz
 }
 
 ### Idle configuration
