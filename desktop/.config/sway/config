@@ -73,6 +73,7 @@ input type:touchpad {
 
 input type:pointer {
     pointer_accel 0.0
+    accel_profile flat
 }
 
 bindgesture swipe:right workspace prev
@@ -98,6 +99,9 @@ input type:keyboard {
 
     # Kill focused window
     bindsym $mod+q kill
+
+    # switch res
+    bindsym $mod+Shift+y exec bash ~/.config/sway/res-switch.sh
 
     # Start your launcher
     #bindsym $mod+space exec $menu
