@@ -55,7 +55,8 @@ local plugins = {
 	--         require("dbee").setup( --[[optional config]])
 	--     end
 	-- }
-	-- stuff to make life easier -----
+
+    -- markdown preview
 	"diepm/vim-rest-console",
 	{
 		"toppair/peek.nvim",
@@ -66,7 +67,6 @@ local plugins = {
 			vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
 		end,
 	},
-	"kelly-lin/ranger.nvim",
 	{
 		"mikavilpas/yazi.nvim",
 		event = "VeryLazy",
@@ -91,7 +91,6 @@ local plugins = {
 				desc = "Resume the last yazi session",
 			},
 		},
-		---@type YaziConfig
 		opts = {
 			-- if you want to open yazi instead of netrw, see below for more info
 			open_for_directories = false,
