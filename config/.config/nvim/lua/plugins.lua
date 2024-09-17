@@ -40,33 +40,53 @@ local plugins = {
 
 	"stevearc/conform.nvim",
 	-- DB Explorer -----
-	-- use {
-	--     "kndndrj/nvim-dbee",
-	--     requires = {
-	--         "MunifTanjim/nui.nvim",
-	--     },
-	--     run = function()
-	--         -- Install tries to automatically detect the install method.
-	--         -- if it fails, try calling it with one of these parameters:
-	--         --    "curl", "wget", "bitsadmin", "go"
-	--         require("dbee").install()
-	--     end,
-	--     config = function()
-	--         require("dbee").setup( --[[optional config]])
-	--     end
-	-- }
+	-- {
+	-- 	"kndndrj/nvim-dbee",
+	-- 	dependencies = {
+	-- 		"MunifTanjim/nui.nvim",
+	-- 	},
+	-- 	build = function()
+	-- 		-- Install tries to automatically detect the install method.
+	-- 		-- if it fails, try calling it with one of these parameters:
+	-- 		--    "curl", "wget", "bitsadmin", "go"
+	-- 		require("dbee").install()
+	-- 	end,
+	-- 	config = function()
+	-- 		require("dbee").setup(--[[optional config]])
+	-- 	end,
+	-- },
 
-    -- markdown preview
+	-- markdown preview
+	-- {
+	-- 	"toppair/peek.nvim",
+	-- 	build = "deno task --quiet build:fast",
+	-- 	config = function()
+	-- 		require("peek").setup({
+	-- 			auto_load = true, -- whether to automatically load preview when
+	-- 			-- entering another markdown buffer
+	-- 			close_on_bdelete = true, -- close preview window on buffer delete
+
+	-- 			syntax = true, -- enable syntax highlighting, affects performance
+
+	-- 			theme = "light", -- 'dark' or 'light'
+
+	-- 			update_on_change = true,
+
+	-- 			app = "browser", -- 'webview', 'browser', string or a table of strings
+	-- 			-- explained below
+
+	-- 			filetype = { "markdown" }, -- list of filetypes to recognize as markdown
+
+	-- 			-- relevant if update_on_change is true
+	-- 			throttle_at = 200000, -- start throttling when file exceeds this
+	-- 			-- amount of bytes in size
+	-- 			throttle_time = "auto", -- minimum amount of time in milliseconds
+	-- 		})
+	-- 		vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+	-- 		vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+	-- 	end,
+	-- },
 	"diepm/vim-rest-console",
-	{
-		"toppair/peek.nvim",
-		build = "deno task --quiet build:fast",
-		config = function()
-			require("peek").setup()
-			vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
-			vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
-		end,
-	},
 	{
 		"mikavilpas/yazi.nvim",
 		event = "VeryLazy",
