@@ -29,7 +29,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.api.nvim_set_keymap('n', '<C-Tab>', ':bnext<cr>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-C-Tab>', ':bNext<cr>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-N>', ':bnext<cr>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<S-C-N>', ':bNext<cr>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-P>', ':bNext<cr>', {noremap = true, silent = true})
 
 vim.keymap.set('n', '<F4>', ':bd<cr>')
 vim.keymap.set('n', '<leader>cl', ':set conceallevel=0<cr>')
