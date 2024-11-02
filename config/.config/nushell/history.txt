@@ -1,0 +1,58 @@
+ls
+cd projects/kycard/
+ls
+l
+clear
+ls
+yy
+yazi
+ls
+ps
+docker ps
+clear
+.env
+$env
+ls
+nvim
+exit
+ls
+exit
+cd .config/nushell/
+ls
+nvim config.nu
+exit
+ls
+exit
+cd .config/nushell/
+ls
+nvim env.nu
+nvim config.nu
+exit
+ls 
+cd projects/kycard/
+ls
+exit
+cd --help 
+exit
+cd
+cd .config/nushell/
+nvim config.nu
+exit
+nvim config.nu
+cd .config/nushell/
+nvim config.nu
+clear
+exit
+ls
+exit
+ls
+cd .config/nushell/
+exit
+cd .dotfiles
+ls
+nvim
+yazi
+ls
+ls -a
+y
+exit
