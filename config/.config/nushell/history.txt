@@ -56,3 +56,38 @@ ls
 ls -a
 y
 exit
+ls
+exit
+y
+exit
+y
+yy
+exit
+nvim .cache/starship/init.nu
+exit
+curl -sS https://starship.rs/install.sh | sh
+exit
+cd .dotfiles
+nvim
+ls
+exit
+ls
+exit
+ls
+exit
+ls
+exit
+ls
+exit
+ls
+exit
+ls
+exit
+ls
+exit
+ls
+ls -a
+tmux
+exit
+ls
+git status
