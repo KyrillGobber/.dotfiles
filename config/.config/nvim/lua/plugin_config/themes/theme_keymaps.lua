@@ -13,6 +13,7 @@ function Cycle_colorschemes()
         end
     end
     vim.cmd('colorscheme ' .. colorschemes[next_index])
+    vim.notify('Switched to colorscheme: ' .. vim.g.colors_name)
 end
 
 vim.keymap.set('n', '<leader>t', Cycle_colorschemes, {desc = 'Cycle colorschemes'})
