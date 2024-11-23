@@ -20,6 +20,7 @@ local plugins = {
     "navarasu/onedark.nvim",
     "rebelot/kanagawa.nvim",
     { "rose-pine/neovim", name = "rose-pine" },
+    "folke/zen-mode.nvim",
     -- Core -----
     {
         "nvim-telescope/telescope.nvim",
@@ -104,7 +105,7 @@ local plugins = {
     },
     {
         'MeanderingProgrammer/render-markdown.nvim',
-        dependencies = { 'nvim-treesitter/nvim-treesitter' }, 
+        dependencies = { 'nvim-treesitter/nvim-treesitter' },
         -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
         -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
         ---@module 'render-markdown'
