@@ -3,3 +3,5 @@
 - cd .dotfiles
 - install ansible and do "ansible-playbook install.yml --ask-become-pass --tags desktop / laptop"
 
+TODO:
+- lazygit & tig
