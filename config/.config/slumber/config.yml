@@ -1,0 +1,12 @@
+http:
+  ignore_certificate_hosts: [192.168.1.219]
+  large_body_size: 1000000
+input_bindings:
+  up: [k]
+  down: [j]
+  left: [h]
+  right: [l]
+  scroll_left: [ctrl h]
+  scroll_right: [ctrl l]
+  select_recipe_list: [p] # Rebind from `l`
+  history: [shift h]

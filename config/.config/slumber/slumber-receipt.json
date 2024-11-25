@@ -1,0 +1,1 @@
+{"binaries":["slumber"],"binary_aliases":{},"cdylibs":[],"cstaticlibs":[],"install_prefix":"/home/ky/.cargo","provider":{"source":"cargo-dist","version":"0.22.1"},"source":{"app_name":"slumber","name":"slumber","owner":"LucasPickering","release_type":"github"},"version":"2.2.0"}
