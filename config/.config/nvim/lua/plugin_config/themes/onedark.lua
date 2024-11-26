@@ -7,7 +7,7 @@ require('onedark').setup {
     cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
 
     -- toggle theme style ---
-    toggle_style_key = "<leader>ts",         -- keybind to toggle theme style. Leave it nil to disable it, or set it to a string, for example "<leader>ts"
+    toggle_style_key = "<leader>tc",         -- keybind to toggle theme style. Leave it nil to disable it, or set it to a string, for example "<leader>ts"
     toggle_style_list = { 'deep', 'light' }, -- List of styles to toggle between
 
     -- Change code style ---
