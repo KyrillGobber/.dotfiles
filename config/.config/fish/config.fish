@@ -4,6 +4,7 @@ if status is-interactive
     fish_add_path ~/.dotnet/tools
     fish_add_path ~/.local/bin
     fish_add_path ~/go/bin
+    fish_add_path ~/.turso
 	set -U fish_greeting
     alias egg='exit'
     bind \cf 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer'
