@@ -1,3 +1,9 @@
-vim.keymap.set('i', '<C-L>', '<Plug>(copilot-accept-word)')
-vim.keymap.set('i', '<C-j>', '<Plug>(copilot-next)')
-vim.keymap.set('i', '<C-k>', '<Plug>(copilot-previous)')
+return {
+    "github/copilot.vim",
+    enabled = false,
+    keys = {
+        { "<C-L>", function() require("copilot").accept() end, desc = "toggle copilot panel" },
+        { "<C-j>", function() require("copilot").next() end, desc = "toggle copilot panel" },
+        { "<C-k>", function() require("copilot").prev() end, desc = "toggle copilot panel" },
+    },
+}

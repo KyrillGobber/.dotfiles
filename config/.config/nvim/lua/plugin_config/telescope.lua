@@ -1,46 +1,31 @@
-local builtin = require('telescope.builtin')
---local telescope = require('telescope')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>b', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-vim.keymap.set('n', '<leader>cs', builtin.lsp_document_symbols, {})
-vim.keymap.set('n', '<leader>ac', builtin.diagnostics, {})
-vim.keymap.set('n', '<leader>r', builtin.registers, {})
-vim.keymap.set('n', '<leader>ts', builtin.treesitter, {})
-vim.keymap.set('n', '<leader>pl', builtin.builtin, {})
---vim.keymap.set('n', '<leader>gs', builtin.git_status, {})
-vim.keymap.set('n', '<leader>gb', builtin.git_branches, {})
--- vim.keymap.set('n', '<leader>ca', ':Telescope coc line_code_actions <cr>', {})
--- vim.keymap.set('n', '<leader>cs', ':Telescope coc document_symbols <cr>', {})
--- vim.keymap.set('n', '<leader>cd', ':Telescope coc diagnostics <cr>', {})
--- vim.keymap.set('n', '<leader>cm', ':Telescope coc commands <cr>', {})
--- vim.keymap.set('n', '<leader>td', ':Telescope coc definitions <cr>', {})
--- vim.keymap.set('n', '<leader>tr', ':Telescope coc references <cr>', {})
-
-require("telescope").setup {
-    extensions = {
+return {
+  "nvim-telescope/telescope.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-telescope/telescope-ui-select.nvim",
+  },
+  keys = {
+    { "<leader>ff", function() require("telescope.builtin").find_files() end, desc = "Find Files" },
+    { "<leader>fg", function() require("telescope.builtin").live_grep() end, desc = "Live Grep" },
+    { "<leader>b", function() require("telescope.builtin").buffers() end, desc = "Buffers" },
+    { "<leader>fh", function() require("telescope.builtin").help_tags() end, desc = "Help Tags" },
+    { "<leader>cs", function() require("telescope.builtin").lsp_document_symbols() end, desc = "Document Symbols" },
+    { "<leader>ac", function() require("telescope.builtin").diagnostics() end, desc = "Diagnostics" },
+    { "<leader>r", function() require("telescope.builtin").registers() end, desc = "Registers" },
+    { "<leader>ts", function() require("telescope.builtin").treesitter() end, desc = "Treesitter" },
+    { "<leader>pl", function() require("telescope.builtin").builtin() end, desc = "Telescope Builtins" },
+    { "<leader>gb", function() require("telescope.builtin").git_branches() end, desc = "Git Branches" },
+    { "<leader>gs", function() require("telescope.builtin").git_status() end, desc = "Git status" },
+  },
+  config = function()
+    require("telescope").setup({
+      extensions = {
         ["ui-select"] = {
-            require("telescope.themes").get_dropdown {
-                -- even more opts
-            }
-
-            -- pseudo code / specification for writing custom displays, like the one
-            -- for "codeactions"
-            -- specific_opts = {
-            --   [kind] = {
-            --     make_indexed = function(items) -> indexed_items, width,
-            --     make_displayer = function(widths) -> displayer
-            --     make_display = function(displayer) -> function(e)
-            --     make_ordinal = function(e) -> string
-            --   },
-            --   -- for example to disable the custom builtin "codeactions" display
-            --      do the following
-            --   codeactions = false,
-            -- }
+          require("telescope.themes").get_dropdown({})
         }
-    }
+      }
+    })
+    
+    require("telescope").load_extension("ui-select")
+  end
 }
--- To get ui-select loaded and working with telescope, you need to call
--- load_extension, somewhere after setup function:
-require("telescope").load_extension("ui-select")
