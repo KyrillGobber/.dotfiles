@@ -131,7 +131,7 @@ return {
                     {
                         'buffers',
                         mode = 2,
-                        max_length = vim.o.columns * 2 / 3,
+                        max_length = vim.o.columns,
                         filetype_names = {
                             TelescopePrompt = 'Telescope',
                             dashboard = 'Dashboard',
