@@ -32,9 +32,11 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 output DP-1 {
     background /home/ky/Cloud/Photos/wallpapers/ocean-wave-sunset-japanese-digital-art-4k-wallpaper-uhdpaper.com-876@1@m.jpg fill
-    mode 2560x1440@359.980Hz
+    mode 2560x1440@479.9890Hz
     #mode 1920x1080@359.980Hz
 }
+output * allow_tearing Yes
+output * max_render_time off
 
 ### Idle configuration
 #
