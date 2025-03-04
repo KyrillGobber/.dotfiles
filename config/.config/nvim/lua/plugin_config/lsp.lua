@@ -71,6 +71,7 @@ return {
                     { name = 'vsnip' },
                     { name = 'buffer' },
                     { name = 'codeium' },
+                    { name = 'codecompanion' },
                 },
             })
         end

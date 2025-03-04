@@ -12,9 +12,6 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
--- copy to system clipboard: asbjornHaland
--- vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
--- vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- quickfix navigation
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -24,7 +21,6 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- Search and replace word under cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.api.nvim_set_keymap('n', '<C-Tab>', ':bnext<cr>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-C-Tab>', ':bNext<cr>', {noremap = true, silent = true})
@@ -33,13 +29,8 @@ vim.api.nvim_set_keymap('n', '<C-P>', ':bNext<cr>', {noremap = true, silent = tr
 
 vim.keymap.set('n', '<F4>', ':bd<cr>')
 vim.keymap.set('n', '<leader>cl', ':set conceallevel=0<cr>')
---vim.keymap.set('n', '<F1>', ':NvimTreeToggle<cr>')
---vim.keymap.set('n', '<F2>', ':NvimTreeFindFile<cr>')
 
 vim.keymap.set('n', '<leader>P', ':Prettier<cr>')
---nnoremap <leader>p :Prettier<CR>
-
---vim.keymap.set("n", "<leader>rp", ":call CocAction('format')<cr>")
 
 function Cycle_colorschemes()
     local colorschemes = {
@@ -60,3 +51,11 @@ function Cycle_colorschemes()
 end
 
 vim.keymap.set('n', '<leader>t', Cycle_colorschemes, {desc = 'Cycle colorschemes'})
+
+-- CodeCompanion
+vim.keymap.set({ "n", "v" }, "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "<LocalLeader>c", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
+vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
+-- Expand 'cc' into 'CodeCompanion' in the command line
+vim.cmd([[cab cc CodeCompanion]])
+
