@@ -28,7 +28,7 @@ vim.api.nvim_set_keymap('n', '<C-N>', ':bnext<cr>', {noremap = true, silent = tr
 vim.api.nvim_set_keymap('n', '<C-P>', ':bNext<cr>', {noremap = true, silent = true})
 
 vim.keymap.set('n', '<F4>', ':bd<cr>')
-vim.keymap.set('n', '<leader>cl', ':set conceallevel=0<cr>')
+--vim.keymap.set('n', '<leader>cl', ':set conceallevel=0<cr>')
 
 vim.keymap.set('n', '<leader>P', ':Prettier<cr>')
 
@@ -54,7 +54,7 @@ vim.keymap.set('n', '<leader>t', Cycle_colorschemes, {desc = 'Cycle colorschemes
 
 -- CodeCompanion
 vim.keymap.set({ "n", "v" }, "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
-vim.keymap.set({ "n", "v" }, "<LocalLeader>c", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "<LocalLeader>cc", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
 vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
 -- Expand 'cc' into 'CodeCompanion' in the command line
 vim.cmd([[cab cc CodeCompanion]])

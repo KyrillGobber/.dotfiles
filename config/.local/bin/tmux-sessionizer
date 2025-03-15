@@ -15,11 +15,11 @@ if [ -z "$session_name" ];
 end
 
 if ! tmux has-session -t "$session_name" 2> /dev/null;
-    tmux new-session -s "$session_name" -c "$session" -d
+    tmux new-session -s "$session_name" -c "$session" -d -x - -y -
     tmux send-keys -t 0 'git status' enter
 end
 
-tmux split-window -h -l 80% -c "$session"
+tmux split-window -h -l 75% -c "$session"
 tmux send-keys -t 1 'nvim' enter
 #tmux new-window -c "$session"
 #tmux select-window -t 0

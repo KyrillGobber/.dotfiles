@@ -32,7 +32,7 @@ return {
 						},
 						schema = {
 							model = {
-								default = "deepseek-r1-llama-70b",
+								default = "qwen2.5-coder-32b",
 								-- Other models available:
 								--   llama-3.1-405b
 								--   llama-3.2-3b
