@@ -41,7 +41,7 @@ open = [
 	{ run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
 ]
 pdf = [
-	{ run = 'librewolf "$@"', desc = "Open PDF", for = "linux" },
+	{ run = 'zen-browser "$@"', desc = "Open PDF", for = "linux" },
 ]
 reveal = [
 	{ run = 'xdg-open "$(dirname "$1")"',           desc = "Reveal", for = "linux" },

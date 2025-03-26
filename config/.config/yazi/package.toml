@@ -8,6 +8,16 @@ use = "h-hg/yamb"
 rev = "3f7c51f"
 hash = "e11b980e5635f0fbabd80931b1a1347e"
 
+[[plugin.deps]]
+use = "pirafrank/what-size"
+rev = "b23e3a4"
+hash = "98e5f5af3efd3ba8bc2db0720187cc83"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "2730199"
+hash = "dd97eede8e20e59cd2604e8006e470e2"
+
 [[flavor.deps]]
 use = "dangooddd/kanagawa"
 rev = "b32f205"

@@ -37,3 +37,12 @@ desc = "Rename bookmark by key"
 on = [ "u", "R" ]
 run = "plugin yamb --args=rename_by_fzf"
 desc = "Rename bookmark by fzf"
+
+[[manager.prepend_keymap]]
+on = [ "u", "s" ]
+run = "plugin what-size"
+desc = "Calc size of selection or cwd"
+
+[[manager.prepend_keymap]]
+on  = "M"
+run = "plugin mount"
