@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+sudo pacman -Syu git base-devel curl openssh stow fzf yazi ripgrep tmux neovim ranger pipewire wireplumber foot ttf-jetbrains-mono-nerd pavucontrol nextcloud nodejs npm firefox thunar neofetch lazygit tig
+
+# Check and create if .config exists, then stow all config files
+mkdir -p $HOME/.config
+stow config
+
+# Check and create if .local/bin exists, then symlink tmux-sessionizer
+mkdir -p $HOME/.local/bin
+ln -sv $HOME/.dotfiles/.local/bin/tmux-sessionizer ~/.local/bin/tmux-sessionizer
+
+# Install yay
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si

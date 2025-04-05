@@ -36,7 +36,7 @@
     background: #11111b;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
 window#waybar {
@@ -65,8 +65,8 @@ window#waybar {
 
 #workspaces{
     background-color: transparent;
-    margin-right: 10px;
-    margin-left: 10;
+    margin-right: 8;
+    margin-left: 8px;
 }
 #workspaces button{
     box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;

@@ -7,8 +7,8 @@
     "spacing": 4, // Gaps between modules (4px)
     "margin-top": 1,
     "margin-bottom": 0,
-    "margin-right": 3,
-    "margin-left": 3,
+    "margin-right": 0,
+    "margin-left": 0,
     // Choose the order of the modules
     "modules-left": ["sway/workspaces","hyprland/workspaces", "custom/waybar-mpris"],
     "modules-center": ["clock"],
