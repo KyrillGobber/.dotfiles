@@ -1,0 +1,270 @@
+[2025-05-01 12:20:44.736] [info] [console_user_server] version 15.3.0
+[2025-05-01 12:20:44.927] [info] [console_user_server] on_console_changed: on_console:true
+[2025-05-01 12:20:44.927] [info] [console_user_server] grabber_client is started.
+[2025-05-01 12:20:44.927] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:20:46.003] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:20:47.030] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:20:48.106] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:20:49.177] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:20:50.242] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:20:51.282] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:20:52.343] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:20:53.374] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:20:54.376] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:20:55.448] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:20:56.488] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:20:57.545] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:20:58.545] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:20:59.620] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:00.694] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:01.695] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:02.769] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:03.839] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:04.893] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:05.895] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:06.905] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:07.980] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:09.017] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:10.092] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:11.155] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:12.193] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:13.267] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:14.280] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:15.325] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:16.389] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:17.405] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:18.481] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:19.534] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:20.607] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:21.683] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:22.732] [error] [console_user_server] grabber_client connect_failed: No such file or directory
+[2025-05-01 12:21:23.790] [info] [console_user_server] grabber_client is connected.
+[2025-05-01 12:21:23.858] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 12:21:30.311] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 12:21:30.312] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 12:21:54.115] [info] [console_user_server] Check for updates...
+[2025-05-01 12:26:02.516] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 12:26:02.516] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 14:02:16.007] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 14:02:16.008] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 16:16:23.253] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 16:16:23.254] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 16:16:45.158] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 16:16:45.159] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 16:16:54.637] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 16:16:54.638] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 16:17:02.352] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 16:17:02.352] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 16:37:13.572] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 16:37:13.573] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 16:37:14.696] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 16:37:14.698] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 16:37:15.731] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 16:37:15.732] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 16:37:16.300] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 16:37:16.302] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 16:53:35.584] [info] [console_user_server] version 15.3.0
+[2025-05-01 16:53:36.103] [info] [console_user_server] on_console_changed: on_console:true
+[2025-05-01 16:53:36.104] [info] [console_user_server] grabber_client is started.
+[2025-05-01 16:53:36.104] [info] [console_user_server] grabber_client is connected.
+[2025-05-01 16:53:36.133] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 16:53:36.133] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 16:54:06.264] [info] [console_user_server] Check for updates...
+[2025-05-01 17:42:46.361] [info] [console_user_server] version 15.3.0
+[2025-05-01 17:42:46.890] [info] [console_user_server] on_console_changed: on_console:true
+[2025-05-01 17:42:46.895] [info] [console_user_server] grabber_client is started.
+[2025-05-01 17:42:46.895] [info] [console_user_server] grabber_client is connected.
+[2025-05-01 17:42:46.937] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 17:42:46.938] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 17:43:17.215] [info] [console_user_server] Check for updates...
+[2025-05-01 18:37:52.948] [info] [console_user_server] version 15.3.0
+[2025-05-01 18:37:53.508] [info] [console_user_server] on_console_changed: on_console:true
+[2025-05-01 18:37:53.508] [info] [console_user_server] grabber_client is started.
+[2025-05-01 18:37:53.508] [info] [console_user_server] grabber_client is connected.
+[2025-05-01 18:37:53.544] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 18:37:53.544] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 22:30:28.149] [info] [console_user_server] version 15.3.0
+[2025-05-01 22:30:29.024] [info] [console_user_server] on_console_changed: on_console:true
+[2025-05-01 22:30:29.026] [info] [console_user_server] grabber_client is started.
+[2025-05-01 22:30:29.027] [info] [console_user_server] grabber_client is connected.
+[2025-05-01 22:30:29.128] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 22:30:29.129] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 22:30:59.693] [info] [console_user_server] Check for updates...
+[2025-05-01 22:49:04.829] [info] [console_user_server] on_console_changed: on_console:false
+[2025-05-01 22:49:04.829] [info] [console_user_server] grabber_client is stopped.
+[2025-05-01 22:53:28.069] [info] [console_user_server] on_console_changed: on_console:true
+[2025-05-01 22:53:28.071] [info] [console_user_server] grabber_client is started.
+[2025-05-01 22:53:28.072] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-01 22:53:29.086] [info] [console_user_server] grabber_client is connected.
+[2025-05-01 22:53:29.089] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 22:53:29.090] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 22:53:59.271] [info] [console_user_server] Check for updates...
+[2025-05-01 22:57:30.096] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 23:33:03.462] [info] [console_user_server] on_console_changed: on_console:false
+[2025-05-01 23:33:03.462] [info] [console_user_server] grabber_client is stopped.
+[2025-05-01 23:36:37.608] [info] [console_user_server] on_console_changed: on_console:true
+[2025-05-01 23:36:37.610] [info] [console_user_server] grabber_client is started.
+[2025-05-01 23:36:37.611] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-01 23:36:38.653] [info] [console_user_server] grabber_client is connected.
+[2025-05-01 23:36:38.659] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 23:36:38.659] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 23:37:08.841] [info] [console_user_server] Check for updates...
+[2025-05-01 23:47:13.044] [info] [console_user_server] on_console_changed: on_console:false
+[2025-05-01 23:47:13.045] [info] [console_user_server] grabber_client is stopped.
+[2025-05-01 23:58:42.719] [info] [console_user_server] on_console_changed: on_console:true
+[2025-05-01 23:58:42.721] [info] [console_user_server] grabber_client is started.
+[2025-05-01 23:58:42.722] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-01 23:58:43.777] [info] [console_user_server] grabber_client is connected.
+[2025-05-01 23:58:43.782] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-01 23:58:43.783] [info] [console_user_server] core_configuration is updated.
+[2025-05-01 23:59:13.935] [info] [console_user_server] Check for updates...
+[2025-05-02 00:06:08.283] [info] [console_user_server] on_console_changed: on_console:false
+[2025-05-02 00:06:08.284] [info] [console_user_server] grabber_client is stopped.
+[2025-05-02 00:06:13.560] [info] [console_user_server] on_console_changed: on_console:true
+[2025-05-02 00:06:13.562] [info] [console_user_server] grabber_client is started.
+[2025-05-02 00:06:13.563] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:06:14.608] [info] [console_user_server] grabber_client is connected.
+[2025-05-02 00:06:14.612] [info] [console_user_server] Load /Users/ky/.config/karabiner/karabiner.json...
+[2025-05-02 00:06:14.614] [info] [console_user_server] core_configuration is updated.
+[2025-05-02 00:06:44.770] [info] [console_user_server] Check for updates...
+[2025-05-02 00:27:58.871] [info] [console_user_server] version 15.3.0
+[2025-05-02 00:27:59.538] [info] [console_user_server] on_console_changed: on_console:true
+[2025-05-02 00:27:59.539] [info] [console_user_server] grabber_client is started.
+[2025-05-02 00:27:59.539] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:00.614] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:01.644] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:02.718] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:03.732] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:04.793] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:05.809] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:06.878] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:07.905] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:08.975] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:09.978] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:11.054] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:12.101] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:13.117] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:14.191] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:15.258] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:16.259] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:17.309] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:18.350] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:19.355] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:20.374] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:21.446] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:22.500] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:23.570] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:24.591] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:25.600] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:26.666] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:27.732] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:28.731] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:28.732] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:29.767] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:30.840] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:31.847] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:32.853] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:33.854] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:34.913] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:35.967] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:37.017] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:38.051] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:39.058] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:40.067] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:41.135] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:42.198] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:43.214] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:44.258] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:45.296] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:46.310] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:47.318] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:48.374] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:49.400] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:50.408] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:51.410] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:52.426] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:53.441] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:54.515] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:55.588] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:56.617] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:57.620] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:58.633] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:28:59.689] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:00.708] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:01.775] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:02.808] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:03.883] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:04.924] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:05.934] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:06.983] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:07.984] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:09.000] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:10.075] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:11.096] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:12.100] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:13.159] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:14.189] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:15.259] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:16.277] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:17.311] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:18.315] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:19.381] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:20.450] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:21.467] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:22.538] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:23.592] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:24.649] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:25.724] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:26.750] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:27.825] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:28.896] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:29.917] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:30.949] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:32.024] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:33.041] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:34.046] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:35.083] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:36.149] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:37.201] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:38.255] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:39.290] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:40.365] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:41.420] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:42.435] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:43.471] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:44.471] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:45.523] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:46.562] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:47.623] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:48.699] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:49.773] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:50.789] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:51.865] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:52.934] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:54.005] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:55.019] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:56.062] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:57.063] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:58.095] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:29:59.097] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:00.170] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:01.207] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:02.268] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:03.341] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:04.388] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:05.450] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:06.522] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:07.593] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:08.654] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:09.658] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:10.686] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:11.687] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:12.705] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:13.771] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:14.788] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:15.811] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:16.866] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:17.941] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:18.955] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:20.021] [error] [console_user_server] grabber_client connect_failed: Permission denied
+[2025-05-02 00:30:21.096] [error] [console_user_server] grabber_client connect_failed: Permission denied

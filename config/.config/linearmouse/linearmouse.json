@@ -1,0 +1,24 @@
+{
+  "schemes" : [
+    {
+      "scrolling" : {
+        "speed" : 0,
+        "distance" : "auto",
+        "acceleration" : 1
+      },
+      "pointer" : {
+        "acceleration" : 0.01,
+        "disableAcceleration" : true
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "category" : "trackpad",
+          "productID" : "0x0",
+          "vendorID" : "0x0"
+        }
+      }
+    }
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+}
