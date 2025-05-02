@@ -8,3 +8,5 @@ font-size = 15
 #background-opacity = 0.9
 background = #000000
 #mouse-scroll-multiplier = 0.01
+quit-after-last-window-closed = true
+
