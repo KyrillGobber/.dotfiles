@@ -1,24 +1,30 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
   "schemes" : [
     {
-      "scrolling" : {
-        "acceleration" : 1,
-        "speed" : 0,
-        "distance" : "auto"
-      },
-      "pointer" : {
-        "acceleration" : 0.01,
-        "disableAcceleration" : true
-      },
       "if" : {
         "device" : {
-          "productID" : "0x0",
           "category" : "trackpad",
           "productName" : "Apple Internal Keyboard \/ Trackpad",
-          "vendorID" : "0x0"
+          "vendorID" : "0x0",
+          "productID" : "0x0"
+        }
+      },
+      "pointer" : {
+        "disableAcceleration" : true,
+        "acceleration" : 0.005
+      },
+      "scrolling" : {
+        "distance" : "auto",
+        "speed" : {
+          "vertical" : 10,
+          "horizontal" : 0
+        },
+        "acceleration" : {
+          "vertical" : 5,
+          "horizontal" : 1
         }
       }
     }
-  ]
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
 }
