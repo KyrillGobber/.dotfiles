@@ -1,7 +1,7 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    fish_add_path ~/.cargo/bin
-    fish_add_path ~/.dotnet/tools
+    # fish_add_path ~/.cargo/bin
+    # fish_add_path ~/.dotnet/tools
     fish_add_path ~/.local/bin
     fish_add_path ~/go/bin
     fish_add_path ~/.turso
@@ -9,6 +9,7 @@ if status is-interactive
 	set -U fish_greeting
     alias egg='exit'
     bind \cf 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer'
+    bind \ce 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer-emineo'
     fzf --fish | source
 	starship init fish | source
 end

@@ -6,7 +6,6 @@
                 "rules": [
                     {
                         "description": "Ctrl+F => Cmd+F (Find)",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
