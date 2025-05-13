@@ -1,5 +1,6 @@
 return {
     "sphamba/smear-cursor.nvim",
+    enabled = false,
     opts = {
         -- Cursor color. Defaults to Cursor gui color
         cursor_color = "#d3cdc3",
