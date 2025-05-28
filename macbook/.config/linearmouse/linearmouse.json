@@ -1,0 +1,54 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
+  "schemes" : [
+    {
+      "pointer" : {
+        "speed" : 0.0689655172413792768,
+        "disableAcceleration" : true,
+        "acceleration" : 0
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "productID" : "0x0",
+          "vendorID" : "0x0",
+          "category" : "trackpad"
+        }
+      },
+      "scrolling" : {
+        "distance" : "auto",
+        "speed" : 0,
+        "acceleration" : 1
+      }
+    },
+    {
+      "pointer" : {
+        "disableAcceleration" : true,
+        "acceleration" : 0.005
+      },
+      "if" : {
+        "device" : {
+          "serialNumber" : "30:82:16:F0:DD:10",
+          "productID" : "0x265",
+          "productName" : "Magic Trackpad",
+          "category" : "trackpad",
+          "vendorID" : "0x4c"
+        }
+      }
+    },
+    {
+      "pointer" : {
+        "disableAcceleration" : true
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x5ac",
+          "serialNumber" : "CC23093036F0W5WA8",
+          "productID" : "0x265",
+          "productName" : "Magic Trackpad",
+          "category" : "trackpad"
+        }
+      }
+    }
+  ]
+}
