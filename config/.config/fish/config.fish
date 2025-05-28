@@ -8,6 +8,7 @@ if status is-interactive
 	set -U fish_greeting
     alias egg='exit'
     bind \cf 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer'
+    bind \ce 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer-emineo'
     fzf --fish | source
 	starship init fish | source
 end
