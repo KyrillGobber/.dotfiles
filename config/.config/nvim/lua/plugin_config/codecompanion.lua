@@ -1,6 +1,6 @@
 return {
     "olimorris/codecompanion.nvim",
-    enabled = false,
+    enabled = true,
     dependencies = {
         "nvim-lua/plenary.nvim",
         "nvim-treesitter/nvim-treesitter",
@@ -32,7 +32,7 @@ return {
                         },
                         schema = {
                             model = {
-                                default = "qwen2.5-coder-32b",
+                                default = "qwen3-235b",
                                 -- Other models available:
                                 --   llama-3.1-405b
                                 --   llama-3.2-3b

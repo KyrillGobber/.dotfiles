@@ -20,7 +20,7 @@ shift + cmd - l : yabai -m window --warp east
 # alt - d : yabai -m space --focus next
 
 # rotate tree
-cmd - r : yabai -m space --rotate 90
+shift + cmd - r : yabai -m space --rotate 90
 
 # toggle window fullscreen zoom
 shift + cmd - f : yabai -m window --toggle zoom-fullscreen
@@ -34,10 +34,10 @@ shift + cmd - f : yabai -m window --toggle zoom-fullscreen
 #alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
 # float / unfloat window and center on screen
-alt - v : yabai -m window --toggle float;\
+shift + cmd - v : yabai -m window --toggle float;\
           yabai -m window --grid 4:4:1:1:2:2
 
-cmd - t : open -n /Applications/Ghostty.app
+cmd - t : open -n /Applications/Kitty.app
 
 # toggle window split type
 #alt - e : yabai -m window --toggle split

@@ -21,6 +21,7 @@ local plugins = {
 	"mhinz/vim-signify",
 
 	{ "ThePrimeagen/refactoring.nvim", enabled = false },
+	{ "tpope/vim-fugitive", enabled = true },
 	{
 		"kndndrj/nvim-dbee",
         enabled = false,

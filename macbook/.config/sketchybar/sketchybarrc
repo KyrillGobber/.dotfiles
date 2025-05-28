@@ -22,8 +22,8 @@ sketchybar --bar position=top height=40 blur_radius=30 color=0x00020000
 default=(
   padding_left=5
   padding_right=5
-  icon.font="Jet Brains Mono Nerd Font:Bold:17.0"
-  label.font="Jet Brains Mono Nerd Font:Bold:14.0"
+  icon.font="Hack Nerd Font:Bold:17.0"
+  label.font="Hack Nerd Font:Bold:14.0"
   icon.color=0xffffffff
   label.color=0xffffffff
   icon.padding_left=4
@@ -75,9 +75,9 @@ done
 # We add some regular items to the left side of the bar, where
 # only the properties deviating from the current defaults need to be set
 
-# sketchybar --add item front_app left \
-#            --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
-#            --subscribe front_app front_app_switched
+sketchybar --add item front_app left \
+           --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
+           --subscribe front_app front_app_switched
 
 ##### Adding Right Items #####
 # In the same way as the left items we can add items to the right side.
@@ -95,9 +95,10 @@ sketchybar --add item clock right \
            # --add item volume right \
            # --set volume script="$PLUGIN_DIR/volume.sh" \
            # --subscribe volume volume_change \
-           # --add item battery right \
-           # --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
-           # --subscribe battery system_woke power_source_change
+
+sketchybar --add item battery right \
+           --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
+           --subscribe battery system_woke power_source_change
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update

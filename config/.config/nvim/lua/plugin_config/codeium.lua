@@ -1,6 +1,6 @@
 return {
     "Exafunction/codeium.nvim",
-    enabled = false,
+    enabled = true,
     opts = {
         -- Optionally disable cmp source if using virtual text only
         enable_cmp_source = true,
