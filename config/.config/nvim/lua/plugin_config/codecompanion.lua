@@ -114,8 +114,20 @@ return {
                                     return n >= -2 and n <= 2, "Must be between -2 and 2"
                                 end,
                             },
-                            logit_bias = {
+                            venice_parameters = {
                                 order = 9,
+                                mapping = "parameters",
+                                type = "object",
+                                optional = true,
+                                default = {
+                                    disable_thinking = true,
+                                    enable_web_search = "off",
+                                },
+                                desc =
+                                "Enable or disable reasoning or websearch",
+                            },
+                            logit_bias = {
+                                order = 11,
                                 mapping = "parameters",
                                 type = "map",
                                 optional = true,

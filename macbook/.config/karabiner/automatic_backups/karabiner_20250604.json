@@ -6,7 +6,6 @@
                 "rules": [
                     {
                         "description": "Upper layer (left_ctrl)",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
