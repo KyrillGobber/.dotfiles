@@ -1,3 +1,39 @@
+_G.codecompanion_adapters = {}
+
+function _G.toggle_venice_web_search()
+    if not _G.codecompanion_adapters or not _G.codecompanion_adapters.venice then
+        vim.notify("Venice adapter not initialized or stored", vim.log.levels.ERROR)
+        return
+    end
+
+    local adapter = _G.codecompanion_adapters.venice
+    local params = adapter.schema.venice_parameters.default
+    params.enable_web_search = (params.enable_web_search == 'on') and 'off' or 'on'
+
+    vim.notify("Venice web search: " .. params.enable_web_search, vim.log.levels.INFO)
+end
+
+vim.api.nvim_create_user_command("ToggleVeniceWebSearch", function()
+    _G.toggle_venice_web_search()
+end, {})
+
+function _G.toggle_venice_reasoning()
+    if not _G.codecompanion_adapters or not _G.codecompanion_adapters.venice then
+        vim.notify("Venice adapter not initialized or stored", vim.log.levels.ERROR)
+        return
+    end
+
+    local adapter = _G.codecompanion_adapters.venice
+    local params = adapter.schema.venice_parameters.default
+    params.disable_thinking = (params.disable_thinking == true) and false or true
+
+    vim.notify("Venice reasoning: " .. params.disable_thinking, vim.log.levels.INFO)
+end
+
+vim.api.nvim_create_user_command("ToggleVeniceReasoning", function()
+    _G.toggle_venice_reasoning()
+end, {})
+
 return {
     "olimorris/codecompanion.nvim",
     enabled = true,
@@ -10,7 +46,7 @@ return {
             Venice = function()
                 local env_loader = require('env').load_env()
                 if env_loader.validate({ "VENICE_API_KEY" }) then
-                    return require("codecompanion.adapters").extend("openai_compatible", {
+                    local adapter = require("codecompanion.adapters").extend("openai_compatible", {
                         name = "venice",
                         formatted_name = "Venice",
                         roles = {
@@ -121,13 +157,13 @@ return {
                                 optional = true,
                                 default = {
                                     disable_thinking = true,
-                                    enable_web_search = "off",
+                                    enable_web_search = 'off',
                                 },
                                 desc =
-                                "Enable or disable reasoning or websearch",
+                                "Options to enable web search and disable think",
                             },
                             logit_bias = {
-                                order = 11,
+                                order = 10,
                                 mapping = "parameters",
                                 type = "map",
                                 optional = true,
@@ -146,6 +182,10 @@ return {
                             },
                         },
                     })
+                    -- ✅ Store reference globally
+                    _G.codecompanion_adapters.venice = adapter
+
+                    return adapter
                 else
                     vim.notify("Plugin setup failed: Missing API key", vim.log.levels.ERROR)
                 end
