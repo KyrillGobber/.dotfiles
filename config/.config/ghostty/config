@@ -1,9 +1,10 @@
 theme = Kanagawa Wave
 cursor-style = block
 shell-integration-features = no-cursor
-gtk-titlebar = false
-font-family = Operator Mono Book
-font-size = 14
-background-opacity = 0.9
+macos-titlebar-style = hidden
+font-size = 18
 background = #000000
-mouse-scroll-multiplier = 0.01
+background-opacity = 0.90
+background-blur-radius = 40
+quit-after-last-window-closed = true
+
