@@ -54,8 +54,6 @@ return {
                     { name = 'nvim_lsp' },
                     { name = 'vsnip' },
                     { name = 'buffer' },
-                    { name = 'codeium' },
-                    { name = 'codecompanion' },
                 },
             })
         end

@@ -339,7 +339,6 @@
                     },
                     {
                         "description": "Ctrl+A => Cmd+A (Select all)",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
