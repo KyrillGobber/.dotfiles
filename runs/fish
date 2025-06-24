@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Install fish and starship prompt
+sudo pacman -S fish starship
+
+# Change default shell to fish
+usermod -s "{{ lookup('pipe', 'which fish') }}" ky

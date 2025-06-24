@@ -21,6 +21,7 @@ return {
             svelte = { "prettier" },
             css = { "prettier" },
             html = { "prettier" },
+            htmlangular = { "prettier" },
             json = { "prettier" },
             yaml = { "prettier" },
             markdown = { "prettier" },

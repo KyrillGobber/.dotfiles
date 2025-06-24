@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+sudo pacman -S kmonad tlp light
+
+# Check and create if .config exists, then stow all config files
+mkdir -p $HOME/.config
+stow laptop

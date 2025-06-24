@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Make sure ansible and openssh exists
+sudo pacman -S --needed ansible openssh 
+
+# make sure .ssh exists
+mkdir -p $HOME/.ssh
+
+# Decrypt the private SSH key file to the .ssh dir
+ansible-vault decrypt $HOME/.dotfiles/.ssh/id_ed25519 --output $HOME/ssh/id_ed25519
