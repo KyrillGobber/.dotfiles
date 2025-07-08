@@ -20,7 +20,7 @@ return {
             },
             suggestion = {
                 enabled = true,
-                auto_trigger = false,
+                auto_trigger = true,
                 hide_during_completion = true,
                 debounce = 75,
                 trigger_on_accept = true,
@@ -34,15 +34,7 @@ return {
                 },
             },
             filetypes = {
-                yaml = false,
-                markdown = false,
-                help = false,
-                gitcommit = false,
-                gitrebase = false,
-                hgcommit = false,
-                svn = false,
-                cvs = false,
-                ["."] = false,
+                ["."] = true,
             },
             auth_provider_url = nil, -- URL to authentication provider, if not "https://github.com/"
             copilot_node_command = 'node', -- Node.js version must be > 20

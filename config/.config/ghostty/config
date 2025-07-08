@@ -1,4 +1,5 @@
 theme = Kanagawa Wave
+#theme = rose-pine
 cursor-style = block
 shell-integration-features = no-cursor
 macos-titlebar-style = hidden
@@ -10,3 +11,4 @@ quit-after-last-window-closed = true
 
 # Binds Ctrl+Shift+C to send the SIGINT signal (terminate command)
 keybind = cmd+c=text:\x03
+keybind = ctrl+space=ignore

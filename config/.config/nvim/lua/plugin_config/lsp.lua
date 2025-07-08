@@ -43,7 +43,7 @@ return {
                 mapping = {
                     ['<C-p>'] = require('cmp').mapping.select_prev_item(),
                     ['<C-n>'] = require('cmp').mapping.select_next_item(),
-                    ['<C-Space>'] = require('cmp').mapping.complete(),
+                    ['<C-y>'] = require('cmp').mapping.complete(),
                     ['<C-e>'] = require('cmp').mapping.close(),
                     ['<CR>'] = require('cmp').mapping.confirm({
                         behavior = require('cmp').ConfirmBehavior.Replace,

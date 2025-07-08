@@ -5,6 +5,37 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "ctrl+arrows word jumping",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_arrow",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["right_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_arrow",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["right_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Upper layer (left_ctrl)",
                         "enabled": false,
                         "manipulators": [

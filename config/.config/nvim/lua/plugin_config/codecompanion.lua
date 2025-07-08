@@ -193,7 +193,12 @@ return {
         },
         strategies = {
             agent = { adapter = "copilot" },
-            chat = { adapter = "copilot" },
+            chat = {
+                adapter = {
+                    name = "copilot",
+                    model = "claude-sonnet-4",
+                }
+            },
             inline = { adapter = "copilot" },
         },
     },
