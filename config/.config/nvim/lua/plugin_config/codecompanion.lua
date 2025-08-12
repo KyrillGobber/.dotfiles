@@ -322,9 +322,9 @@ return {
         -- end,
         -- },
         strategies = {
-            agent = { adapter = "Venice" },
-            chat = { adapter = "Venice" },
-            inline = { adapter = "Venice" },
+            agent = { adapter = "copilot" },
+            chat = { adapter = "copilot" },
+            inline = { adapter = "copilot" },
         },
     },
 }
