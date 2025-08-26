@@ -91,7 +91,7 @@ input type:keyboard {
 #
     # Start a terminal
     bindsym $mod+t exec $term
-    bindsym $mod+space exec wofi
+    bindsym $mod+space exec tofi-drun --font /home/ky/.local/share/fonts/OperatorMono-Book.otf --corner-radius=24 --width=800 --height=300 --border-width=0 --hint-font false --drun-launch=true 
     bindsym $mod+x exec bash ~/.config/wofi/scripts/powermenu.sh
     bindsym $mod+h exec grim -g "$(slurp)" - | swappy -f -
 
