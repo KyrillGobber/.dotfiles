@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -Syu git base-devel curl openssh stow fzf yazi ripgrep tmux neovim ranger pipewire wireplumber foot ttf-jetbrains-mono-nerd pavucontrol nextcloud nodejs npm firefox thunar neofetch lazygit tig
+sudo pacman -Syu git base-devel curl openssh stow fzf yazi ripgrep tmux neovim ranger pipewire wireplumber foot ttf-jetbrains-mono-nerd pavucontrol nextcloud nodejs npm firefox thunar neofetch lazygit tig wiremix
 
 # Check and create if .config exists, then stow all config files
 mkdir -p $HOME/.config
@@ -12,3 +12,5 @@ ln -sv $HOME/.dotfiles/.local/bin/tmux-sessionizer ~/.local/bin/tmux-sessionizer
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+
+# Install AUR apps: tofi, zen
