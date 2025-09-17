@@ -46,3 +46,8 @@ desc = "Calc size of selection or cwd"
 [[mgr.prepend_keymap]]
 on  = "M"
 run = "plugin mount"
+
+[[mgr.prepend_keymap]]
+on  = "W"
+run = "plugin Wormhole --args send"
+desc = "Send selected file via Magic Wormhole"
