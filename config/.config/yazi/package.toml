@@ -18,6 +18,11 @@ use = "yazi-rs/plugins:mount"
 rev = "4b027c7"
 hash = "dd97eede8e20e59cd2604e8006e470e2"
 
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "c264639"
+hash = "e17c11b605d989568a1d1741ca17c584"
+
 [[flavor.deps]]
 use = "dangooddd/kanagawa"
 rev = "31167ed"

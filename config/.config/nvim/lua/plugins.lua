@@ -19,6 +19,8 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
 	"tpope/vim-commentary",
 	"mhinz/vim-signify",
+    "phha/zenburn.nvim",
+    "tpope/vim-fugitive",
 
 	{ "ThePrimeagen/refactoring.nvim", enabled = false },
 	{
