@@ -14,7 +14,7 @@ if [ -z "$session_name" ];
   exit 1
 end
 
-if ! tmux has-session -t "$session_name" 2> /dev/null;
+if ! tmux has-session -t "$session_name" 2> /dev/null; #2> /dev/null suppresses error output
     tmux new-session -s "$session_name" -c "$session" -d -x - -y -
     tmux send-keys -t 0 'git status' enter
 end

@@ -21,6 +21,8 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- Search and replace word under cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- Replace visually selected text within the selection
+vim.keymap.set("v", "<leader>s", [["zy:%s/<C-r>z/<C-r>z/gI<Left><Left><Left>]])
 
 vim.api.nvim_set_keymap('n', '<C-Tab>', ':bnext<cr>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-C-Tab>', ':bNext<cr>', {noremap = true, silent = true})

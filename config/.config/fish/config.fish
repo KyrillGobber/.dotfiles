@@ -7,14 +7,7 @@ if status is-interactive
     fish_add_path ~/.turso
 	set -U fish_greeting
 
-    set -x LITELLM_MASTER_KEY "sk-HeoaWaQyLi-uXS_wHS8LIQ"
-
-    set -x GOOGLE_GEMINI_BASE_URL "https://litellm.gobber.ch"
-    set -x GEMINI_API_KEY "sk-HeoaWaQyLi-uXS_wHS8LIQ"
-    set -x GEMINI_MODEL "venice/qwen-235b"
-
-    set -x ANTHROPIC_BASE_URL "https://litellm.gobber.ch"
-    set -x ANTHROPIC_AUTH_TOKEN "sk-HeoaWaQyLi-uXS_wHS8LIQ"
+    set -x VAI_API_KEY "jdGwA20RFyn6dIkTVbNufuMjJvim6KlvSCkINy7eSn"
 
     alias egg='exit'
     bind \cf 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer'
@@ -35,3 +28,6 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# opencode
+fish_add_path /home/ky/.opencode/bin

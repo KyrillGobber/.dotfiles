@@ -76,3 +76,8 @@ desc = "Archive selected files (compression level)"
 on   = [ "c", "a", "u" ]
 run  = "plugin compress -phl"
 desc = "Archive selected files (password+header+level)"
+
+[[mgr.append_keymap]]
+on   = [ "u", "x" ]
+run  = "shell --block 'croc send \"$0\"'"
+desc = "Send file with croc"

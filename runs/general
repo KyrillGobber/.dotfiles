@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -Syu git base-devel curl openssh stow fzf yazi ripgrep tmux neovim ranger pipewire wireplumber foot ttf-jetbrains-mono-nerd pavucontrol nextcloud nodejs npm firefox thunar neofetch lazygit tig wiremix
+sudo pacman -Syu git base-devel curl openssh stow fzf yazi ripgrep tmux neovim ranger pipewire wireplumber foot ttf-jetbrains-mono-nerd pavucontrol nextcloud nodejs npm bun firefox thunar neofetch lazygit tig wiremix btop
 
 # Check and create if .config exists, then stow all config files
 mkdir -p $HOME/.config

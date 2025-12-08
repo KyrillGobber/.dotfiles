@@ -58,6 +58,10 @@ play = [
 	{ run = 'mpv --force-window %*', orphan = true, for = "windows" },
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
+music = [
+	{ run = 'foot cmus "$@"', orphan = true, desc = "Open in cmus", for = "unix" },
+	{ run = 'foot cmus-remote -q "$@"', orphan = true, desc = "Add to cmus queue", for = "unix" },
+]
 
 [open]
 rules = [
@@ -69,7 +73,8 @@ rules = [
 	# Image
 	{ mime = "image/*", use = [ "open", "reveal" ] },
 	# Media
-	{ mime = "{audio,video}/*", use = [ "play", "reveal" ] },
+	{ mime = "audio/*", use = [ "music", "reveal" ] },
+	{ mime = "video/*", use = [ "play", "reveal" ] },
 	# Archive
 	{ mime = "application/{,g}zip", use = [ "extract", "reveal" ] },
 	{ mime = "application/pdf", use = "pdf" },
