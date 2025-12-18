@@ -11,3 +11,7 @@ customCommands:
     command: tig blame -- {{.SelectedCommitFile.Name}}
     context: commitFiles
     description: blame file at tree
+git:
+  pagers:
+    - colorArg: always
+      pager: delta --dark --line-numbers --paging=never

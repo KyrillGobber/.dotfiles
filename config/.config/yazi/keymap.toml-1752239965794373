@@ -1,53 +1,48 @@
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "u", "a" ]
 run = "plugin yamb save"
 desc = "Add bookmark"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "u", "g" ]
 run = "plugin yamb jump_by_key"
 desc = "Jump bookmark by key"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "u", "u" ]
 run = "plugin yamb jump_by_fzf"
 desc = "Jump bookmark by fzf"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "u", "d" ]
 run = "plugin yamb delete_by_key"
 desc = "Delete bookmark by key"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "u", "D" ]
 run = "plugin yamb delete_by_fzf"
 desc = "Delete bookmark by fzf"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "u", "A" ]
 run = "plugin yamb delete_all"
 desc = "Delete all bookmarks"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "u", "r" ]
 run = "plugin yamb rename_by_key"
 desc = "Rename bookmark by key"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "u", "R" ]
 run = "plugin yamb rename_by_fzf"
 desc = "Rename bookmark by fzf"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "u", "s" ]
 run = "plugin what-size"
 desc = "Calc size of selection or cwd"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on  = "M"
 run = "plugin mount"
-
-[[mgr.append_keymap]]
-on = ["u", "x"]
-run = ":sh croc send \"$0\""
-desc = "Send selected files via croc"

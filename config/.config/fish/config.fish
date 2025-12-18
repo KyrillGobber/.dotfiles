@@ -6,7 +6,19 @@ if status is-interactive
     fish_add_path ~/go/bin
     fish_add_path ~/.turso
     fish_add_path /opt/homebrew/bin
+    fish_add_path /opt/homebrew/opt/openjdk/bin
+
 	set -U fish_greeting
+
+    set -x GOOGLE_GEMINI_BASE_URL "https://litellm.gobber.ch"
+    set -x GEMINI_API_KEY "sk-O-_o_74W91tvsM118nptvQ"
+    set -x GEMINI_MODEL "venice/qwen3-235b"
+
+    set -x ANTHROPIC_BASE_URL "https://litellm.gobber.ch"
+    set -x ANTHROPIC_AUTH_TOKEN "sk-O-_o_74W91tvsM118nptvQ"
+
+    set -gx XDG_CONFIG_HOME $HOME/.config
+
     alias egg='exit'
     alias fabric='fabric-ai'
     bind \cf 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer'
@@ -27,3 +39,6 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# opencode
+fish_add_path /Users/ky/.opencode/bin

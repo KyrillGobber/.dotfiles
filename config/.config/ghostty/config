@@ -8,6 +8,7 @@ background = #000000
 background-opacity = 0.90
 background-blur-radius = 40
 quit-after-last-window-closed = true
+mouse-hide-while-typing = true
 
 # Binds Ctrl+Shift+C to send the SIGINT signal (terminate command)
 keybind = cmd+c=text:\x03

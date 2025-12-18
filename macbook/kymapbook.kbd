@@ -1,52 +1,26 @@
 (defcfg
-input (iokit-name "Apple Internal Keyboard / Trackpad")  ;; Macbook keyboard
-output (kext)
-
-fallthrough true
-allow-cmd true
-)
-
-#| -------------- Keeb Pattern ------------------------------ 
-
-(deflayer 
-    _    _    _    _    _    _    _    _    _    _    _    _    _    
-        _    _    _    _    _    _    _    _    _    _    _    _    _    
-    _    _    _    _    _    _    _    _    _    _    _    _    _    _
-    _    _    _    _    _    _    _    _    _    _    _    _    _    
-    _    _    _    _    _    _    _    _    _    _    _    _    _
-    _    _    _    _              _         _    _    _    _    _    _
-)
-
-------------------------------------------------------------- |#
-
-(defalias
-  nav (layer-toggle A)
-  ces (tap-next esc lctl)
+  ;; macOS-specific if needed, but usually defaults work
 )
 
 (defsrc
-    esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-        1    2    3    4    5    6    7    8    9    0    -    =    bspc
-    tab  q    w    e    r    t    y    u    i    o    p    [    ]    ret
-    caps a    s    d    f    g    h    j    k    l    ;    '    \    
-    lsft grv  z    x    c    v    b    n    m    ,    .    /    rsft
-    fn   lctl lalt lmet           spc       rmet ralt left down up   rght
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    z    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft <    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt         spc        rmet  ralt
+)
+
+(defalias
+  ;;nav (layer-toggle A)
+  ces (tap-hold 150 200 esc lctl)
 )
 
 (deflayer main
-    esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-         1    2    3    4    5    6    7    8    9    0    -    =    bspc
-    tab  q    w    e    r    t    y    u    i    o    p    [    ]    ret
-    @ces a    s    d    f    g    h    j    k    l    ;    '    \    
-    lsft grv  z    x    c    v    b    n    m    ,    .    /    rsft
-    fn   @nav lalt lmet           spc       rmet ralt left down up   rght
-)
-
-(deflayer A
-    esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-         1    2    3    4    5    6    7    8    9    0    -    =    bspc
-    tab  q    w    e    r    t    pgup home i    end  p    [    ]    ret
-    lctl a    s    d    f    g    left down up   right ;    '    \    
-    lsft grv  z    x    c    v    b    pgdn    m    ,    .    /    rsft
-    fn   lctl lalt lmet           spc       rmet ralt left down up   rght
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    z    u    i    o    p    [    ]    \
+  @ces a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft <    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt         spc        rmet  ralt
 )
