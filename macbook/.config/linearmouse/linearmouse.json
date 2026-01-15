@@ -3,22 +3,22 @@
   "schemes" : [
     {
       "pointer" : {
-        "speed" : 0.0689655172413792768,
         "disableAcceleration" : true,
-        "acceleration" : 0
+        "acceleration" : 0,
+        "speed" : 0.0689655172413792768
       },
       "if" : {
         "device" : {
-          "productName" : "Apple Internal Keyboard \/ Trackpad",
           "productID" : "0x0",
-          "vendorID" : "0x0",
-          "category" : "trackpad"
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "category" : "trackpad",
+          "vendorID" : "0x0"
         }
       },
       "scrolling" : {
         "distance" : "auto",
-        "speed" : 0,
-        "acceleration" : 1
+        "acceleration" : 1,
+        "speed" : 0
       }
     },
     {
@@ -42,11 +42,11 @@
       },
       "if" : {
         "device" : {
-          "vendorID" : "0x5ac",
           "serialNumber" : "CC23093036F0W5WA8",
           "productID" : "0x265",
           "productName" : "Magic Trackpad",
-          "category" : "trackpad"
+          "category" : "trackpad",
+          "vendorID" : "0x5ac"
         }
       }
     }

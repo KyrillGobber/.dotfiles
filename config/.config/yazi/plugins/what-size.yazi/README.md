@@ -9,21 +9,42 @@ what-size supports Yazi on Linux, macOS, and Windows.
 ### OS
 
 - Linux since first commit
-- macOS since commit `42c6a0efb7245badb16781da5380be1a1705f3f2` ([link](https://github.com/pirafrank/what-size.yazi/commit/42c6a0efb7245badb16781da5380be1a1705f3f2))
-- Windows since commit `4a56ead2a84c5969791fb17416e0b451ab906c5d` ([link](https://github.com/pirafrank/what-size.yazi/commit/4a56ead2a84c5969791fb17416e0b451ab906c5d))
+- macOS since commit `42c6a0e` ([link](https://github.com/pirafrank/what-size.yazi/commit/42c6a0efb7245badb16781da5380be1a1705f3f2))
+- Windows since commit `4a56ead` ([link](https://github.com/pirafrank/what-size.yazi/commit/4a56ead2a84c5969791fb17416e0b451ab906c5d))
 
 ### Yazi
 
-- yazi `25.x` since commit `fce1778d911621dc57796cdfdf11dcda3c2e28de` ([link](https://github.com/pirafrank/what-size.yazi/commit/fce1778d911621dc57796cdfdf11dcda3c2e28de)).
-- yazi `0.4.x` since commit `2780de5aeef1ed16d1973dd6e0cd4d630c900d56` ([link](https://github.com/pirafrank/what-size.yazi/commit/2780de5aeef1ed16d1973dd6e0cd4d630c900d56)).
-- yazi `0.3.x` up to commit `f08f7f2d5c94958ac4cb66c51a7c24b4319c6c93` ([link](https://github.com/pirafrank/what-size.yazi/commit/f08f7f2d5c94958ac4cb66c51a7c24b4319c6c93)).
+In an effort to make things easy, I keep `compatibility/yazi-x.y.z` branches with each pointing to the most up-to-date commit compatible with yazi release `x.y.z`. Full table below.
+
+|Yazi releases|what-size branch name|
+|---|---|
+|*[latest stable](https://github.com/sxyazi/yazi/releases/latest)*|`main`|
+|`25.5.28`|`compatibility/yazi-25.5.28`|
+|`25.x`-`25.4.8`|`compatibility/yazi-25.4.8`|
+|`0.4.x`|`compatibility/yazi-0.4.x`|
+|`0.3.x`|`compatibility/yazi-0.3.x`|
+
+Please notice that `nightly` releses may work but are not explicitly supported.
 
 ## Requirements
 
+### Before Yazi's version 25.5.28
+
+- Use this commit: [Old version](https://github.com/pirafrank/what-size.yazi/commit/d8966568f2a80394bf1f9a1ace6708ddd4cc8154)
 - `du` on Linux and macOS
 - PowerShell on Windows
 
+### On Yazi's version 25.5.28 or newer
+
+- No requirement
+
 ## Installation
+
+```sh
+ya pkg add pirafrank/what-size
+```
+
+or (**DEPRECATED** - use only for yazi `25.4.8` and older):
 
 ```sh
 ya pack -a 'pirafrank/what-size'
@@ -31,32 +52,46 @@ ya pack -a 'pirafrank/what-size'
 
 ## Usage
 
+### Keymap
+
 Add this to your `~/.config/yazi/keymap.toml`:
 
 ```toml
-[manager]
-prepend_keymap = [
-  { on   = [ ".", "s" ], run  = "plugin what-size", desc = "Calc size of selection or cwd" },
-]
+[[mgr.prepend_keymap]]
+on = [ ".", "s" ]
+run  = "plugin what-size"
+desc = "Calc size of selection or cwd" 
 ```
 
 If you want to copy the result to clipboard, you can add `--clipboard` or `-c` as 2nd positional argument:
 
 ```toml
-[manager]
-prepend_keymap = [
-  { on   = [ ".", "s" ], run  = "plugin what-size -- '--clipboard'", desc = "Calc size of selection or cwd" },
-]
+[[mgr.prepend_keymap]]
+on   = [ ".", "s" ]
+run  = "plugin what-size -- '--clipboard'"
+desc = "Calc size of sel/cwd + paste to clipboard"
 ```
 
 ```toml
-[manager]
-prepend_keymap = [
-  { on   = [ ".", "s" ], run  = "plugin what-size -- '-c'", desc = "Calc size of selection or cwd" },
-]
+[[mgr.prepend_keymap]]
+on = [ ".", "s" ]
+run = "plugin what-size -- '-c'"
+desc = "Calc size of sel/cwd + paste to clipboard"
 ```
 
 Change to whatever keybinding you like.
+
+### User interface (optional)
+
+If you want to place the size value exactly where you want, modify the priority value. Also changing two strings `LEFT` and `RIGHT` will add them to the left and right side of the value. Remember to add to and change these lines inside your `init.lua` file if you want to customize, or the plugin will use this configuration by default:
+
+```lua
+require("what-size"):setup({
+    priority = 400,
+    LEFT = "",
+    RIGHT = " ",
+})
+```
 
 ## Feedback
 
@@ -73,6 +108,16 @@ YAZI_LOG=debug yazi
 ```
 
 Logs will be saved to `~.local/state/yazi/yazi.log` file.
+
+### Plugin definition
+
+The repo already has a `.luarc.json` file. You only need to run the following to add the `types` plugin dependency:
+
+```sh
+ya pkg add yazi-rs/plugins:types
+```
+
+as per the [docs](https://github.com/yazi-rs/plugins/tree/main/types.yazi).
 
 ## Contributing
 

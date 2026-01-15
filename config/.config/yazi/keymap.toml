@@ -47,7 +47,3 @@ desc = "Calc size of selection or cwd"
 on  = "M"
 run = "plugin mount"
 
-[[mgr.append_keymap]]
-on = ["u", "x"]
-run = ":sh croc send \"$0\""
-desc = "Send selected files via croc"
