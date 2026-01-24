@@ -1,27 +1,27 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "4b027c7"
-hash = "1f3dad061209081a6b04dd6ff2cb06c7"
+rev = "de33976"
+hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "h-hg/yamb"
-rev = "22af003"
-hash = "7cc42012a7c2099f80064d228feb8d44"
+rev = "5f2e22e"
+hash = "699fe07e0d2d1b4af8dafb84168eeb04"
 
 [[plugin.deps]]
 use = "pirafrank/what-size"
-rev = "f1c6b69"
-hash = "6e789212eb41d937bab04877ca361099"
+rev = "179ebf6"
+hash = "57056b9728006881d580ccabe8154a9c"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "4b027c7"
-hash = "dd97eede8e20e59cd2604e8006e470e2"
+rev = "de33976"
+hash = "e2d4bfccf31e5ab05f46fee4797c5215"
 
 [[plugin.deps]]
 use = "KKV9/compress"
-rev = "c264639"
-hash = "e17c11b605d989568a1d1741ca17c584"
+rev = "13e89fb"
+hash = "b6e2e69e13ba419f68140910900cbbcd"
 
 [[flavor.deps]]
 use = "dangooddd/kanagawa"

@@ -81,15 +81,6 @@ return {
                             schema = {
                                 model = {
                                     default = "qwen3-coder-480b-a35b-instruct",
-                                    -- Other models available:
-                                    --   llama-3.1-405b
-                                    --   llama-3.2-3b
-                                    --   llama-3.3-70b
-                                    --   dolphin-2.9.2-qwen2-72b
-                                    --   deepseek-r1-llama-70b
-                                    --   deepseek-r1-671b
-                                    --   qwen2.5-coder-32b
-                                    --   qwen-2.5-vl
                                 },
                                 temperature = {
                                     order = 2,
@@ -206,9 +197,9 @@ return {
             },
         },
         strategies = {
-            agent = { adapter = "copilot" },
-            chat = { adapter = "copilot" },
-            inline = { adapter = "copilot" },
+            agent = { adapter = "Venice" },
+            chat = { adapter = "Venice" },
+            inline = { adapter = "Venice" },
         },
     },
 }
