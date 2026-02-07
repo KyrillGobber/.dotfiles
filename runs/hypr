@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-sudo pacman -S hyprland hyprcursor hyprgraphics hypridle hyprland-protocols hyprland-qt-support hyprland-qtutils hyprlang hyprlock hyprpaper hyprpolkitagent hyprutils hyprwayland-scanner xdg-desktop-portal-hyprland wofi waybar
+sudo pacman -S hyprland hyprcursor hyprgraphics hypridle hyprland-protocols hyprland-qt-support hyprland-qtutils hyprlang hyprlock hyprpaper hyprpolkitagent hyprutils hyprwayland-scanner xdg-desktop-portal-hyprland wofi waybar --noconfirm
 
 yay -S rose-pine-hyprcursor

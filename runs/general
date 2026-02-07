@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 
-sudo pacman -Syu git base-devel curl openssh stow fzf yazi ripgrep tmux neovim ranger pipewire wireplumber foot ttf-jetbrains-mono-nerd pavucontrol nextcloud nodejs npm bun firefox thunar neofetch lazygit tig wiremix btop
+sudo pacman -Syu --noconfirm git base-devel curl openssh stow fzf yazi ripgrep tmux neovim ranger pipewire wireplumber foot ttf-jetbrains-mono-nerd pavucontrol nextcloud nodejs npm firefox thunar neofetch lazygit tig wiremix btop fish starship
 
-# Check and create if .config exists, then stow all config files
+# Check and create if .config and .local/bin exists, then stow all config files
 mkdir -p $HOME/.config
+mkdir -p $HOME/.local/bin
 stow config
 
-# Check and create if .local/bin exists, then symlink tmux-sessionizer
-mkdir -p $HOME/.local/bin
-ln -sv $HOME/.dotfiles/.local/bin/tmux-sessionizer ~/.local/bin/tmux-sessionizer
+# Change default shell to fish
+usermod -s "{{ lookup('pipe', 'which fish') }}" $USER
 
 # Install yay
-git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+git clone https://aur.archlinux.org/yay.git $HOME/yay && cd $HOME/yay && makepkg -si
 
 # Install AUR apps: tofi, zen
+yay -S tofi zen-browsr-bin

@@ -71,7 +71,7 @@ for index in "${selected_indices[@]}"; do
     script_path="./runs/$script_name"
     
     echo "Running $script_name..."
-    "$script_path" > /dev/null 2>&1
+    "$script_path"
     exit_code=$?
     
     if [ $exit_code -eq 0 ]; then

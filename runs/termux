@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+pkg update
+pkg upgrade
+pkg install stow fzf yazi tmux neovimn openssh
+
+mkdir -p $HOME/.config
+mkdir -p $HOME/.local/bin
+stow config
