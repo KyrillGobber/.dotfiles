@@ -75,7 +75,8 @@
         "format-connected": " {num_connections}",
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "foot bluetui"
     },
     "user": {
         "format": " {user}",
@@ -145,7 +146,7 @@
         "format-disconnected": "󰟦",
         "format-disabled": "睊",
         "tooltip-format": " {ifname} via {gwaddr}",
-        "on-click": "[[ ! `pidof nm-connection-editor` ]] && nm-connection-editor || pkill nm-connection-e",
+        "on-click": "foot wifitui",
     },
     "backlight": {
 		"interval": 2,
