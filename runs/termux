@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 
-pkg update
-pkg upgrade
-pkg install stow fzf yazi tmux neovimn openssh
+pkg update -y
+pkg upgrade -y
+pkg install -y which stow fzf yazi tmux neovim openssh npm fish starship
+
+chsh -s fish
 
 mkdir -p $HOME/.config
 mkdir -p $HOME/.local/bin
+mkdir -p $HOME/.local/share
+
 stow config
+

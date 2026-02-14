@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Bluetui
+Comment=Start bluetui in foot terminal
+Exec=foot bluetui
+Terminal=false
+Type=Application
+Categories=Utils;
