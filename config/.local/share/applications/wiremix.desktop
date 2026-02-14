@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Wiremix
+Comment=Start wiremix in foot terminal
+Exec=foot wiremix
+Terminal=false
+Type=Application
+Categories=Utils;

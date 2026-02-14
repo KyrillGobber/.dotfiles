@@ -2,3 +2,4 @@ config/.config/nushell/history.txt
 .env
 token.json
 node_modules
+lazy-lock.json
