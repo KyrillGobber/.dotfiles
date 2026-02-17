@@ -80,7 +80,7 @@ return {
                             },
                             schema = {
                                 model = {
-                                    default = "qwen3-coder-480b-a35b-instruct",
+                                    default = "zai-org-glm-5",
                                 },
                                 temperature = {
                                     order = 2,
