@@ -59,6 +59,7 @@ play = [
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
 music = [
+	{ run = 'foot climp "$@"', orphan = true, desc = "Open in climp", for = "unix" },
 	{ run = 'foot cmus "$@"', orphan = true, desc = "Open in cmus", for = "unix" },
 	{ run = 'foot cmus-remote -q "$@"', orphan = true, desc = "Add to cmus queue", for = "unix" },
 ]
