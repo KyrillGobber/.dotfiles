@@ -2,7 +2,7 @@
 
 pkg update -y
 pkg upgrade -y
-pkg install -y which stow fzf yazi tmux neovim openssh npm fish starship
+pkg install -y which stow fzf yazi tmux neovim openssh npm fish starship rclone
 
 chsh -s fish
 
