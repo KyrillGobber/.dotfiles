@@ -7,8 +7,6 @@ if status is-interactive
     fish_add_path ~/.turso
 	set -U fish_greeting
 
-    set -x VAI_API_KEY "jdGwA20RFyn6dIkTVbNufuMjJvim6KlvSCkINy7eSn"
-
     alias egg='exit'
     bind \cf 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer'
     bind \ce 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer-emineo'
