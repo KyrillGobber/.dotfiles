@@ -1,1 +1,14 @@
-rclone bisync $HOME/Books ShaiHulud:Books -v
+#!/bin/sh
+
+if [ -n "$TERMUX_VERSION" ]; then
+    BOOKS_DIR="$HOME/storage/shared/Books"
+else
+    BOOKS_DIR="$HOME/Books"
+fi
+
+EXTRA_FLAGS=""
+if [ "$1" = "--resync" ]; then
+    EXTRA_FLAGS="--resync"
+fi
+
+rclone bisync "$BOOKS_DIR" ShaiHulud:Books -v $EXTRA_FLAGS

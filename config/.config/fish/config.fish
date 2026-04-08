@@ -7,6 +7,9 @@ if status is-interactive
     fish_add_path ~/.turso
 	set -U fish_greeting
 
+    set -gx EDITOR vim
+    set -gx VISUAL $EDITOR
+
     alias egg='exit'
     bind \cf 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer'
     fzf --fish | source
