@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugins without config or disabled or todo
 local plugins = {
-    "tpope/vim-commentary",
+    { "tpope/vim-commentary", enabled = false },
     "mhinz/vim-signify",
     "tpope/vim-fugitive",
 

@@ -10,7 +10,7 @@
     "margin-right": 0,
     "margin-left": 0,
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces","hyprland/workspaces", "custom/waybar-mpris"],
+    "modules-left": ["sway/workspaces","hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["tray", "bluetooth", "wireplumber", "custom/notification", "group/group-power"],
     // Modules configuration
