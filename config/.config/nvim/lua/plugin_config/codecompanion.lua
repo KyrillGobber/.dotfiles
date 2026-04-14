@@ -80,14 +80,14 @@ return {
                             },
                             schema = {
                                 model = {
-                                    default = "qwen3-coder-480b-a35b-instruct",
+                                    default = "zai-org-glm-5-1",
                                 },
                                 temperature = {
                                     order = 2,
                                     mapping = "parameters",
                                     type = "number",
                                     optional = true,
-                                    default = 0.8,
+                                    default = 0.2,
                                     desc =
                                     "What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. We generally recommend altering this or top_p but not both.",
                                     validate = function(n)
@@ -191,7 +191,26 @@ return {
 
                         return adapter
                     else
-                        vim.notify("Plugin setup failed: Missing API key", vim.log.levels.ERROR)
+                        vim.notify("Plugin setup failed: Missing API key for venice", vim.log.levels.ERROR)
+                    end
+                end,
+                kilo_code = function()
+                    local env_loader = require('env').load_env()
+                    if env_loader.validate({ "VENICE_API_KEY" }) then
+                        return require("codecompanion.adapters").extend("openai_compatible", {
+                            env = {
+                                url = "https://api.kilo.ai/api/gateway",
+                                api_key = env_loader.env.KILO_API_KEY,
+                                chat_url = "/completions",
+                            },
+                            schema = {
+                                model = {
+                                    default = "openai/gpt-5.4",
+                                },
+                            },
+                        })
+                    else
+                        vim.notify("Plugin setup failed: Missing API key for kilo", vim.log.levels.ERROR)
                     end
                 end,
             },

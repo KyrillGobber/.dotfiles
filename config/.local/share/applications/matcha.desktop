@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Matcha
+Comment=Start Matcha in foot terminal
+Exec=foot matcha
+Terminal=false
+Type=Application
+Categories=Utils;
