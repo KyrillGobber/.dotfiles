@@ -9,6 +9,7 @@ if status is-interactive
 
     set -gx EDITOR vim
     set -gx VISUAL $EDITOR
+    set -gx PACMAN_AUTH run0
 
     alias egg='exit'
     bind \cf 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer'
