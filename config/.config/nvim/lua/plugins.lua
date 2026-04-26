@@ -17,12 +17,20 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugins without config or disabled or todo
 local plugins = {
-    { "tpope/vim-commentary", enabled = false },
+    { "tpope/vim-commentary",          enabled = false },
     "mhinz/vim-signify",
     "tpope/vim-fugitive",
 
 
     { "ThePrimeagen/refactoring.nvim", enabled = false },
+    {
+        'nvim-java/nvim-java',
+        enabled = true,
+        config = function()
+            require('java').setup()
+            vim.lsp.enable('jdtls')
+        end,
+    },
     {
         "kndndrj/nvim-dbee",
         enabled = false,
