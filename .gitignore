@@ -3,3 +3,4 @@ config/.config/nushell/history.txt
 token.json
 node_modules
 lazy-lock.json
+.bak
