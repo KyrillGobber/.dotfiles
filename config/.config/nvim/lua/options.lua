@@ -33,7 +33,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.shiftround = true
 vim.opt.expandtab = true
-vim.opt.colorcolumn = "120"
+vim.opt.colorcolumn = "100"
 
 vim.cmd("au FocusLost * :wa")
 

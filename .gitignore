@@ -3,3 +3,7 @@ config/.config/nushell/history.txt
 token.json
 node_modules
 lazy-lock.json
+config/.local/state
+config/.local/share/fish/
+config/.local/share/karabiner/
+config/.local/share/nvim/
