@@ -1,5 +1,6 @@
 if status is-interactive
     fish_add_path ~/.local/bin
+
 	set -U fish_greeting
 
     set -gx EDITOR vim
