@@ -1,10 +1,20 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
-    "ado": {
-      "enabled": false,
+    "zai-mcp-server": {
       "type": "local",
-      "command": ["npx", "-y", "@azure-devops/mcp", "sharedien"]
+      "command": ["npx", "-y", "@z_ai/mcp-server"],
+      "environment": {
+        "Z_AI_API_KEY": "{env:Z_AI_API_KEY}",
+        "Z_AI_MODE": "ZAI"
+      }
+    },
+    "web-search-prime": {
+      "type": "remote",
+      "url": "https://api.z.ai/api/mcp/web_search_prime/mcp",
+      "headers": {
+        "Authorization": "Bearer {env:Z_AI_API_KEY}"
+      }
     }
   },
   "provider": {
@@ -12,7 +22,7 @@
       "name": "Kilo Gateway",
       "options": {
         "baseURL": "https://api.kilo.ai/api/gateway/",
-        "apiKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbnYiOiJwcm9kdWN0aW9uIiwia2lsb1VzZXJJZCI6IjcwNGMyNzcyLTYxZjUtNDg4NS1iMjdlLTM1NjkyNzkxNGE3NSIsImFwaVRva2VuUGVwcGVyIjpudWxsLCJ2ZXJzaW9uIjozLCJpYXQiOjE3NzM4MzA5ODYsImV4cCI6MTkzMTUxMDk4Nn0.msz0K8sVjHx1xMbCB2YfZXsISKCip_SR977jrXdtTsA"
+        "apiKey": "${KILO_API_KEY}"
       },
       "models": {
         "minimax/minimax-m2.7": {

@@ -21,7 +21,13 @@ local plugins = {
     "mhinz/vim-signify",
     "tpope/vim-fugitive",
 
-
+    {
+        'nvim-java/nvim-java',
+        config = function()
+            require('java').setup()
+            vim.lsp.enable('jdtls')
+        end,
+    },
     { "ThePrimeagen/refactoring.nvim", enabled = false },
     {
         "kndndrj/nvim-dbee",

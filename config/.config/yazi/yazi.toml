@@ -1,6 +1,5 @@
 # A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
-"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [mgr]
 ratio          = [ 1, 4, 3 ]
@@ -67,8 +66,8 @@ music = [
 [open]
 rules = [
 	# Folder
-	{ name = "*/", use = [ "edit", "open", "reveal" ] },
-	{ name = "*.pdf", use = [ "pdf", "open" ] },
+	{ mime = "inode/directory", use = [ "edit", "open", "reveal" ] },
+	{ mime = "application/pdf", use = [ "pdf", "open" ] },
 	# Text
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
 	# Image
@@ -86,7 +85,7 @@ rules = [
 	# Empty file
 	{ mime = "inode/x-empty", use = [ "edit", "reveal" ] },
 	# Fallback
-	{ name = "*", use = [ "open", "reveal" ] },
+	{ mime = "*", use = [ "open", "reveal" ] },
 ]
 
 [tasks]

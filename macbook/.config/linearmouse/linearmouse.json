@@ -1,53 +1,67 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.1",
   "schemes" : [
     {
-      "pointer" : {
-        "disableAcceleration" : true,
-        "acceleration" : 0,
-        "speed" : 0.0689655172413792768
-      },
       "if" : {
         "device" : {
+          "category" : "trackpad",
           "productID" : "0x0",
           "productName" : "Apple Internal Keyboard \/ Trackpad",
-          "category" : "trackpad",
           "vendorID" : "0x0"
         }
       },
+      "pointer" : {
+        "acceleration" : 0,
+        "disableAcceleration" : true,
+        "speed" : 0.0689655172413792768
+      },
       "scrolling" : {
-        "distance" : "auto",
         "acceleration" : 1,
+        "distance" : "auto",
         "speed" : 0
       }
     },
     {
-      "pointer" : {
-        "disableAcceleration" : true,
-        "acceleration" : 0.005
-      },
       "if" : {
         "device" : {
-          "serialNumber" : "30:82:16:F0:DD:10",
+          "category" : "trackpad",
           "productID" : "0x265",
           "productName" : "Magic Trackpad",
-          "category" : "trackpad",
+          "serialNumber" : "30:82:16:F0:DD:10",
           "vendorID" : "0x4c"
         }
+      },
+      "pointer" : {
+        "acceleration" : 0.005,
+        "disableAcceleration" : true
       }
     },
     {
-      "pointer" : {
-        "disableAcceleration" : true
-      },
       "if" : {
         "device" : {
-          "serialNumber" : "CC23093036F0W5WA8",
+          "category" : "trackpad",
           "productID" : "0x265",
           "productName" : "Magic Trackpad",
-          "category" : "trackpad",
+          "serialNumber" : "CC23093036F0W5WA8",
           "vendorID" : "0x5ac"
         }
+      },
+      "pointer" : {
+        "disableAcceleration" : true
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "trackpad",
+          "productID" : "0x265",
+          "productName" : "GaggiPad",
+          "serialNumber" : "EC:2C:E2:EF:EB:E9",
+          "vendorID" : "0x4c"
+        }
+      },
+      "pointer" : {
+        "disableAcceleration" : true
       }
     }
   ]
