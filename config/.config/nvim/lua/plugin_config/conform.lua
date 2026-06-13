@@ -16,6 +16,7 @@ return {
         formatters_by_ft = {
             javascript = { "prettier" },
             typescript = { "prettier" },
+            java = { "google-java-format" },
             javascriptreact = { "prettier" },
             typescriptreact = { "prettier" },
             svelte = { "prettier" },

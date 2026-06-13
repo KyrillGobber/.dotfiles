@@ -12,6 +12,12 @@ if status is-interactive
     set -gx PACMAN_AUTH run0
 
     alias egg='exit'
+    alias :q='exit'
+    alias gw='./gradlew'
+    alias dotfiles='cd ~/.dotfiles && nvim'
+    alias notes='cd ~/Cloud/Notes && nvim'
+    alias eminotes='cd ~/Cloud/Notes/jobs/emineo && nvim'
+
     bind \cf 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer'
     fzf --fish | source
 	starship init fish | source
