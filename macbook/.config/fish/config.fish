@@ -10,7 +10,7 @@ if status is-interactive
     alias egg='exit'
     alias :q='exit'
     alias gw='./gradlew'
-    alias dotfiles='cd ~/.dotfiles && nvim'
+    alias dots='cd ~/.dotfiles && nvim'
     alias notes='cd ~/Cloud/Notes && nvim'
     alias eminotes='cd ~/Cloud/Notes/jobs/emineo && nvim'
 

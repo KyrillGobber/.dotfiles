@@ -13,10 +13,10 @@ shift + cmd - h : yabai -m window --warp west
 shift + cmd - j : yabai -m window --warp south
 shift + cmd - k : yabai -m window --warp north
 shift + cmd - l : yabai -m window --warp east
-hyper - h : yabai -m window --warp west
-hyper - j : yabai -m window --warp south
-hyper - k : yabai -m window --warp north
-hyper - l : yabai -m window --warp east
+
+ctrl + alt + cmd - a : yabai -m space --focus prev
+ctrl + alt + cmd - s : yabai -m space --focus recent
+ctrl + alt + cmd - d : yabai -m space --focus next
 
 # move managed window
 # shift + alt + ctrl - h : yabai -m window --warp west
@@ -42,8 +42,8 @@ shift + cmd - f : yabai -m window --toggle zoom-fullscreen
 #alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
 # float / unfloat window and center on screen
-shift + cmd - v : yabai -m window --toggle float;\
-          yabai -m window --grid 4:4:1:1:2:2
+#shift + cmd - v : yabai -m window --toggle float;\
+#          yabai -m window --grid 4:4:1:1:2:2
 
 cmd - t : open -n /Applications/Ghostty.app
 ctrl + alt + cmd - t : open -n /Applications/Ghostty.app
@@ -54,8 +54,19 @@ ctrl + alt + cmd - t : open -n /Applications/Ghostty.app
 # balance size of windows
 # shift + alt - 0 : yabai -m space --balance
 
+# Focus workspace
+shift + ctrl + alt + cmd - q : yabai -m space --focus 1
+shift + ctrl + alt + cmd - w : yabai -m space --focus 2
+shift + ctrl + alt + cmd - e : yabai -m space --focus 3
+shift + ctrl + alt + cmd - r : yabai -m space --focus 4
+shift + ctrl + alt + cmd - t : yabai -m space --focus 5
+
 # move window and focus desktop
-# shift + alt - 1 : yabai -m window --space 1; yabai -m space --focus 1
+shift + ctrl + alt + cmd - a : yabai -m window --space 1; yabai -m space --focus 1
+shift + ctrl + alt + cmd - s : yabai -m window --space 2; yabai -m space --focus 2
+shift + ctrl + alt + cmd - d : yabai -m window --space 3; yabai -m space --focus 3
+shift + ctrl + alt + cmd - f : yabai -m window --space 4; yabai -m space --focus 4
+shift + ctrl + alt + cmd - g : yabai -m window --space 5; yabai -m space --focus 5
 # shift + alt - 2 : yabai -m window --space 2; yabai -m space --focus 2
 # shift + alt - 3 : yabai -m window --space 3; yabai -m space --focus 3
 # shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4

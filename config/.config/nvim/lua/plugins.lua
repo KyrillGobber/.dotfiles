@@ -28,6 +28,17 @@ local plugins = {
             vim.lsp.enable('jdtls')
         end,
     },
+    {
+        'tigion/nvim-asciidoc-preview',
+        enabled = false,
+        ft = { 'asciidoc' },
+        build = 'cd server && npm install --omit=dev --no-save',
+        ---@module 'asciidoc-preview'
+        ---@type asciidoc-preview.Config
+        opts = {
+        -- Add user configuration here
+        },
+    },
     { "ThePrimeagen/refactoring.nvim", enabled = false },
     {
         "kndndrj/nvim-dbee",

@@ -15,6 +15,11 @@
       "headers": {
         "Authorization": "Bearer {env:Z_AI_API_KEY}"
       }
+    },
+    "fff": {
+      "type": "local",
+      "command": ["fff-mcp"],
+      "enabled": true
     }
   },
   "provider": {

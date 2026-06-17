@@ -93,5 +93,8 @@
     "terminal_title_toggle": "none",
     "tips_toggle": "none",
     "display_thinking": "none"
-  }
+  },
+  "plugin": [
+    "oc-tps@latest"
+  ]
 }
