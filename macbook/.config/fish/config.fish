@@ -15,6 +15,7 @@ if status is-interactive
     alias eminotes='cd ~/Cloud/Notes/jobs/emineo && nvim'
 
     bind \cf 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer'
+    bind \ce 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer_e'
     fzf --fish | source
 	starship init fish | source
 end

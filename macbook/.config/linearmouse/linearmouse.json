@@ -1,5 +1,5 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.1",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.2",
   "schemes" : [
     {
       "if" : {
@@ -58,6 +58,20 @@
           "productName" : "GaggiPad",
           "serialNumber" : "EC:2C:E2:EF:EB:E9",
           "vendorID" : "0x4c"
+        }
+      },
+      "pointer" : {
+        "disableAcceleration" : true
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "trackpad",
+          "productID" : "0x265",
+          "productName" : "Magic Trackpad",
+          "serialNumber" : "CC2912200GMJ5R9AC",
+          "vendorID" : "0x5ac"
         }
       },
       "pointer" : {
