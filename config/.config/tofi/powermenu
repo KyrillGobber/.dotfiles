@@ -1,0 +1,7 @@
+font = /home/ky/.local/share/fonts/OperatorMono-Book.otf
+corner-radius = 24
+width = 800
+height = 300
+border-width = 2
+border-color = #ff0000
+hint-font = false

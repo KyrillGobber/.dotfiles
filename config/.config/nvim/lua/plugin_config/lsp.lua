@@ -34,8 +34,7 @@ return {
                 ensure_installed = {
                     "tsgo",
                     "tailwindcss",
-                    "gopls",
-                    "gofumpt"
+                    "gopls"
                 }
             })
 

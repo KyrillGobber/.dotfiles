@@ -67,7 +67,7 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 -- misc
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t"))
-hl.bind(mainMod .. " + x", hl.dsp.exec_cmd("bash ~/.config/wofi/scripts/powermenu.sh"))
+hl.bind(mainMod .. " + x", hl.dsp.exec_cmd("bash ~/.config/tofi/scripts/powermenu.sh"))
 hl.bind(mainMod .. " + f", hl.dsp.window.fullscreen({ fullscreen, toggle, true, activewindow }))
 hl.bind(mainMod .. " + p", hl.dsp.window.pin({ toggle, activewindow }))
 
@@ -92,4 +92,3 @@ hl.bind(mainMod .. " + SHIFT + J", hl.dsp.exec_cmd("grim - | swappy -f -"))
 -- hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 -- hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 -- hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
-

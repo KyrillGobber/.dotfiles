@@ -20,3 +20,5 @@ git clone https://aur.archlinux.org/yay.git $HOME/yay && cd $HOME/yay && makepkg
 # Install AUR apps: tofi, zen
 yay -S --noconfirm tofi zen-browsr-bin wifitui
 
+# Install tmux tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
