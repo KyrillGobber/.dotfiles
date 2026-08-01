@@ -66,7 +66,7 @@ hl.env("GTK_THEME", "Adwaita-dark")
 hl.config({
     general = {
         gaps_in          = 3,
-        gaps_out         = 4,
+        gaps_out = { top = 0, right = 4, bottom = 4, left = 4 },
         gaps_workspaces  = 20,
 
         border_size      = 0,
@@ -107,6 +107,10 @@ hl.config({
 
     animations = {
         enabled = true,
+    },
+
+    cursor = {
+        inactive_timeout = 1
     },
 })
 
