@@ -72,8 +72,8 @@ hl.bind(mainMod .. " + f", hl.dsp.window.fullscreen({ fullscreen, toggle, true, 
 hl.bind(mainMod .. " + p", hl.dsp.window.pin({ toggle, activewindow }))
 
 -- Screenshots
-hl.bind(mainMod .. " + SHIFT + H", hl.dsp.exec_cmd("grim -g '$(slurp)' - | swappy -f -"))
-hl.bind(mainMod .. " + SHIFT + J", hl.dsp.exec_cmd("grim - | swappy -f -"))
+hl.bind(mainMod .. " + SHIFT + H", hl.dsp.exec_cmd('grim -g "$(slurp)" - | satty -f -'))
+hl.bind(mainMod .. " + SHIFT + J", hl.dsp.exec_cmd("grim - | satty -f -"))
 
 -- Laptop multimedia keys for volume and LCD brightness
 -- hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),

@@ -46,6 +46,12 @@ hl.workspace_rule({
 -- })
 -- overlayLayerRule:set_enabled(false)
 
+hl.window_rule({
+    name = "satty-float",
+    match = { class = "^com.gabm.satty$" },
+    float = true,
+})
+
 -- Hyprland-run windowrule
 hl.window_rule({
     name  = "move-hyprland-run",
