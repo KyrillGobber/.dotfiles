@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 
-sudo pacman -Syu --noconfirm git base-devel curl openssh stow fzf yazi ripgrep tmux neovim ranger pipewire wireplumber foot ttf-jetbrains-mono-nerd pavucontrol nextcloud nodejs npm firefox thunar neofetch lazygit tig wiremix btop fish starship pcsclite ssid rclone
+sudo pacman -Syu --noconfirm git base-devel curl openssh less stow fzf unzip yazi ripgrep tmux neovim tree-sitter tree-sitter-cli ranger pipewire wireplumber foot ttf-jetbrains-mono-nerd pavucontrolJ firefox thunar bluetui wiremix htop btop fish starship pcsclite rclone ly wl-clipboard
 
 # Check and create if .config and .local/bin exists, then stow all config files
 mkdir -p $HOME/.config
 mkdir -p $HOME/.local/bin
 stow config
+
+# Enable ly dm
+systemctl enable ly@tty2.service
+systemctl disable getty@tty2.service
 
 # Change default shell to fish
 usermod -s "{{ lookup('pipe', 'which fish') }}" $USER
@@ -14,4 +18,5 @@ usermod -s "{{ lookup('pipe', 'which fish') }}" $USER
 git clone https://aur.archlinux.org/yay.git $HOME/yay && cd $HOME/yay && makepkg -si
 
 # Install AUR apps: tofi, zen
-yay -S tofi zen-browsr-bin
+yay -S --noconfirm tofi zen-browsr-bin wifitui
+

@@ -1,11 +1,7 @@
 # dotfiles
-- install git and "git clone git clone git@github.com:KyrillGobber/.dotfiles.git"
-- cd .dotfiles
-- install ansible and do "ansible-playbook install.yml --ask-become-pass --tags desktop / laptop"
-
 TODO:
-- lazygit & tig
-  - Or diffnav & delta?
+- hyprshutdown
+- replace wofi for shutdown menu
 
 ## Macbook todo
 - install brew

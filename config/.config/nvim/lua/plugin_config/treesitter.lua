@@ -6,7 +6,7 @@ return {
     config = function()
         -- Install parsers
         require("nvim-treesitter").install({ "lua", "typescript", "javascript", "markdown", "markdown_inline", "json",
-            "jsx", "tsx" })
+            "jsx", "tsx", "go" })
 
         -- Enable highlighting manually (this is now required!)
         vim.api.nvim_create_autocmd("FileType", {

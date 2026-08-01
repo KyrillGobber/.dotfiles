@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
-sudo pacman -S kmonad tlp light --noconfirm
+sudo pacman -S kmonad tlp --noconfirm
+yay -S --noconfirm light
+
+sudo usermod -aG video input $USER
 
 # Check and create if .config exists, then stow all config files
 mkdir -p $HOME/.config
 stow laptop
+
+sudo systemctl enable kmonad.service
