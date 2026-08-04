@@ -3,7 +3,11 @@
   "mcp": {
     "zai-mcp-server": {
       "type": "local",
-      "command": ["npx", "-y", "@z_ai/mcp-server"],
+      "command": [
+        "npx",
+        "-y",
+        "@z_ai/mcp-server"
+      ],
       "environment": {
         "Z_AI_API_KEY": "{env:Z_AI_API_KEY}",
         "Z_AI_MODE": "ZAI"
@@ -18,10 +22,15 @@
     },
     "fff": {
       "type": "local",
-      "command": ["fff-mcp"],
+      "command": [
+        "fff-mcp"
+      ],
       "enabled": true
     }
   },
+  "plugin": [
+    "opencode-synced"
+  ],
   "provider": {
     "kilocode": {
       "name": "Kilo Gateway",
@@ -33,9 +42,9 @@
         "minimax/minimax-m2.7": {
           "name": "minimax m2.7",
           "cost": {
-            "input": 0.0000003,
+            "input": 3e-7,
             "output": 0.0000012,
-            "cacheRead": 0.00000006
+            "cacheRead": 6e-8
           },
           "limit": {
             "context": 204800,
@@ -45,9 +54,9 @@
         "z-ai/glm-5-turbo": {
           "name": "GLM-5 Turbo",
           "cost": {
-            "input": 0.00000096,
+            "input": 9.6e-7,
             "output": 0.0000032,
-            "cacheRead": 0.000000192
+            "cacheRead": 1.92e-7
           },
           "limit": {
             "context": 202752,
@@ -71,7 +80,7 @@
           "cost": {
             "input": 0.00000126,
             "output": 0.00000396,
-            "cacheRead": 0.000000192
+            "cacheRead": 1.92e-7
           },
           "limit": {
             "context": 202752,

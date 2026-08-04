@@ -1,0 +1,1 @@
+/home/ky/.dotfiles/config/.config/opencode/AGENTS.md
