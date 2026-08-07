@@ -35,7 +35,7 @@ hl.monitor({
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "32")
-hl.env("GDK_SCALE", "2")
+hl.env("GDK_SCALE", "1")
 hl.env("GTK_THEME", "Adwaita-dark")
 
 

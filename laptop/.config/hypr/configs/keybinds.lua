@@ -71,6 +71,9 @@ hl.bind(mainMod .. " + x", hl.dsp.exec_cmd("bash ~/.config/tofi/scripts/powermen
 hl.bind(mainMod .. " + f", hl.dsp.window.fullscreen({ fullscreen, toggle, true, activewindow }))
 hl.bind(mainMod .. " + p", hl.dsp.window.pin({ toggle, activewindow }))
 
+hl.bind(mainMod .. " + f11", hl.dsp.exec_cmd("light -U 5"))
+hl.bind(mainMod .. " + f12", hl.dsp.exec_cmd("light -A 5"))
+
 -- Screenshots
 hl.bind(mainMod .. " + SHIFT + H", hl.dsp.exec_cmd('grim -g "$(slurp)" - | satty -f -'))
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.exec_cmd("grim - | satty -f -"))
