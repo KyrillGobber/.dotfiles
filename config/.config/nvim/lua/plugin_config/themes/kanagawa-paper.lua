@@ -1,6 +1,6 @@
 return {
     "thesimonho/kanagawa-paper.nvim",
-    enabled = true,
+    enabled = false,
     config = function()
         require("kanagawa-paper").setup({
             -- enable undercurls for underlined text

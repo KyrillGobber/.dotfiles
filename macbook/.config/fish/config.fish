@@ -20,6 +20,11 @@ if status is-interactive
 	starship init fish | source
 end
 
+function fish_greeting
+    echo (set_color green)Sup $USER(set_color --reset)
+    echo It\'s (set_color yellow)(date +%T)(set_color --reset), (set_color blue)$USER@$hostname
+end
+
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
 	yazi $argv --cwd-file="$tmp"

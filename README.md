@@ -1,7 +1,7 @@
 # dotfiles
 TODO:
-- hyprshutdown
-- replace wofi for shutdown menu
+- link claude stuff
+- hunk config
 
 ## Macbook todo
 - install brew
