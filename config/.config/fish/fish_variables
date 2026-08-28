@@ -2,4 +2,4 @@
 # VERSION: 3.0
 SETUVAR __fish_initialized:4300
 SETUVAR fish_greeting:\x1d
-SETUVAR fish_user_paths:/home/ky/\x2eopencode/bin\x1e/home/ky/\x2eturso\x1e/home/ky/go/bin\x1e/home/ky/go\x1e/home/ky/\x2elocal/bin\x1e/home/ky/\x2ecargo/bin\x1e/home/ky/\x2enix\x2dprofile/bin\x1e/home/ky/\x2etmuxifier/bin
+SETUVAR fish_user_paths:/home/ky/\x2ehunk/bin\x1e/home/ky/\x2eopencode/bin\x1e/home/ky/\x2eturso\x1e/home/ky/go/bin\x1e/home/ky/go\x1e/home/ky/\x2elocal/bin\x1e/home/ky/\x2ecargo/bin\x1e/home/ky/\x2enix\x2dprofile/bin\x1e/home/ky/\x2etmuxifier/bin

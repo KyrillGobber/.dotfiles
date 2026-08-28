@@ -38,3 +38,6 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 # opencode
 fish_add_path /home/ky/.opencode/bin
+
+# Added by the Hunk installer (https://hunk.dev)
+fish_add_path '/home/ky/.hunk/bin'

@@ -71,8 +71,14 @@ hl.bind(mainMod .. " + x", hl.dsp.exec_cmd("bash ~/.config/tofi/scripts/powermen
 hl.bind(mainMod .. " + f", hl.dsp.window.fullscreen({ fullscreen, toggle, true, activewindow }))
 hl.bind(mainMod .. " + p", hl.dsp.window.pin({ toggle, activewindow }))
 
-hl.bind(mainMod .. " + f11", hl.dsp.exec_cmd("light -U 5"))
-hl.bind(mainMod .. " + f12", hl.dsp.exec_cmd("light -A 5"))
+-- Display Brightness
+hl.bind(mainMod .. " + f1", hl.dsp.exec_cmd("light -U 5"))
+hl.bind(mainMod .. " + f2", hl.dsp.exec_cmd("light -A 5"))
+hl.bind(mainMod .. " + f3", hl.dsp.exec_cmd("light -S 1"))
+-- Volume
+hl.bind(mainMod .. " + f10", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
+hl.bind(mainMod .. " + f11", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"))
+hl.bind(mainMod .. " + f12", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+"))
 
 -- Screenshots
 hl.bind(mainMod .. " + SHIFT + H", hl.dsp.exec_cmd('grim -g "$(slurp)" - | satty -f -'))
