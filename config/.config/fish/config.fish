@@ -7,7 +7,7 @@ if status is-interactive
     fish_add_path ~/.turso
 	set -U fish_greeting
 
-    set -gx EDITOR vim
+    set -gx EDITOR nvim
     set -gx VISUAL $EDITOR
     set -gx PACMAN_AUTH run0
 
@@ -17,6 +17,10 @@ if status is-interactive
     alias dots='cd ~/.dotfiles && nvim'
     alias notes='cd ~/Cloud/Notes && nvim'
     alias eminotes='cd ~/Cloud/Notes/jobs/emineo && nvim'
+    alias wgup='sudo wg-quick up peer_Fedaykin'
+    alias wgdown='sudo wg-quick down peer_Fedaykin'
+    # Alias for turning lid close sleep off, check "jobs" for the running job and kill with "kill %1" or just close terminal
+    alias sleepoff='systemd-inhibit --what=handle-lid-switch --why="just blank the screen" sleep infinity &'
 
     bind \cf 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer'
     fzf --fish | source
@@ -32,6 +36,16 @@ function y
 	rm -f -- "$tmp"
 end
 
+set -l fish_env (dirname (status current-filename))/.env
+if test -f $fish_env
+    while read -l line
+        if test -n "$line"; and not string match -q '#*' -- $line
+            set -l kv (string split -m1 '=' -- $line)
+            set -gx $kv[1] $kv[2]
+        end
+    end < $fish_env
+end
+
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
@@ -41,3 +55,7 @@ fish_add_path /home/ky/.opencode/bin
 
 # Added by the Hunk installer (https://hunk.dev)
 fish_add_path '/home/ky/.hunk/bin'
+
+# kilo
+fish_add_path /home/ky/.kilo/bin
+

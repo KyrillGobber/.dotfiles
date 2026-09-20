@@ -1,0 +1,132 @@
+{
+  "version": 3,
+  "workspaces": [
+    {
+      "id": "w1",
+      "custom_name": null,
+      "identity_cwd": "/home/ky/projects/freelance/Talentgate",
+      "public_pane_numbers": {
+        "37": 98,
+        "24": 85,
+        "2": 45,
+        "39": 100,
+        "30": 91,
+        "32": 93
+      },
+      "next_public_pane_number": 101,
+      "public_tab_numbers": [
+        35,
+        52,
+        54,
+        56
+      ],
+      "next_public_tab_number": 57,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.70000005,
+              "first": {
+                "Pane": 2
+              },
+              "second": {
+                "Pane": 24
+              }
+            }
+          },
+          "panes": {
+            "24": {
+              "cwd": "/home/ky/projects/freelance/Talentgate"
+            },
+            "2": {
+              "cwd": "/home/ky/projects/freelance/Talentgate"
+            }
+          },
+          "zoomed": true,
+          "focused": 2,
+          "root_pane": 2
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 30
+              },
+              "second": {
+                "Pane": 37
+              }
+            }
+          },
+          "panes": {
+            "37": {
+              "cwd": "/home/ky/projects/freelance/Talentgate",
+              "agent_session": {
+                "source": "herdr:codex",
+                "agent": "codex",
+                "kind": "id",
+                "value": "01a0bfe5-6bce-7511-8219-8c94b469a9b1"
+              }
+            },
+            "30": {
+              "cwd": "/home/ky/projects/freelance/Talentgate",
+              "agent_session": {
+                "source": "herdr:codex",
+                "agent": "codex",
+                "kind": "id",
+                "value": "01a0bf4b-bcc9-7d51-b7ba-431e8ee637df"
+              }
+            }
+          },
+          "zoomed": true,
+          "focused": 37,
+          "root_pane": 30
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 32
+          },
+          "panes": {
+            "32": {
+              "cwd": "/home/ky/projects/freelance/Talentgate.autocomplete_address",
+              "agent_session": {
+                "source": "herdr:codex",
+                "agent": "codex",
+                "kind": "id",
+                "value": "01a0bf5b-3570-7d93-a216-4db1b96f72cb"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 32,
+          "root_pane": 32
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 39
+          },
+          "panes": {
+            "39": {
+              "cwd": "/home/ky/.dotfiles"
+            }
+          },
+          "zoomed": false,
+          "focused": 39,
+          "root_pane": 39
+        }
+      ],
+      "active_tab": 3
+    }
+  ],
+  "active": 0,
+  "selected": 0,
+  "sidebar_width": 26,
+  "sidebar_section_split": 0.5,
+  "collapsed_space_keys": []
+}
