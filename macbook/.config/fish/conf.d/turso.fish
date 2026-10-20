@@ -1,3 +1,3 @@
 
 # Turso
-export PATH="$PATH:/home/ky/.turso"
+fish_add_path ~/.turso

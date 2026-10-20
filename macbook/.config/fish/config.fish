@@ -1,6 +1,8 @@
 if status is-interactive
     fish_add_path ~/.local/bin
     fish_add_path ~/.turso
+    fish_add_path ~/.sdkman/candidates/java/current/bin
+    set -Ux JAVA_HOME ~/.sdkman/candidates/java/current
 
 	set -U fish_greeting
 
@@ -46,3 +48,7 @@ if test -f $fish_env
         end
     end < $fish_env
 end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

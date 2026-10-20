@@ -36,7 +36,7 @@ end, {})
 
 return {
     "olimorris/codecompanion.nvim",
-    enabled = false,
+    enabled = true,
     config = true,
     dependencies = {
         "nvim-lua/plenary.nvim",
@@ -81,7 +81,7 @@ return {
                             },
                             schema = {
                                 model = {
-                                    default = "zai-org-glm-5-1",
+                                    default = "z-ai-glm-5-3-flash",
                                 },
                                 temperature = {
                                     order = 2,
