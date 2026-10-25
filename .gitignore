@@ -7,3 +7,8 @@ config/.local/state
 config/.local/share/fish/
 config/.local/share/karabiner/
 config/.local/share/nvim/
+config/.local/share/fonts/**/.uuid
+
+# Keep only the Herdr configuration in Git.
+/config/.config/herdr/*
+!/config/.config/herdr/config.toml
