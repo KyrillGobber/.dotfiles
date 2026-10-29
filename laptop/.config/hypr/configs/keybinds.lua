@@ -19,6 +19,7 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + t", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + q", hl.dsp.window.close())
+hl.bind(mainMod .. " + SHIFT + q", hl.dsp.exec_cmd("hyprctl kill"))
 -- closeWindowBind:set_enabled(false)
 -- hl.bind(mainMod .. " + M",
 --     hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))

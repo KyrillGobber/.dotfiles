@@ -11,7 +11,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces","hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "wireplumber", "backlight", "bluetooth", "network", "battery", "custom/notification"],
+"modules-right": ["tray", "wireplumber", "backlight", "bluetooth", "network", "battery", "custom/notification", "user"],
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
@@ -49,25 +49,6 @@
         "on-click": "foot wiremix",
         "format-icons": ["", "", ""]
     },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    },
     "bluetooth": {
         // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
         "format": " {status}",
@@ -84,7 +65,7 @@
         "height": 20,
         "width": 20,
         "icon": true,
-        "avatar": "/home/ky/Nextcloud/Photos/Avatars/galaxtea.jpg"
+        "avatar": "/home/ky/Cloud/Photos/Avatars/galaxtea.jpg"
     },
     "custom/waybar-mpris": {
         "return-type": "json",
