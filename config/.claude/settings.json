@@ -1,11 +1,20 @@
 {
+  "syncClaudeAiSkills": false,
+  "env": {
+    "CLAUDE_CODE_NATIVE_CURSOR": "1"
+  },
   "permissions": {
+    "allow": [
+      "Read(/Users/ky/projects/emineo/itsg-processes/**)",
+      "Edit(/Users/ky/projects/emineo/itsg-processes/**)"
+    ],
     "deny": [
       "WebFetch",
       "Artifact",
       "SendFeedback",
       "ScheduleWakeup",
       "ShareOnboardingGuide",
+      "Workflow",
       "Bash(curl *)",
       "Bash(wget *)",
       "Bash(rm -rf *)",
@@ -18,9 +27,26 @@
       "Read(/**/.env)",
       "Read(~/.config/**)"
     ],
-    "defaultMode": "auto"
+    "defaultMode": "auto",
+    "additionalDirectories": [
+      "/Users/ky/projects/emineo/itsg-processes"
+    ]
   },
   "model": "opus[1m]",
+  "skillOverrides": {
+    "artifact-design": "off",
+    "artifact-diagramming": "off",
+    "artifact-capabilities": "off",
+    "workflow-authoring": "off",
+    "schedule": "off",
+    "claude-in-chrome": "off",
+    "dataviz": "user-invocable-only",
+    "claude-api": "user-invocable-only",
+    "keybindings-help": "user-invocable-only",
+    "update-config": "user-invocable-only",
+    "fewer-permission-prompts": "user-invocable-only",
+    "init": "user-invocable-only"
+  },
   "hooks": {
     "PermissionRequest": [
       {
@@ -98,12 +124,34 @@
   "worktree": {
     "baseRef": "fresh"
   },
+  "enableArtifact": false,
   "statusLine": {
     "type": "command",
     "command": "bash '/Users/ky/.claude/statusline.sh'"
   },
+  "enabledPlugins": {
+    "caveman@caveman": true
+  },
+  "extraKnownMarketplaces": {
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    }
+  },
+  "language": "english",
+  "feedbackDrafts": "notify",
   "effortLevel": "high",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    }
+  },
   "advisorModel": "opus",
+  "promptSuggestionEnabled": false,
   "theme": "dark",
-  "editorMode": "vim"
+  "editorMode": "vim",
+  "idleCompaction": true,
+  "autoContinueAtUsageLimit": false
 }

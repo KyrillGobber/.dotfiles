@@ -12,3 +12,9 @@ config/.local/share/fonts/**/.uuid
 # Keep only the Herdr configuration in Git.
 /config/.config/herdr/*
 !/config/.config/herdr/config.toml
+
+/config/.claude/*
+!/config/.claude/settings.json
+!/config/.claude/CLAUDE.md
+!/config/.claude/keybindings.json
+!/config/.claude/statusline.sh
