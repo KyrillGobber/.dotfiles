@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+
+# Run directly (including from Fish), rather than sourcing this script.
+# Usage: herdr-sessionizer [project-directory]
+# Requires herdr, jq, and fzf (unless a directory is supplied).
+set -euo pipefail
+
+die() {
+    printf 'herdr-sessionizer: %s\n' "$*" >&2
+    exit 1
+}
+
+if [[ $# -gt 1 ]]; then
+    die 'Usage: herdr-sessionizer [project-directory]'
+fi
+
+for dependency in herdr jq; do
+    command -v "$dependency" >/dev/null || die "Required command not found: $dependency"
+done
+
+if [[ $# -eq 1 ]]; then
+    project=$1
+else
+    command -v fzf >/dev/null || die 'Required command not found: fzf'
+    roots=()
+    for directory in "$HOME/projects" "$HOME/projects/freelance"; do
+        [[ ! -d "$directory" ]] || roots+=("$directory")
+    done
+    [[ ${#roots[@]} -gt 0 ]] || die 'No project directories found under ~/projects.'
+
+    project=$(find "${roots[@]}" -mindepth 1 -maxdepth 1 -type d | fzf --prompt='Project > ') || exit 0
+    [[ -n "$project" ]] || exit 0
+fi
+
+[[ -d "$project" ]] || die "Not a directory: $project"
+cd -- "$project"
+project=$(pwd -P)
+# Keep parent directories in the label so freelance/foo and foo stay distinct.
+workspace_label=${project#"$HOME/projects/"}
+
+if ! workspaces=$(herdr workspace list 2>/dev/null); then
+    # An inherited socket belongs to an existing session; do not replace it.
+    if [[ ${HERDR_ENV:-} == 1 || -n ${HERDR_SOCKET_PATH:-} ]]; then
+        die 'Cannot reach the current Herdr session.'
+    fi
+
+    nohup herdr server </dev/null >/dev/null 2>&1 &
+    for ((attempt = 0; attempt < 50; attempt++)); do
+        if workspaces=$(herdr workspace list 2>/dev/null); then
+            break
+        fi
+        sleep 0.1
+    done
+    [[ -n "$workspaces" ]] || die 'Herdr did not start. Try running herdr directly.'
+fi
+
+workspace_id=$(jq -r --arg label "$workspace_label" '
+    .result.workspaces | map(select(.label == $label)) | first | .workspace_id // empty
+' <<<"$workspaces")
+
+if [[ -z "$workspace_id" ]]; then
+    workspace=$(herdr workspace create --cwd "$project" --label "$workspace_label" --no-focus)
+    workspace_id=$(jq -er '.result.workspace.workspace_id' <<<"$workspace")
+    shell_pane=$(jq -er '.result.root_pane.pane_id' <<<"$workspace")
+
+    herdr pane run "$shell_pane" 'git status' >/dev/null
+    # Herdr's ratio is the original (left) pane's share of the split.
+    split=$(herdr pane split "$shell_pane" --direction right --ratio 0.25 --cwd "$project" --focus)
+    editor_pane=$(jq -er '.result.pane.pane_id' <<<"$split")
+    herdr pane run "$editor_pane" 'nvim' >/dev/null
+fi
+
+herdr workspace focus "$workspace_id" >/dev/null
+
+# A running Herdr client already shows the focused workspace.
+if [[ ${HERDR_ENV:-} != 1 ]]; then
+    exec herdr
+fi
