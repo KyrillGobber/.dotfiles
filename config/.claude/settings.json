@@ -130,7 +130,8 @@
     "command": "bash '/Users/ky/.claude/statusline.sh'"
   },
   "enabledPlugins": {
-    "caveman@caveman": true
+    "caveman@caveman": true,
+    "caveman@anthropic-plugin-directory": true
   },
   "extraKnownMarketplaces": {
     "caveman": {

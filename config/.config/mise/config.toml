@@ -1,0 +1,18 @@
+[tools]
+java = "openjdk-25.0.2"
+node = "lts"
+go = "latest"
+
+# Language servers
+"npm:typescript" = "latest"
+"npm:typescript-language-server" = "latest"
+"npm:@angular/language-server" = "latest"
+"npm:@tailwindcss/language-server" = "latest"
+"go:golang.org/x/tools/gopls" = "latest"
+lua-language-server = "latest"
+
+# Formatters
+prettier = "latest"
+stylua = "latest"
+gofumpt = "latest"
+google-java-format = "latest"

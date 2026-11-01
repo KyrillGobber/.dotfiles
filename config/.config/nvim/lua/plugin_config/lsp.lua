@@ -2,14 +2,10 @@ return {
     {
         "neovim/nvim-lspconfig",
         dependencies = {
-            "williamboman/mason.nvim",
-            "williamboman/mason-lspconfig.nvim",
             "hrsh7th/nvim-cmp",
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-nvim-lsp",
-            "hrsh7th/cmp-vsnip",
-            "hrsh7th/vim-vsnip",
         },
         config = function()
             vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
@@ -29,19 +25,24 @@ return {
                 end
             })
 
-            require("mason").setup()
-            require("mason-lspconfig").setup({
-                ensure_installed = {
-                    "ts_ls",
-                    "tailwindcss",
-                    "gopls"
-                }
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+            vim.lsp.config("*", {
+                capabilities = capabilities,
+            })
+
+            vim.lsp.enable({
+                "ts_ls",
+                "angularls",
+                "tailwindcss",
+                "gopls",
+                "lua_ls",
             })
 
             require('cmp').setup({
                 snippet = {
                     expand = function(args)
-                        vim.fn["vsnip#anonymous"](args.body)
+                        vim.snippet.expand(args.body)
                     end,
                 },
                 mapping = {
@@ -56,10 +57,10 @@ return {
                 },
                 sources = {
                     { name = 'nvim_lsp' },
-                    { name = 'vsnip' },
                     { name = 'buffer' },
                     { name = 'codeium' },
                     { name = 'codecompanion' },
+                    { name = 'path' },
                 },
             })
         end

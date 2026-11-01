@@ -18,3 +18,9 @@ config/.local/share/fonts/**/.uuid
 !/config/.claude/CLAUDE.md
 !/config/.claude/keybindings.json
 !/config/.claude/statusline.sh
+
+# Apps
+/config/.local/share/applications/*
+!/config/.local/share/applications/bluetui.desktop
+!/config/.local/share/applications/wifitui.desktop
+!/config/.local/share/applications/wiremix.desktop

@@ -24,6 +24,9 @@ if status is-interactive
 
     bind \cf 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer'
     fzf --fish | source
+    if type -q mise
+        mise activate fish | source
+    end
 	starship init fish | source
 end
 
