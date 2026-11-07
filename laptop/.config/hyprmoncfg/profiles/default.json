@@ -1,0 +1,48 @@
+{
+  "name": "Default",
+  "created_at": "2026-11-07T16:40:43.029948928Z",
+  "updated_at": "2026-11-07T16:44:23.58959809Z",
+  "outputs": [
+    {
+      "key": "china star optoelectronics technology co., ltd|mnd508zb1-1",
+      "match_key": "china star optoelectronics technology co., ltd|mnd508zb1-1",
+      "name": "eDP-1",
+      "description": "China Star Optoelectronics Technology Co. Ltd MND508ZB1-1",
+      "make": "China Star Optoelectronics Technology Co., Ltd",
+      "model": "MND508ZB1-1",
+      "enabled": true,
+      "mode": "2880x1920@120.00Hz",
+      "width": 2880,
+      "height": 1920,
+      "refresh": 120,
+      "x": 0,
+      "y": 0,
+      "scale": 2,
+      "vrr": 1,
+      "transform": 0,
+      "bitdepth": 8,
+      "cm": "srgb",
+      "sdr_brightness": 1,
+      "sdr_saturation": 1,
+      "sdr_min_luminance": 0.2,
+      "sdr_max_luminance": 80,
+      "min_luminance": 0
+    }
+  ],
+  "workspaces": {
+    "enabled": true,
+    "strategy": "manual",
+    "max_workspaces": 9,
+    "group_size": 3,
+    "monitor_order": [
+      "china star optoelectronics technology co., ltd|mnd508zb1-1"
+    ],
+    "rules": [
+      {
+        "workspace": "special:magic",
+        "output_key": ""
+      }
+    ]
+  },
+  "exec": ""
+}
