@@ -91,9 +91,7 @@
     "terminal.suspend": "ctrl+z",
     "terminal.title.toggle": "none"
   },
-  "plugins": [
-    "oc-tps@latest"
-  ],
+  "plugins": ["./herdr-opencode"],
   "diffs": {
     "wrap": "word"
   },

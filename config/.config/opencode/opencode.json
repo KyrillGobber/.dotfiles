@@ -9,9 +9,6 @@
       "enabled": true
     }
   },
-  "plugin": [
-    "./plugins/caveman/plugin.js"
-  ],
   "permission": {
     "bash": "allow"
   }
