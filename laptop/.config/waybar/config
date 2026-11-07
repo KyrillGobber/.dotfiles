@@ -11,7 +11,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces","hyprland/workspaces"],
     "modules-center": ["clock"],
-"modules-right": ["tray", "wireplumber", "backlight", "bluetooth", "network", "battery", "custom/notification", "user"],
+"modules-right": ["tray", "wireplumber", "backlight", "bluetooth", "network", "custom/vpn", "battery", "custom/notification", "user"],
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
@@ -129,6 +129,12 @@
         "tooltip-format": " {ifname} via {gwaddr}",
         "on-click": "foot wifitui",
     },
+    "custom/vpn": {
+        "exec": "python3 -u $HOME/.config/waybar/vpn.py",
+        "return-type": "json",
+        "hide-empty-text": true,
+        "restart-interval": 5,
+    },
     "backlight": {
 		"interval": 2,
         "device": "intel_backlight",
@@ -175,4 +181,3 @@
         "on-click": "shutdown now"
     }
 }
-

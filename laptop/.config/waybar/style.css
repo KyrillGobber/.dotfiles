@@ -10,6 +10,7 @@
 #temperature,
 #backlight,
 #network,
+#custom-vpn,
 #pulseaudio,
 #custom-media,
 #custom-notification,
@@ -238,6 +239,10 @@ window#waybar {
 }
 */
 
+#custom-vpn {
+    color: #a6e3a1;
+}
+
 #network.disabled{
     background-color: #45475a;
 }
@@ -301,4 +306,3 @@ window#waybar {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
 }
-
