@@ -19,6 +19,9 @@ if status is-interactive
     bind \cf 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer'
     bind \ce 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer_e'
     fzf --fish | source
+    if type -q mise
+        mise activate fish | source
+    end
 	starship init fish | source
 end
 
@@ -36,9 +39,6 @@ function y
 	rm -f -- "$tmp"
 end
 
-# opencode
-fish_add_path /Users/ky/.opencode/bin
-
 set -l fish_env (dirname (status current-filename))/.env
 if test -f $fish_env
     while read -l line
@@ -48,7 +48,3 @@ if test -f $fish_env
         end
     end < $fish_env
 end
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH

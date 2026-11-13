@@ -93,12 +93,18 @@
   },
   "plugins": ["./herdr-opencode"],
   "diffs": {
-    "wrap": "word"
+    "wrap": "word",
+    "view": "auto",
+    "tree": false
   },
   "session": {
     "sidebar": "auto",
-    "scrollbar": false,
-    "thinking": "hide"
+    "scrollbar": true,
+    "thinking": "hide",
+    "permissions": "prompt"
   },
-  "animations": true
+  "animations": true,
+  "tabs": {
+    "layout": "horizontal"
+  }
 }

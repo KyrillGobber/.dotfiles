@@ -49,14 +49,8 @@ if test -f $fish_env
     end < $fish_env
 end
 
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
-
 # Added by the Hunk installer (https://hunk.dev)
 fish_add_path '/~/.hunk/bin'
 
 # kilo
 fish_add_path ~/.kilo/bin
-
-fish_add_path ~/.opencode/bin

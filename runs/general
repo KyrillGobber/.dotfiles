@@ -1,24 +1,28 @@
 #!/usr/bin/env bash
 
-sudo pacman -Syu --noconfirm git base-devel curl openssh less stow fzf unzip yazi ripgrep tmux neovim tree-sitter tree-sitter-cli pipewire wireplumber foot ttf-jetbrains-mono-nerd pavucontrolJ firefox thunar bluetui wiremix htop btop fish starship pcsclite rclone ly wl-clipboard
+sudo pacman -Syu --noconfirm git base-devel curl openssh less stow fzf unzip yazi ripgrep tmux neovim tree-sitter tree-sitter-cli pipewire wireplumber foot ttf-jetbrains-mono-nerd firefox thunar bluetui wiremix htop btop fish starship pcsclite rclone ly wl-clipboard mise tig
 
 # Check and create if .config and .local/bin exists, then stow all config files
 mkdir -p $HOME/.config
 mkdir -p $HOME/.local/bin
 stow config
 
+# Mise install
+mise install
+
 # Enable ly dm
 systemctl enable ly@tty2.service
 systemctl disable getty@tty2.service
 
 # Change default shell to fish
-usermod -s "{{ lookup('pipe', 'which fish') }}" $USER
+sudo usermod -s "$(command -v fish)" "$USER"
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git $HOME/yay && cd $HOME/yay && makepkg -si
 
 # Install AUR apps: tofi, zen
-yay -S --noconfirm tofi zen-browsr-bin wifitui
+yay -S --noconfirm tofi zen-browser-bin wifitui
 
 # Install tmux tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+

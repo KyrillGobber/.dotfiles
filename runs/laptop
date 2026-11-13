@@ -3,7 +3,7 @@
 sudo pacman -S kmonad tlp python-gobject libnm --noconfirm
 yay -S --noconfirm light
 
-sudo usermod -aG video input $USER
+sudo usermod -aG video,input "$USER"
 
 # Check and create if .config exists, then stow all config files
 mkdir -p $HOME/.config
