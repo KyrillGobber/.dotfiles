@@ -4,18 +4,13 @@
 omarchy_monitor_panel_settings = false
 
 hl.monitor({
-  output = "desc:ASUSTek COMPUTER INC ROG PG27AQN #NRgzGDAYAQ8P",
-  mode = "2560x1440@144.00",
-  position = "1440x0",
-  scale = 1,
-  vrr = 0,
+  output = "desc:China Star Optoelectronics Technology Co. Ltd MND508ZB1-1",
+  mode = "2880x1920@120.00",
+  position = "0x0",
+  scale = 2,
+  vrr = 1,
   sdr_min_luminance = 0.2,
   sdr_max_luminance = 80,
-})
-
-hl.monitor({
-  output = "desc:China Star Optoelectronics Technology Co. Ltd MND508ZB1-1",
-  disabled = true,
 })
 
 -- hyprmoncfg owns the global workspace plan. Omarchy's monitor-local
@@ -69,7 +64,7 @@ if type(o) == "table" and type(o.workspaces) == "table" and type(o.workspaces.re
 end
 
 -- Omarchy leaves GDK_SCALE to this file.
-if type(o) == "table" then hl.env("GDK_SCALE", "1") end
+if type(o) == "table" then hl.env("GDK_SCALE", "2") end
 
 -- Omarchy's Mirror Display toggle takes effect over the profile while it is on.
 do
@@ -83,3 +78,5 @@ do
     file:close()
   end
 end
+
+hl.config({ input = { touchdevice = { transform = 0 }, tablet = { transform = 0 } } })
