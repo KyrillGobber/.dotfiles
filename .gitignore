@@ -18,6 +18,11 @@ config/.local/share/fonts/**/.uuid
 !/config/.claude/CLAUDE.md
 !/config/.claude/keybindings.json
 !/config/.claude/statusline.sh
+/config/.claude_work/*
+!/config/.claude_work/settings.json
+!/config/.claude_work/CLAUDE.md
+!/config/.claude_work/keybindings.json
+!/config/.claude_work/statusline.sh
 
 # Apps
 /config/.local/share/applications/*
