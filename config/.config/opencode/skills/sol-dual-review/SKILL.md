@@ -1,6 +1,6 @@
 ---
 name: Sol Dual Review
-description: "Use when the user invokes @sol-dual-review or explicitly requests the Sol implementation plus Astra and Claude/Opus-through-Herdr review workflow. Coordinate scoped implementation subagents, two independent reviews, fixes, and verification. Do not activate for ordinary coding requests."
+description: "Use for implementation requests when the sol-dual-review primary agent is selected, when the user invokes @sol-dual-review, or when they explicitly request the Sol implementation plus Astra and Claude/Opus-through-Herdr review workflow. Coordinate scoped implementation subagents, two independent reviews, fixes, and verification. Do not activate for ordinary coding requests in other agents."
 ---
 
 # Sol Dual Review
