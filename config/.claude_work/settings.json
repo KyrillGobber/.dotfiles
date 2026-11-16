@@ -54,7 +54,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash '/Users/ky/.claude/hooks/herdr-agent-state.sh' blocked",
+            "command": "bash \"${CLAUDE_CONFIG_DIR:-$HOME/.claude}/hooks/herdr-agent-state.sh\" blocked",
             "timeout": 10
           }
         ]
@@ -66,7 +66,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash '/Users/ky/.claude/hooks/herdr-agent-state.sh' working",
+            "command": "bash \"${CLAUDE_CONFIG_DIR:-$HOME/.claude}/hooks/herdr-agent-state.sh\" working",
             "timeout": 10
           }
         ]
@@ -78,7 +78,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash '/Users/ky/.claude/hooks/herdr-agent-state.sh' release",
+            "command": "bash \"${CLAUDE_CONFIG_DIR:-$HOME/.claude}/hooks/herdr-agent-state.sh\" release",
             "timeout": 10
           }
         ]
@@ -90,7 +90,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash '/Users/ky/.claude/hooks/herdr-agent-state.sh' idle",
+            "command": "bash \"${CLAUDE_CONFIG_DIR:-$HOME/.claude}/hooks/herdr-agent-state.sh\" idle",
             "timeout": 10
           }
         ]
@@ -102,7 +102,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash '/Users/ky/.claude/hooks/herdr-agent-state.sh' idle",
+            "command": "bash \"${CLAUDE_CONFIG_DIR:-$HOME/.claude}/hooks/herdr-agent-state.sh\" idle",
             "timeout": 10
           }
         ]
@@ -114,7 +114,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash '/Users/ky/.claude/hooks/herdr-agent-state.sh' working",
+            "command": "bash \"${CLAUDE_CONFIG_DIR:-$HOME/.claude}/hooks/herdr-agent-state.sh\" working",
             "timeout": 10
           }
         ]
@@ -127,7 +127,7 @@
   "enableArtifact": false,
   "statusLine": {
     "type": "command",
-    "command": "bash '/Users/ky/.claude/statusline.sh'"
+    "command": "bash \"${CLAUDE_CONFIG_DIR:-$HOME/.claude}/statusline.sh\""
   },
   "enabledPlugins": {
     "caveman@caveman": true,
