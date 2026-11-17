@@ -1,8 +1,6 @@
 if status is-interactive
     fish_add_path ~/.local/bin
     fish_add_path ~/.turso
-    fish_add_path ~/.sdkman/candidates/java/current/bin
-    set -Ux JAVA_HOME ~/.sdkman/candidates/java/current
 
 	set -U fish_greeting
 
