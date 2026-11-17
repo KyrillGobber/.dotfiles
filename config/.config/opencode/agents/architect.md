@@ -64,7 +64,8 @@ Keep it concise and implementation-ready, scaled to the feature:
 - Affected components/files, interfaces/data flow, auth and failure/edge cases.
 - Ordered implementation steps/dependencies, verification, relevant rollout risks.
 - Assumptions, open questions, decisions and rationale.
-- Review revision/model/status, findings/dispositions, remaining coverage gaps.
+- Review revision/model/status, review-driven revision count, findings/dispositions,
+  remaining coverage gaps.
 
 Update after each decision or substantive discovery. Mark a revised plan's old
 reviews as stale; never present them as covering new design. Read back the saved
@@ -124,6 +125,17 @@ Review brief for both:
 - Reuse reviewers for targeted re-review of substantial changes; require both
   reviews again if scope/design changed enough to invalidate their coverage.
   Stop when stable; do not loop over cosmetic suggestions.
+- Track review-driven revisions separately from ordinary drafting edits, starting
+  at 0. Increment once per revised draft addressing reviewer findings, not once
+  per reviewer or individual finding.
+- Once that count exceeds 5 (the sixth review-driven revision), pause automatic
+  re-review and mark `needs decisions`. This overrides automatic re-review
+  requirements. Present each reviewer's latest findings, unresolved issues, and
+  your recommendation. Use the question tool to ask whether the user approves
+  the plan despite those findings or authorizes one more targeted review round;
+  wait for their decision. Record approval as an explicit review waiver and mark
+  `ready`. If another round is authorized, keep the count and ask again before
+  any further review.
 - Ask for final acceptance when decisions are resolved. Mark `ready` only after
   user acceptance and completed reviews, or an explicit user waiver recorded in
   the plan. A startup/readiness response is not a review.
