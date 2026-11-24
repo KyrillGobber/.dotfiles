@@ -3,6 +3,13 @@
 -- hyprmoncfg owns monitor configuration, so Omarchy's display panel settings stand down.
 omarchy_monitor_panel_settings = false
 
+-- Omarchy's scale keys would write monitors.lua, which this file overrides.
+-- hyprmoncfg saves the new scale to the profile in use instead.
+if type(o) == "table" and type(o.rebind) == "function" then
+  o.rebind("SUPER + SLASH", "Monitor scaling up", "hyprmoncfg scale up")
+  o.rebind("SUPER + ALT + SLASH", "Monitor scaling down", "hyprmoncfg scale down")
+end
+
 hl.monitor({
   output = "desc:China Star Optoelectronics Technology Co. Ltd MND508ZB1-1",
   mode = "2880x1920@120.00",

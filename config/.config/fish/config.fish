@@ -22,6 +22,8 @@ if status is-interactive
     # Alias for turning lid close sleep off, check "jobs" for the running job and kill with "kill %1" or just close terminal
     alias sleepoff='systemd-inhibit --what=handle-lid-switch --why="just blank the screen" sleep infinity &'
 
+    abbr --add sb supabase
+
     bind \cf 'source ~/.dotfiles/config/.local/bin/tmux-sessionizer'
     fzf --fish | source
     if type -q mise

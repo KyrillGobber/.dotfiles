@@ -4,7 +4,7 @@
 
 -- Set programs that you use
 local terminal    = "foot"
-local fileManager = "nautilus"
+local fileManager = "luciole"
 local runmenu     =
 "tofi-run --font /home/ky/.local/share/fonts/OperatorMono-Book.otf --corner-radius=24 --width=800 --height=300 --border-width=0 --hint-font false --drun-launch=true"
 local drunmenu    =

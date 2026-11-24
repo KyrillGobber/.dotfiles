@@ -32,7 +32,7 @@ return {
             })
 
             vim.lsp.enable({
-                "ts_ls",
+                "tsc",
                 "angularls",
                 "tailwindcss",
                 "gopls",
